@@ -38,7 +38,7 @@ export function Meme() {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    
+
     width: '100%',
     height: 'max-content',
   }
@@ -73,7 +73,7 @@ export function Meme() {
 
   }
 
-  const skip: CSS.Properties = {
+  const NextButton: CSS.Properties = {
     borderStyle: 'none',
     background: '#FEEAC5',
     color: 'black',
@@ -86,7 +86,7 @@ export function Meme() {
     marginBottom: '0px'
   }
 
-  const generate: CSS.Properties = {
+  const CreateButton: CSS.Properties = {
     background: '#A34AA7',
     border: '1px solid #000000',
     boxShadow: '-5px 5px 0px #000000',
@@ -103,18 +103,18 @@ export function Meme() {
 
   const [memes, setMemes] = useState<any[]>([])
   const [memeIndex, setMemIndex] = useState<any[number]>(0)
-  const [captions, setCaptions] = useState<any[]>([])
+  const [fields, setFields] = useState<any[]>([])
 
   const navigate = useNavigate()
 
-  const updateCaption = (e: ChangeEvent<HTMLInputElement>, index: number) => {
-    const text = e.target.value
-    setCaptions(
-      captions.map((c, i) => {
+  const updateField = (e: ChangeEvent<HTMLInputElement>, index: number) => {
+    const textMeme = e.target.value
+    setFields(
+      fields.map((element, i) => {
         if (index === i) {
-          return text
+          return textMeme
         }
-        return c
+        return element
       }),
     )
   }
@@ -128,16 +128,16 @@ export function Meme() {
     }
   }
 
-  const generateMeme = () => {
+  const fetchMeme = () => {
     const currentMeme = memes[memeIndex]
     const formData = new FormData()
 
     formData.append('username', 'ArseniRusin')
     formData.append('password', '1qaz1Qaz')
     formData.append('template_id', currentMeme.id)
-    captions.forEach((c, index) =>
+    fields.forEach((element, index) =>
       // console.log(`boxes[${index}][text]`, c)
-      formData.append(`boxes[${index}][text]`, c),
+      formData.append(`boxes[${index}][text]`, element),
     )
     // formData.forEach((c) => console.log(c))
     fetch('https://api.imgflip.com/caption_image', {
@@ -146,7 +146,6 @@ export function Meme() {
     }).then((res) => {
       res.json().then((res) => {
         const saveURL = window.location.pathname
-        console.log(saveURL)
         navigate(`${saveURL}/generated?url=${res.data.url}`)
       })
     })
@@ -164,33 +163,30 @@ export function Meme() {
 
   useEffect(() => {
     if (memes.length) {
-      setCaptions(Array(memes[memeIndex].box_count).fill(''))
+      setFields(Array(memes[memeIndex].box_count).fill(''))
     }
-  }, [memeIndex, memes])
+  }, [memeIndex])
 
-  // useEffect(() => {
-  //     console.log(captions)
-  // }, [captions])
 
   return memes.length ? (
     <body style={body}>
-      <NavibarBack/>
-        <div style={MemContainer}>
-          <div style={MemContent}>
+      <NavibarBack />
+      <div style={MemContainer}>
+        <div style={MemContent}>
 
-            {captions.map((c, index) => (
-              <input onChange={(e) => updateCaption(e, index)} key={index} style={EnterButton} />
-            ))}
-            <button onClick={() => generateMeme()} style={generate}>
-              Generate
-            </button>
-            <img src={memes[memeIndex].url} alt='meme' style={MemImage} />
-            <button onClick={() => setMemIndex(memeIndex + 1)} style={skip}>
-              Skip
-            </button>
-          </div>
-          {/*<img style={mainBackground} src={background}/>*/}
+          {fields.map((element, index) => (
+            <input onChange={(e) => updateField(e, index)} key={index} style={EnterButton} />
+          ))}
+          <button onClick={() => fetchMeme()} style={CreateButton}>
+            Create!
+          </button>
+          <img src={memes[memeIndex].url} alt='meme' style={MemImage} />
+          <button onClick={() => setMemIndex(memeIndex + 1)} style={NextButton}>
+            Next
+          </button>
         </div>
+        {/*<img style={mainBackground} src={background}/>*/}
+      </div>
     </body>
   ) : (
     <></>
