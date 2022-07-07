@@ -5,7 +5,7 @@ export default class Login extends Component {
         const form: CSS.Properties = {
             border: '1px solid #000000',
             width:'100%',
-           
+            backgroundColor: '#FEEAC5'
                         
             
         }
