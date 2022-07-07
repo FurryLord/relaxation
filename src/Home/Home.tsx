@@ -13,6 +13,7 @@ export function Home() {
         let path = '/home/meme_page'
         navigate(path)
     }
+
     const body: CSS.Properties = {
         /* Background */
         backgroundImage: `url(${backgroundRetro})`,
