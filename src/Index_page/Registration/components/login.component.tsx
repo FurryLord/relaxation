@@ -1,36 +1,68 @@
 import React, { Component } from "react";
-
+import CSS from 'csstype'
 export default class Login extends Component {
     render() {
+        const form: CSS.Properties = {
+            border: '1px solid #000000',
+            width:'100%',
+           
+                        
+            
+        }
+
+        const Log_in: CSS.Properties = {
+            backgroundColor:'#FFD203',
+            textAlign:'center',
+            padding:'2%',
+            margin:'0',
+            fontFamily: 'Roboto Condensed',
+            fontWeight: '1000', 
+            
+            fontSize:'x-large',
+            
+        }
+        const input: CSS.Properties = {
+            width:'90%',
+            margin:'5%',
+            backgroundColor: '#FFFFFF',
+            border: '1px solid #000000',
+            borderRadius: '60px',
+        }
+        const enter: CSS.Properties = {
+            width:'46%',
+            margin:'4%',
+            backgroundColor: '#000000',
+            textAlign:'center',
+            borderRadius: '60px',
+            marginLeft:'27%',
+            height:'3em',
+            fontSize:'large',
+            padding:'0',
+            
+        }
+        
+
+
         return (
             <div className="col-6">
 
 
-            <form>
+            <form style={form}>
 
-                <h3>Log in</h3>
+                <h3 style={Log_in}>Log in</h3>
 
-                <div className="form-group">
-                    <label>Email</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
+                <div >
+                    <input style={input} type="email" placeholder="Enter email" />
                 </div>
 
                 <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
+                    
+                    <input style={input} type="password"  placeholder="Enter password" />
                 </div>
 
-                <div className="form-group">
-                    <div className="custom-control custom-checkbox">
-                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                        <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                    </div>
-                </div>
-
-                <button type="submit" className="btn btn-dark btn-lg btn-block">Sign in</button>
-                <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
-                </p>
+               
+                <button style={enter} type="submit" >Enter</button>
+            
             </form>
             </div>
         );
