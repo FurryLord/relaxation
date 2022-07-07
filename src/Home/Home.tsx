@@ -13,6 +13,14 @@ export function Home() {
         let path = '/home/meme_page'
         navigate(path)
     }
+    const routeChangePsy = () =>{
+        let path = '/home/tests'
+        navigate(path)
+    }
+    const routeChangeLg = () =>{
+        let path = '/home/Game1'
+        navigate(path)
+    }
 
     const body: CSS.Properties = {
         /* Background */
@@ -176,11 +184,11 @@ export function Home() {
                             <p style={HomeButtonText}>Meme</p>
                             <p style={HomeButtonText}>Generator</p>
                         </button>
-                        <button style={HomeButtonPsy}>
+                        <button style={HomeButtonPsy} onClick={routeChangePsy}>
                             <p style={HomeButtonText}>Psychological</p>
                             <p style={HomeButtonText}>Tests</p>
                         </button>
-                        <button style={HomeButtonLg}>
+                        <button style={HomeButtonLg} onClick={routeChangeLg}>
                             <p style={HomeButtonText}>Logic</p>
                             <p style={HomeButtonText}>Games</p>
                         </button>

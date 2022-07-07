@@ -23,8 +23,8 @@ export function App() {
         <Route path="/reglog/sign-in" element={<Login />} />
         <Route path="/reglog/sign-up" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/tests" element={<Catalog />} />
-        <Route path='/tests/test1' element={<Test1 />} />
+        <Route path="home/tests" element={<Catalog />} />
+        <Route path='home/tests/test1' element={<Test1 />} />
         <Route path="home/Game1" element={<Game />} />
     </Routes>
   )
