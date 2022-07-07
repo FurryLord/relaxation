@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react
 
 import CSS from "csstype";
 import Login from './components/login.component'
-import SignUp from './components/signup.component'
 import { resolve } from 'node:path/win32';
 
 export function Registration() {
