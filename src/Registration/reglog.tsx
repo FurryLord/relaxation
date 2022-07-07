@@ -9,6 +9,8 @@ import CSS from "csstype";
 import Login from './components/login.component'
 import SignUp from './components/signup.component'
 import { resolve } from 'node:path/win32';
+// @ts-ignore
+import backgroundRetro from "../img/background.png";
 
 export function Registration() {
 
@@ -39,7 +41,18 @@ xhr.onreadystatechange = () => {
 }
   const navigate = useNavigate();
   const body: CSS.Properties = {
-    backgroundColor: '#FEE9C6',
+      /* Background */
+      backgroundImage: `url(${backgroundRetro})`,
+      backgroundBlendMode: "soft-light",
+      backgroundSize: 'cover',
+      backgroundPosition: '0 50vh',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed',
+      borderWidth: "none",
+      borderStyle: "none",
+      borderColor: "none",
+      backgroundColor: '#FEEAC5',
+
     /* Size */
     minHeight: '100vh',
     /* Display */
@@ -153,16 +166,14 @@ const outer: CSS.Properties ={
           </div>
           <button style={login_button} onClick={()=>navigate('/reglog')}> Sign in</button>
             <button style={reg_button} onClick={()=>navigate('/reglog/sign-up')}> Sign up</button>
-    </header>
+        </header>
     
         <div style={outer} className="outer">
           <div style={inner} className="inner">
             <Login/>
-         
-         
+          </div>
         </div>
-      </div>
-      </body>
+   </body>
   )
  
 }
