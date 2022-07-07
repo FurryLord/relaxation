@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import CSS from 'csstype'
+
 export default class Login extends Component {
     render() {
         const form: CSS.Properties = {
             border: '1px solid #000000',
             width:'100%',
+            /* Background */
+            backgroundColor: '#FEEAC5',
            
                         
             
