@@ -4,6 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { Navibar } from './Navbar/Navibar';
 import CSS from "csstype";
 
+// @ts-ignore
+import woman from "../img/woman.png";
+// @ts-ignore
+import background from "../img/background.png"
+
 // eslint-disable-next-line import/prefer-default-export
 export function Index() {
     const navigate = useNavigate();
@@ -39,6 +44,20 @@ export function Index() {
         margin: '0',
         padding: '0',
     };
+    const mainBackground: CSS.Properties = {
+        position: "absolute",
+        width: '100vw',
+        height: 'auto',
+        maxHeight: 'none',
+        maxWidth: 'none',
+        objectFit: 'cover',
+        objectPosition: '0 50vw',
+        mixBlendMode: 'soft-light',
+        bottom: '0',
+        boxShadow: '0 0 0 0',
+        margin: '0',
+        padding: '0',
+    }
     const GreetingWrapper: CSS.Properties = {
         backgroundColor: '#FEE9C6',
 
@@ -158,11 +177,25 @@ export function Index() {
         border: '5px solid #000000',
         boxShadow: '-5px 5px 0px #000000',
         borderRadius: '80px',
-        height: '5rem',
+
+        height: '6rem',
+        width: '16rem',
+
         fontFamily: 'Roboto',
         fontSize: '36px',
         color: '#000000',
     };
+    const GreetingWoman: CSS.Properties = {
+        boxShadow: '0 0 0 0',
+
+        width: '25%',
+        height: 'auto',
+
+        position: "absolute",
+        left: 0,
+        bottom: 0,
+        padding: '0 0 10px 10px'
+    }
     return (
         <body style={body}>
             <Navibar/>
@@ -177,12 +210,13 @@ export function Index() {
                                 and tense your <span style={GreetingInnerTextBold}>logic</span>.</p>
                             <button style={GreetingButton}>Play Now!</button>
                         </div>
-                        {/*<img src={'/public/woman.jpg'}/>*/}
+                        <img style={GreetingWoman} src={woman}/>
                     </div>
                     <div style={GreetingInnerCard3}/>
                     <div style={GreetingInnerCard2}/>
                     <div style={GreetingInnerCard1}/>
                 </div>
+                <img style={mainBackground} src={background}/>
             </main>
         </body>
     );
