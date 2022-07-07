@@ -8,6 +8,7 @@ import { Index } from '../Index_page/Index'
 import {Registration} from "../Registration/reglog"
 import Login from "../Registration/components/login.component"
 import SignUp from '../Registration/components/signup.component'
+import { Game } from '../Game1/components/test'
 
 export function App() {
   return (
@@ -18,6 +19,7 @@ export function App() {
       <Route path='/reglog/*' element={<Registration />}></Route>
       <Route path="/reglog/sign-in" element={<Login />} />
       <Route path="/reglog/sign-up" element={<SignUp />} />
+      <Route path="home/Game1" element={<Game />} />
       
     </Routes>
   )
