@@ -8,17 +8,18 @@ import { Index } from '../Index_page/Index'
 import {Registration} from "../Registration/reglog"
 import Login from "../Registration/components/login.component"
 import {SignUp} from '../Registration/components/signup'
+import { Home } from '../Home/Home'
 
 export function App() {
   return (
     <Routes>
-      <Route path='/' element={<Index />} />
-      <Route path='/meme_page/generated' element={<MemeGenerated />} />
-      <Route path='/meme_page' element={<Meme />} />
-      <Route path='/reglog/*' element={<Registration />}></Route>
-      <Route path="/reglog/sign-in" element={<Login />} />
-      <Route path="/reglog/sign-up" element={<SignUp />} />
-      
+        <Route path='/' element={<Index />} />
+        <Route path='home/meme_page/generated' element={<MemeGenerated />} />
+        <Route path='home/meme_page' element={<Meme />} />
+        <Route path='/reglog/*' element={<Registration />}></Route>
+        <Route path="/reglog/sign-in" element={<Login />} />
+        <Route path="/reglog/sign-up" element={<SignUp />} />
+        <Route path="/home" element={<Home />} />
     </Routes>
   )
 }
