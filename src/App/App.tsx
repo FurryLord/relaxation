@@ -7,7 +7,7 @@ import { MemeGenerated } from '../MemeGenerated/MemeGenerated'
 import { Index } from '../Index_page/Index'
 import {Registration} from "../Registration/reglog"
 import Login from "../Registration/components/login.component"
-import SignUp from '../Registration/components/signup.component'
+import {SignUp} from '../Registration/components/signup'
 
 export function App() {
   return (
