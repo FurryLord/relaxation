@@ -165,7 +165,7 @@ export function Meme() {
     if (memes.length) {
       setFields(Array(memes[memeIndex].box_count).fill(''))
     }
-  }, [memeIndex])
+  }, [memeIndex, memes])
 
 
   return memes.length ? (

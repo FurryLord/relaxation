@@ -4,6 +4,11 @@ import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import { App } from './App/App'
 import reportWebVitals from './reportWebVitals'
+import { createStore } from 'redux'
+import linkReducer from './Meme/reducers/counter'
+import { Provider } from 'react-redux'
+
+const store = createStore(linkReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
