@@ -1,7 +1,9 @@
 const linkReducer = (state = "false", action: { type: any }) => {
-    switch(action.type){
+    switch (action.type) {
         case "COPY":
-            return !state
+            return "Link copied!"
+        default:
+            return "copy"
     }
 }
 export default linkReducer
