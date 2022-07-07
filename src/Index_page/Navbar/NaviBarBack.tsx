@@ -79,7 +79,7 @@ export function NavibarBack() {
         <header style={nav}>
             <div style={logoBox}>
                 <button onClick={() => navigate('/')} style={logoText}>Relaxacion</button>
-                <button onClick={() => navigate('/reglog/*')} style={HomeButton} >Home</button>
+                <button onClick={() => navigate('/home')} style={HomeButton} >Home</button>
             </div>
         </header>
     )
