@@ -3,11 +3,36 @@ import { useClipboard } from 'use-clipboard-copy'
 import React, { useState } from 'react'
 
 import CSS from 'csstype'
-import { Navibar } from '../Navbar/Navibar'
-import { NavibarBack } from '../Navbar/NaviBarBack'
+
+// @ts-ignore
+import backgroundRetro from "../img/background.png";
+import { NavibarBack } from '../Index_page/Navbar/NaviBarBack';
 
 export function MemeGenerated() {
+  const body: CSS.Properties = {
+    /* Background */
+    backgroundImage: `url(${backgroundRetro})`,
+    backgroundBlendMode: "soft-light",
+    backgroundSize: 'cover',
+    backgroundPosition: '0 50vh',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    borderWidth: "none",
+    borderStyle: "none",
+    borderColor: "none",
+    backgroundColor: '#FEEAC5',
+    /* Size */
+    minHeight: '100vh',
+    /* Display */
+    display: 'flex',
+    flexDirection: 'column',
+    alignContent: 'center',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
 
+    margin: '0',
+    padding: '0'
+  };
   const MemContainer: CSS.Properties = {
     boxSizing: 'border-box',
     display: 'flex',
@@ -17,10 +42,12 @@ export function MemeGenerated() {
     
     width: '100%',
     height: 'max-content',
-    background: '#FEEAC5',
   }
 
   const MemContent: CSS.Properties = {
+    /* Background */
+    backgroundColor: '#FEEAC5',
+
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -86,8 +113,8 @@ export function MemeGenerated() {
   }
 
   return (
-    <>
-      <NavibarBack />
+    <body style={body}>
+      <NavibarBack/>
       <div style={MemContainer}>
         <div style={MemContent}>
           <button onClick={() => navigate('/meme_page')} style={MakeButton}>
@@ -99,6 +126,6 @@ export function MemeGenerated() {
           </button>
         </div>
       </div>
-    </>
+    </body>
   )
 }
