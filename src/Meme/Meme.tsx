@@ -1,8 +1,8 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import CSS from 'csstype'
-import { Navibar } from '../Navbar/Navibar'
-import { NavibarBack } from '../Navbar/NaviBarBack'
+import { Navibar } from '../Index_page/Navbar/Navibar'
+import { NavibarBack } from '../Index_page/Navbar/NaviBarBack'
 
 export function Meme() {
 

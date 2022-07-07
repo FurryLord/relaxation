@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line import/extensions
-import { Navibar } from '../Navbar/Navibar';
+import { Navibar } from './Navbar/Navibar';
 import CSS from "csstype";
 
 // @ts-ignore
