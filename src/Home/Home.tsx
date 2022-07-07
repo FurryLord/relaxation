@@ -151,6 +151,7 @@ export function Home() {
     const HomeButtonText: CSS.Properties = {
         fontFamily: 'Roboto Condensed',
         fontSize: 'calc(36px + (48 - 36) * ((100vw - 280px) / (1920 - 280)))',
+        fontWeight: 'bold',
         color: '#000000',
         /* Display */
         display: 'flex',
@@ -175,12 +176,12 @@ export function Home() {
                             <p style={HomeButtonText}>Generator</p>
                         </button>
                         <button style={HomeButtonPsy}>
-                            <p style={HomeButtonText}>Meme</p>
-                            <p style={HomeButtonText}>Generator</p>
+                            <p style={HomeButtonText}>Psychological</p>
+                            <p style={HomeButtonText}>Tests</p>
                         </button>
                         <button style={HomeButtonLg}>
-                            <p style={HomeButtonText}>Meme</p>
-                            <p style={HomeButtonText}>Generator</p>
+                            <p style={HomeButtonText}>Logic</p>
+                            <p style={HomeButtonText}>Games</p>
                         </button>
                     </div>
                 </div>

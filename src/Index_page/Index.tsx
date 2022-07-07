@@ -174,11 +174,12 @@ export function Index() {
         boxShadow: '-5px 5px 0px #000000',
         borderRadius: '80px',
 
-        height: 'calc(84px + (96 - 84) * ((100vw - 280px) / (1920 - 280)))',
-        width: 'calc(156px + (256 - 156) * ((100vw - 280px) / (1920 - 280)))',
+        height: 'calc(90px + (96 - 90) * ((100vw - 280px) / (1920 - 280)))',
+        width: 'calc(256px + (356 - 256) * ((100vw - 280px) / (1920 - 280)))',
 
         fontFamily: 'Roboto',
         fontSize: 'calc(24px + (36 - 24) * ((100vw - 280px) / (1920 - 280)))',
+        fontWeight: 'bold',
         color: '#000000',
     };
     const GreetingWoman: CSS.Properties = {
