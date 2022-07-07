@@ -8,6 +8,8 @@ import { Index } from '../Index_page/Index'
 import {Registration} from "../Registration/reglog"
 import Login from "../Registration/components/login.component"
 import SignUp from '../Registration/components/signup.component'
+import { Catalog } from '../Tests/catalog'
+import { Test1 } from '../Tests/Test1/test1'
 
 export function App() {
   return (
@@ -18,6 +20,8 @@ export function App() {
       <Route path='/reglog/*' element={<Registration />}></Route>
       <Route path="/reglog/sign-in" element={<Login />} />
       <Route path="/reglog/sign-up" element={<SignUp />} />
+      <Route path="/tests" element={<Catalog />} />
+      <Route path='/tests/test1' element={<Test1 />} />
       
     </Routes>
   )
