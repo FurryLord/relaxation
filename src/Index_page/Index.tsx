@@ -152,18 +152,18 @@ export function Index() {
     const GreetingInnerTitle: CSS.Properties = {
         color: '#000000',
         fontFamily: 'Roboto Condensed',
-        fontSize: '48px',
+        fontSize: 'calc(36px + (48 - 36) * ((100vw - 280px) / (1920 - 280)))',
         marginTop: '0',
     };
     const GreetingInnerText: CSS.Properties = {
         color: '#000000',
         fontFamily: 'Roboto Condensed',
-        fontSize: '36px',
+        fontSize: 'calc(20px + (36 - 20) * ((100vw - 280px) / (1920 - 280)))',
     };
     const GreetingInnerLogo: CSS.Properties = {
         color: '#000000',
         fontFamily: 'Parisienne',
-        fontSize: '96px',
+        fontSize: 'calc(64px + (96 - 64) * ((100vw - 280px) / (1920 - 280)))',
     };
     const GreetingInnerTextBold: CSS.Properties = {
         fontWeight: 'bold',
@@ -174,17 +174,17 @@ export function Index() {
         boxShadow: '-5px 5px 0px #000000',
         borderRadius: '80px',
 
-        height: '6rem',
-        width: '16rem',
+        height: 'calc(84px + (96 - 84) * ((100vw - 280px) / (1920 - 280)))',
+        width: 'calc(156px + (256 - 156) * ((100vw - 280px) / (1920 - 280)))',
 
         fontFamily: 'Roboto',
-        fontSize: '36px',
+        fontSize: 'calc(24px + (36 - 24) * ((100vw - 280px) / (1920 - 280)))',
         color: '#000000',
     };
     const GreetingWoman: CSS.Properties = {
         boxShadow: '0 0 0 0',
 
-        width: '25%',
+        width: 'calc(200px + (350 - 200) * ((100vw - 280px) / (1920 - 280)))',
         height: 'auto',
 
         position: "absolute",
