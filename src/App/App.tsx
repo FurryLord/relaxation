@@ -2,12 +2,12 @@
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import React from 'react'
-import { Meme } from '../Index_page/Meme/Meme'
-import { MemeGenerated } from '../Index_page/MemeGenerated/MemeGenerated'
+import { Meme } from '../Meme/Meme'
+import { MemeGenerated } from '../MemeGenerated/MemeGenerated'
 import { Index } from '../Index_page/Index'
-import {Registration} from "../Index_page/Registration/reglog"
-import Login from "../Index_page/Registration/components/login.component"
-import SignUp from '../Index_page/Registration/components/signup.component'
+import {Registration} from "../Registration/reglog"
+import Login from "../Registration/components/login.component"
+import SignUp from '../Registration/components/signup.component'
 
 export function App() {
   return (
