@@ -8,11 +8,17 @@ import CSS from "csstype";
 import woman from "../img/woman.png";
 // @ts-ignore
 import backgroundRetro from "../img/background.png";
+// @ts-ignore
+import backgroundCircle from "../img/dots.png";
+import {Simulate} from "react-dom/test-utils";
+import React from "react";
 
 // eslint-disable-next-line import/prefer-default-export
 export function Index() {
+    let [over, setOver]= React.useState(false);
+    let [click, setClicked]= React.useState(false);
     const navigate = useNavigate();
-    const routeChange = () =>{
+    const routeChange = () => {
         let path = '/reglog'
         navigate(path)
     }
@@ -152,39 +158,59 @@ export function Index() {
     const GreetingInnerTitle: CSS.Properties = {
         color: '#000000',
         fontFamily: 'Roboto Condensed',
-        fontSize: '48px',
+        fontSize: 'calc(36px + (48 - 36) * ((100vw - 280px) / (1920 - 280)))',
         marginTop: '0',
     };
     const GreetingInnerText: CSS.Properties = {
         color: '#000000',
         fontFamily: 'Roboto Condensed',
-        fontSize: '36px',
+        fontSize: 'calc(20px + (36 - 20) * ((100vw - 280px) / (1920 - 280)))',
     };
     const GreetingInnerLogo: CSS.Properties = {
         color: '#000000',
         fontFamily: 'Parisienne',
-        fontSize: '96px',
+        fontSize: 'calc(64px + (96 - 64) * ((100vw - 280px) / (1920 - 280)))',
     };
     const GreetingInnerTextBold: CSS.Properties = {
         fontWeight: 'bold',
     };
     const GreetingButton: CSS.Properties = {
-        background: '#F8A7A4',
+        backgroundColor: '#F8A7A4',
         border: '5px solid #000000',
         boxShadow: '-5px 5px 0px #000000',
         borderRadius: '80px',
 
-        height: '6rem',
-        width: '16rem',
+        height: 'calc(90px + (96 - 90) * ((100vw - 280px) / (1920 - 280)))',
+        width: 'calc(256px + (356 - 256) * ((100vw - 280px) / (1920 - 280)))',
 
         fontFamily: 'Roboto',
-        fontSize: '36px',
+        fontSize: 'calc(24px + (36 - 24) * ((100vw - 280px) / (1920 - 280)))',
+        fontWeight: 'bold',
         color: '#000000',
     };
+    if(over){
+        // @ts-ignore
+        GreetingButton.backgroundImage=`url(${backgroundCircle})`;
+        GreetingButton.backgroundBlendMode= "soft-light";
+        GreetingButton.backgroundSize= 'contain';
+        GreetingButton.backgroundAttachment= 'fixed';
+    }
+    else{
+        // @ts-ignore
+        GreetingButton.backgroundColor="#F8A7A4";
+    }
+    if(click) {
+        // @ts-ignore
+        GreetingButton.backgroundImage=``;
+        GreetingButton.backgroundColor="#F5807C";
+    } else {
+        // @ts-ignore
+        GreetingButton.backgroundColor="#F8A7A4";
+    }
     const GreetingWoman: CSS.Properties = {
         boxShadow: '0 0 0 0',
 
-        width: '25%',
+        width: 'calc(200px + (350 - 200) * ((100vw - 280px) / (1920 - 280)))',
         height: 'auto',
 
         position: "absolute",
@@ -205,7 +231,12 @@ export function Index() {
                                 stuck in <span style={GreetingInnerTextBold}>memes</span>,
                                and tense your <span style={GreetingInnerTextBold}>logic</span>.
                             </p>
-                            <button style={GreetingButton} onClick={routeChange}>Play Now!</button>
+                            <button style={GreetingButton}
+                                    onClick={routeChange}
+                                    onMouseDown={()=>setClicked(true)}
+                                    onMouseUp={()=>setClicked(false)}
+                                    onMouseOver={()=>setOver(true)}
+                                    onMouseOut={()=>setOver(false)}> Play Now!</button>
                         </div>
                         <img style={GreetingWoman} src={woman}/>
                     </div>
