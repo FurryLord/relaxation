@@ -1,20 +1,33 @@
 import { useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line import/extensions
-import { Navibar } from '../Navbar/Navibar';
+import { Navibar } from './Navbar/Navibar';
 import CSS from "csstype";
 
 // @ts-ignore
 import woman from "../img/woman.png";
 // @ts-ignore
-import background from "../img/background.png"
+import backgroundRetro from "../img/background.png";
 
 // eslint-disable-next-line import/prefer-default-export
 export function Index() {
     const navigate = useNavigate();
-
+    const routeChange = () =>{
+        let path = '/reglog'
+        navigate(path)
+    }
     const body: CSS.Properties = {
-        backgroundColor: '#FEE9C6',
+        /* Background */
+        backgroundImage: `url(${backgroundRetro})`,
+        backgroundBlendMode: "soft-light",
+        backgroundSize: 'cover',
+        backgroundPosition: '0 50vh',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        borderWidth: "none",
+        borderStyle: "none",
+        borderColor: "none",
+        backgroundColor: '#FEEAC5',
         /* Size */
         minHeight: '100vh',
         /* Display */
@@ -28,7 +41,6 @@ export function Index() {
         padding: '0'
     };
     const main: CSS.Properties = {
-        backgroundColor: '#FEE9C6',
 
         /* Size */
         height: '90vh',
@@ -44,23 +56,7 @@ export function Index() {
         margin: '0',
         padding: '0',
     };
-    const mainBackground: CSS.Properties = {
-        position: "absolute",
-        width: '100vw',
-        height: 'auto',
-        maxHeight: 'none',
-        maxWidth: 'none',
-        objectFit: 'cover',
-        objectPosition: '0 50vw',
-        mixBlendMode: 'soft-light',
-        bottom: '0',
-        boxShadow: '0 0 0 0',
-        margin: '0',
-        padding: '0',
-    }
     const GreetingWrapper: CSS.Properties = {
-        backgroundColor: '#FEE9C6',
-
         /* Size */
         width: '85%',
         height: '95%',
@@ -207,8 +203,9 @@ export function Index() {
                             <p style={GreetingInnerTitle} >Welcome to <span style={GreetingInnerLogo}>Relaxacion!</span></p>
                             <p style={GreetingInnerText}> Place where you can find yourself in <span style={GreetingInnerTextBold}>tests</span>,
                                 stuck in <span style={GreetingInnerTextBold}>memes</span>,
-                                and tense your <span style={GreetingInnerTextBold}>logic</span>.</p>
-                            <button style={GreetingButton}>Play Now!</button>
+                               and tense your <span style={GreetingInnerTextBold}>logic</span>.
+                            </p>
+                            <button style={GreetingButton} onClick={routeChange}>Play Now!</button>
                         </div>
                         <img style={GreetingWoman} src={woman}/>
                     </div>
@@ -216,7 +213,6 @@ export function Index() {
                     <div style={GreetingInnerCard2}/>
                     <div style={GreetingInnerCard1}/>
                 </div>
-                <img style={mainBackground} src={background}/>
             </main>
         </body>
     );
