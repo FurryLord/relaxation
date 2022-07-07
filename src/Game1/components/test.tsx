@@ -1,5 +1,5 @@
 import CSS from 'csstype'
-import { NavibarBack } from '../../Navbar/NaviBarBack'
+import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack';
 
 export function Game(){
 

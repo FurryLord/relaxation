@@ -1,25 +1,51 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import CSS from 'csstype'
-import { Navibar } from '../Navbar/Navibar'
-import { NavibarBack } from '../Navbar/NaviBarBack'
+
+// @ts-ignore
+import backgroundRetro from "../img/background.png"
+import { NavibarBack } from '../Index_page/Navbar/NaviBarBack';
 
 export function Meme() {
 
+  const body: CSS.Properties = {
+    /* Background */
+    backgroundImage: `url(${backgroundRetro})`,
+    backgroundBlendMode: "soft-light",
+    backgroundSize: 'cover',
+    backgroundPosition: '0 50vh',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    borderWidth: "none",
+    borderStyle: "none",
+    borderColor: "none",
+    backgroundColor: '#FEEAC5',
+    /* Size */
+    minHeight: '100vh',
+    /* Display */
+    display: 'flex',
+    flexDirection: 'column',
+    alignContent: 'center',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
 
+    margin: '0',
+    padding: '0'
+  };
   const MemContainer: CSS.Properties = {
     boxSizing: 'border-box',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    
+
     width: '100%',
     height: 'max-content',
-    background: '#FEEAC5',
   }
 
   const MemContent: CSS.Properties = {
+    backgroundColor: '#FEEAC5',
+
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -31,7 +57,6 @@ export function Meme() {
     border: '1px solid #000000',
     width: 'max-content',
     height: 'max-content',
-
   }
 
   const MemImage: CSS.Properties = {
@@ -48,7 +73,7 @@ export function Meme() {
 
   }
 
-  const skip: CSS.Properties = {
+  const NextButton: CSS.Properties = {
     borderStyle: 'none',
     background: '#FEEAC5',
     color: 'black',
@@ -61,7 +86,7 @@ export function Meme() {
     marginBottom: '0px'
   }
 
-  const generate: CSS.Properties = {
+  const CreateButton: CSS.Properties = {
     background: '#A34AA7',
     border: '1px solid #000000',
     boxShadow: '-5px 5px 0px #000000',
@@ -78,18 +103,18 @@ export function Meme() {
 
   const [memes, setMemes] = useState<any[]>([])
   const [memeIndex, setMemIndex] = useState<any[number]>(0)
-  const [captions, setCaptions] = useState<any[]>([])
+  const [fields, setFields] = useState<any[]>([])
 
   const navigate = useNavigate()
 
-  const updateCaption = (e: ChangeEvent<HTMLInputElement>, index: number) => {
-    const text = e.target.value
-    setCaptions(
-      captions.map((c, i) => {
+  const updateField = (e: ChangeEvent<HTMLInputElement>, index: number) => {
+    const textMeme = e.target.value
+    setFields(
+      fields.map((element, i) => {
         if (index === i) {
-          return text
+          return textMeme
         }
-        return c
+        return element
       }),
     )
   }
@@ -103,16 +128,16 @@ export function Meme() {
     }
   }
 
-  const generateMeme = () => {
+  const fetchMeme = () => {
     const currentMeme = memes[memeIndex]
     const formData = new FormData()
 
     formData.append('username', 'ArseniRusin')
     formData.append('password', '1qaz1Qaz')
     formData.append('template_id', currentMeme.id)
-    captions.forEach((c, index) =>
+    fields.forEach((element, index) =>
       // console.log(`boxes[${index}][text]`, c)
-      formData.append(`boxes[${index}][text]`, c),
+      formData.append(`boxes[${index}][text]`, element),
     )
     // formData.forEach((c) => console.log(c))
     fetch('https://api.imgflip.com/caption_image', {
@@ -121,7 +146,6 @@ export function Meme() {
     }).then((res) => {
       res.json().then((res) => {
         const saveURL = window.location.pathname
-        console.log(saveURL)
         navigate(`${saveURL}/generated?url=${res.data.url}`)
       })
     })
@@ -139,32 +163,31 @@ export function Meme() {
 
   useEffect(() => {
     if (memes.length) {
-      setCaptions(Array(memes[memeIndex].box_count).fill(''))
+      setFields(Array(memes[memeIndex].box_count).fill(''))
     }
-  }, [memeIndex, memes])
+  }, [memeIndex])
 
-  // useEffect(() => {
-  //     console.log(captions)
-  // }, [captions])
 
   return memes.length ? (
-    <><NavibarBack />
+    <body style={body}>
+      <NavibarBack />
       <div style={MemContainer}>
         <div style={MemContent}>
 
-          {captions.map((c, index) => (
-            <input onChange={(e) => updateCaption(e, index)} key={index} style={EnterButton} />
+          {fields.map((element, index) => (
+            <input onChange={(e) => updateField(e, index)} key={index} style={EnterButton} />
           ))}
-          <button onClick={() => generateMeme()} style={generate}>
-            Generate
+          <button onClick={() => fetchMeme()} style={CreateButton}>
+            Create!
           </button>
           <img src={memes[memeIndex].url} alt='meme' style={MemImage} />
-          <button onClick={() => setMemIndex(memeIndex + 1)} style={skip}>
-            Skip
+          <button onClick={() => setMemIndex(memeIndex + 1)} style={NextButton}>
+            Next
           </button>
         </div>
+        {/*<img style={mainBackground} src={background}/>*/}
       </div>
-    </>
+    </body>
   ) : (
     <></>
   )
