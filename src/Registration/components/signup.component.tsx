@@ -19,6 +19,8 @@ export default class SignUpCom extends Component<any, any> {
       }
     
        handleSubmit(event: { preventDefault: () => void; }){
+        event.preventDefault();
+        
         const { firstName, lastName,email, password } = this.state
         // alert(`
         //   ____Your Details____\n
@@ -26,11 +28,7 @@ export default class SignUpCom extends Component<any, any> {
         //   Password : ${password_}
           
         // `)
-        // let user = {
-        //     "type": 'authorization',
-        //     "email": `${email}` ,
-        //     "password": `${password}`
-        //   };
+     
           var xhr = new XMLHttpRequest();
 
         let user = {
@@ -40,32 +38,46 @@ export default class SignUpCom extends Component<any, any> {
             "email": `${email}` ,
             "password": `${password}`
         }
-
-        xhr.open('POST', 'http://localhost:1337', true);
-        xhr.setRequestHeader("Content-type", "application/json")
-        xhr.send(JSON.stringify(user));
-        xhr.onreadystatechange = () => {
-            if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 201)) {
-                alert("User is cool");
-            }
-            else if (xhr.status == 403) {
-                alert("User already exist");
-            }
-        
-
-        }
-        //   fetch("http://localhost:1337", {
-        //         method: 'POST',
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //              },
-        //         body: JSON.stringify(user)})
-        //     .then(response => response.json())
-        //         .then(result => alert(JSON.parse(result)))
+        fetch("https://relaxacion.egorleb.repl.co", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                     },
+                body: JSON.stringify(user)})
+            .then(function(response){
+                if (response.status !== 201) {  
+                    alert('User with this email already exist' )
+                }
+                else {
+                    let name = response.json.name;
+                    localStorage.setItem("name", name);
+                    window.location.href='/reglog';
+                }
+                    })
+                
         
        }   
-         
+
+        // xhr.open('POST', 'https://relaxacion.egorleb.repl.co', true);
+        // xhr.setRequestHeader("Content-type", "application/json")
+        //  xhr.send(JSON.stringify(user));
+        //  xhr.onreadystatechange = () => {
+        //     if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 201)) {
+        //         alert("User is cool");
+        //     }
+        //     else if (xhr.status == 403) {
+        //         alert("User already exist");
+        //     }
+           
+        // }
+        // alert(xhr.readyState)
+
     
+
+        // }
+          
+         
+        
 
 
     render() {
@@ -116,7 +128,7 @@ export default class SignUpCom extends Component<any, any> {
 
 
     return (
-        <form style={form}>
+        <form onSubmit={this.handleSubmit} style={form}>
         <p style={Log_in}>Register</p>
 
         <div>
@@ -135,7 +147,7 @@ export default class SignUpCom extends Component<any, any> {
             <input name="password" value={this.state.password} onChange={this.handleInputChange} style={input} type="password" placeholder="Enter password" />
         </div>
 
-        <button style={enter} type='submit' onClick={this.handleSubmit}>Register</button>
+        <button style={enter} type='submit' >Register</button>
 
         </form>
 )

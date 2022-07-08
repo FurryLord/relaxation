@@ -24,6 +24,7 @@ export default class Login extends Component<any, any> {
       }
     
        handleSubmit(event: { preventDefault: () => void; }){
+        event.preventDefault();
         let { email, password } = this.state
     
           var xhr = new XMLHttpRequest();
@@ -34,30 +35,55 @@ export default class Login extends Component<any, any> {
             "password": `${password}`
         }
 
-        xhr.open('POST', 'http://localhost:1337', true);
+        xhr.open('POST', 'https://relaxacion.egorleb.repl.co', true);
         xhr.setRequestHeader("Content-type", "application/json")
         xhr.send(JSON.stringify(user));
-        xhr.onreadystatechange = () => {
-            if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 201)) {
-                // alert(xhr.responseText);
-                console.log(JSON.parse(xhr.responseText).name)
-                let name = JSON.parse(xhr.responseText).name
-                localStorage.setItem("name", name);
-                
-                window.location.href  = '/home';
-                
+        
+        // xhr.addEventListener("loadend", loadEnd , false);
+         
+        //  function loadEnd(e:any){
+        //     if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 201)) {
+        //         // alert(xhr.responseText);
+        //         console.log(JSON.parse(xhr.responseText).name)
+        //         let name = JSON.parse(xhr.responseText).name
+        //         localStorage.setItem("name", name);
+        //         window.location.href  = '/home';
                 
 
-            }
-            else if (xhr.status == 400){
-                alert("There is no user with this email")
-            }
-            else if (xhr.status == 403) {
-                alert("User already exist");
-            }
+        //     }
+        //     else if (xhr.status == 400){
+        //         alert("There is no user with this email")
+        //     }
+        //     else if (xhr.status == 403) {
+        //         alert("User already exist");
+        //     }
        
 
-        }
+        // }
+        fetch("https://relaxacion.egorleb.repl.co", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+                 },
+            body: JSON.stringify(user)})
+        .then(function(response){
+            if (response.status !== 201) {  
+                alert('There is no user with this email')
+            }
+            
+                
+                response.json().then(function(data){
+                    console.log(data.name)
+                    let name = data.name;
+                    localStorage.setItem("name", name);
+                    window.location.href='/home';
+                })
+                
+                
+                
+               
+            
+                })
     //       fetch("http://localhost:1337", {
     //             method: 'POST',
     //             headers: {
