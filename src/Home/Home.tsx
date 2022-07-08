@@ -11,6 +11,8 @@ import React from "react";
 
 // eslint-disable-next-line import/prefer-default-export
 export function Home() {
+    let name = localStorage.getItem("name");
+    console.log(name);
     let [overMem, setOverMem]= React.useState(false);
     let [overPsy, setOverPsy]= React.useState(false);
     let [overLg, setOverLg]= React.useState(false);
@@ -220,7 +222,7 @@ export function Home() {
             {/* eslint-disable-next-line react/button-has-type */}
             <main style={main}>
                 <div style={HomeWrapper}>
-                    <p style={HomeInnerTitle}>Hello, <span style={HomeInnerTitleName}>name!</span> </p>
+                    <p style={HomeInnerTitle}>Hello, <span style={HomeInnerTitleName}>{name}</span> </p>
                     <div style={HomeCatalogue}>
                         <button style={HomeButtonMeme}
                                 onMouseDown={()=>setOverMem(true)}
