@@ -122,7 +122,7 @@ export function MemeGenerated() {
       <NavibarBack />
       <div style={MemContainer}>
         <div style={MemContent}>
-          <button onClick={() => navigate('/meme_page')} style={MakeButton}>
+          <button onClick={() => navigate('/home/meme_page')} style={MakeButton}>
             Make more memes
           </button>
           {url && <img src={url} alt='meme' style={MemImage} />}
