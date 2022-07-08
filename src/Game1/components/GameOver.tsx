@@ -4,7 +4,8 @@ import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack';
 // @ts-ignore
 import styles from "./gameStyle.module.css";
 
-export function Question1() {
+
+export function GameOver() {
 
     let qu = require('./question.json')
     const navigate = useNavigate()
@@ -13,7 +14,7 @@ export function Question1() {
         <body className={styles.body}>
             <NavibarBack />
             <div className={styles.block}>
-                <div className={styles.little_box_now}>1</div>
+                <div className={styles.little_box}>1</div>
                 <div className={styles.little_box}>2</div>
                 <div className={styles.little_box}>3</div>
                 <div className={styles.little_box}>4</div>
@@ -31,26 +32,17 @@ export function Question1() {
             </div>
             <div className={styles.box}>
                 <div className={styles.question}>
-                    <h3 className={styles.h3}>Question</h3>
-                    <p className={styles.p}>{qu.q1.question}</p>
+                    <h3 className={styles.h3}>You lose!</h3>
                 </div>
 
                 <div className={styles.answer}>
-                    <div className={styles.box_answer} onClick={() => navigate('/home/GameOver')}>
-                        <button className={styles.btn}>{qu.q1.answers.a}</button>
+                    <div className={styles.box_answer} id="a">
+                        <button className={styles.btn} onClick={() => navigate('/home/Game1')}>Start Over</button>
                     </div>
-                    <div className={styles.box_answer} onClick={() => navigate('/home/GameOver')}>
-                        <button className={styles.btn}>{qu.q1.answers.b}</button>
-                    </div>
-                    <div className={styles.box_answer} onClick={() => navigate('/home/Question2')}>
-                        <button className={styles.btn}>{qu.q1.answers.c}</button>
-                    </div>
-                    <div className={styles.box_answer} onClick={() => navigate('/home/GameOver')}>
-                        <button className={styles.btn}>{qu.q1.answers.d}</button>
-                    </div>
+
                 </div>
             </div>
-     
+
         </body>
         
     );
