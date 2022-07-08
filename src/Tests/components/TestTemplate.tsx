@@ -27,7 +27,8 @@ export function TestTemplate(props: Test) {
     const questionField: CSS.Properties = {
         height: '17vh',
         background: '#6ACD94',
-        margin: '0' 
+        margin: '0',
+        borderBottom: '0.01em solid #000000' 
     }
 
     const answerOptions: CSS.Properties = {

@@ -77,16 +77,6 @@ export function Catalog() {
                         <a style={text}>What element are you?</a>
                     </div>
                 </div>
-                <div style={test}>
-                    <div style={namebox}>
-                        <a style={text}>Test 2</a>
-                    </div>
-                </div>
-                <div style={test}>
-                    <div style={namebox}>
-                        <a style={text}>Test 3</a>
-                    </div>
-                </div>
             </div>
         </body>
     )

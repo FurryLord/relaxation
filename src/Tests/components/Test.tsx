@@ -4,12 +4,17 @@ import { Result } from "./Result";
 import React, { Component } from 'react';
 
 type MyProps = {
-    content: {
+    questionContent: {
         question: string;
         answers: {
             type: string;
             content: string;
         }[];
+    }[],
+    resultContent: {
+        result: string;
+        description: string;
+        imageURL: string;
     }[]
 }
 
@@ -28,7 +33,9 @@ type MyState = {
         Nintendo: number
         Sony: number
     },
-    result: string
+    result: string,
+    description: string,
+    imageURL: string
 }
 
 export class Test extends Component<MyProps, MyState> {
@@ -63,7 +70,9 @@ export class Test extends Component<MyProps, MyState> {
                 Nintendo: 0,
                 Sony: 0
             },
-            result: ''
+            result: '',
+            description: '',
+            imageURL: ''
         };
 
         this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -71,15 +80,15 @@ export class Test extends Component<MyProps, MyState> {
 
     componentDidMount() {
         this.setState({
-            question: this.props.content[0].question,
-            answerOptions: this.props.content[0].answers
+            question: this.props.questionContent[0].question,
+            answerOptions: this.props.questionContent[0].answers
         });
     }
 
     handleAnswerSelected(event: { currentTarget: { value: any; }; }) {
         this.setUserAnswer(event.currentTarget.value);
 
-        if (this.state.questionId < this.props.content.length) {
+        if (this.state.questionId < this.props.questionContent.length) {
             setTimeout(() => this.setNextQuestion(), 300);
         } else {
             setTimeout(() => this.setResults(this.getResults()), 300);
@@ -103,8 +112,8 @@ export class Test extends Component<MyProps, MyState> {
         this.setState({
             counter: counter,
             questionId: questionId,
-            question: this.props.content[counter].question,
-            answerOptions: this.props.content[counter].answers,
+            question: this.props.questionContent[counter].question,
+            answerOptions: this.props.questionContent[counter].answers,
             answer: ''
         });
     }
@@ -133,14 +142,21 @@ export class Test extends Component<MyProps, MyState> {
                 answerOptions={this.state.answerOptions}
                 questionId={this.state.questionId}
                 question={this.state.question}
-                questionTotal={this.props.content.length}
+                questionTotal={this.props.questionContent.length}
                 onAnswerSelected={this.handleAnswerSelected}
             />
         );
     }
 
     renderResult() {
-        return <Result content={this.state.result} />;
+        for (let index = 0; index < this.props.resultContent.length; index++) {
+            if (this.state.result === this.props.resultContent[index].result) {
+                this.setState({ description: this.props.resultContent[index].description });
+                this.setState({ imageURL: this.props.resultContent[index].imageURL });
+            }
+        }
+        return <Result result={this.state.result} description={this.state.description}
+            imageURL={this.state.imageURL} />;
     }
 
     testContainer: CSS.Properties = {

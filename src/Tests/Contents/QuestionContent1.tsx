@@ -1,4 +1,4 @@
-var Content1 = [
+var questionContent1 = [
     {
         question: "What is your main positive quality?",
         answers: [
@@ -127,4 +127,4 @@ var Content1 = [
     }
   ];
   
-  export default Content1;
+export default questionContent1;

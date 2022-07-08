@@ -1,7 +1,8 @@
 import CSS from "csstype";
 import { NavibarBack } from '../Index_page/Navbar/NaviBarBack';
 import { Test } from "./components/Test";
-import Content1 from "./Contents/Content1";
+import questionContent1 from "./Contents/QuestionContent1";
+import resultContent1 from "./Contents/ResultContent1";
 
 export function Test1() {
 
@@ -30,7 +31,7 @@ export function Test1() {
         <body style={body}>
             <NavibarBack />
             <h1 style={headline}>What element are you?</h1>
-            <Test content={Content1}></Test>
+            <Test questionContent={questionContent1} resultContent={resultContent1}></Test>
         </body>
     )
 }
