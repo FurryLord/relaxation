@@ -12,6 +12,11 @@ export function Catalog() {
     navigate(path)
   }
 
+  const routeChangeTest2 = () => {
+    const path = '/home/tests/2'
+    navigate(path)
+  }
+
   const body: CSS.Properties = {
     /* Background */
     backgroundImage: `url(${backgroundRetro})`,
@@ -45,7 +50,7 @@ export function Catalog() {
 
   const container: CSS.Properties = {
     display: 'flex',
-    width: '90%',
+    width: '70%',
     top: '30%',
     position: 'absolute',
     flexWrap: 'wrap',
@@ -87,6 +92,11 @@ export function Catalog() {
         <div style={test} onClick={routeChangeTest1}>
           <div style={namebox}>
             <a style={text}>What element are you?</a>
+          </div>
+        </div>
+        <div style={test} onClick={routeChangeTest2}>
+          <div style={namebox}>
+            <a style={text}>Your Hogwarts House</a>
           </div>
         </div>
       </div>

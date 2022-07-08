@@ -9,6 +9,7 @@ import { Registration } from '../Registration/reglog'
 import Login from '../Registration/components/login.component'
 import { Catalog } from '../Tests/catalog'
 import { Test1 } from '../Tests/Test1'
+import { Test2 } from '../Tests/Test2'
 import { SignUp } from '../Registration/components/signup'
 import { Game } from '../Game1/components/StartGame'
 import { Question1 } from '../Game1/components/Questionn1'
@@ -43,6 +44,7 @@ export function App() {
       <Route path='/home' element={<Home />} />
       <Route path='/home/tests' element={<Catalog />} />
       <Route path='/home/tests/1' element={<Test1 />} />
+      <Route path='/home/tests/2' element={<Test2 />} />
       <Route path='/home/Game1' element={<Game />} />
       <Route path='/home/Question1' element={<Question1 />} />
       <Route path='/home/Question2' element={<Question2 />} />
