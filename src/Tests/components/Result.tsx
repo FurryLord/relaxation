@@ -31,6 +31,7 @@ export function Result(props: Result) {
     const resultDesription: CSS.Properties = {
         display: 'flex',
         height: '48vh',
+        borderBottom: '0.01em solid #000000' 
     }
 
     const image: CSS.Properties = {
