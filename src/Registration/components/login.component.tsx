@@ -43,9 +43,8 @@ export default class Login extends Component<any, any> {
                 console.log(JSON.parse(xhr.responseText).name)
                 let name = JSON.parse(xhr.responseText).name
                 localStorage.setItem("name", name);
-                console.log("1234")
-                alert("ortnkrjdnt")
-             window.location.href  = '/reglog/sign-up';
+                
+                window.location.href  = '/home';
                 
                 
 
