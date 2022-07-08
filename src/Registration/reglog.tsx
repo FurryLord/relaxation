@@ -12,32 +12,32 @@ import { resolve } from 'node:path/win32';
 import backgroundRetro from "../img/background.png";
 
 export function Registration() {
+    //  console.log(localStorage.getItem("name"))
+//   var xhr = new XMLHttpRequest();
 
-  var xhr = new XMLHttpRequest();
+// let data = {
+//     "type": 'registrtion',
+//     "name": "egor",
+//     "surname": "lebedev",
+//     "email": "egor28476@gmail.com",
+//     "password": "12343211",
+// }
 
-let data = {
-    "type": 'registrtion',
-    "name": "egor",
-    "surname": "lebedev",
-    "email": "egor28476@gmail.com",
-    "password": "12343211",
-}
+// xhr.open('POST', 'http://localhost:1337', true);
+// xhr.setRequestHeader("Content-type", "application/json")
+// xhr.send(JSON.stringify(data));
+// xhr.onreadystatechange = () => {
+//     if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 201)) {
+//         alert("User is cool");
+//     }
+//     else if (xhr.status == 403) {
+//         alert("User already exist");
+//     }
+//     else {
+//         console.log('fuck you!')
+//     }
 
-xhr.open('POST', 'http://localhost:1337', true);
-xhr.setRequestHeader("Content-type", "application/json")
-xhr.send(JSON.stringify(data));
-xhr.onreadystatechange = () => {
-    if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 201)) {
-        alert("User is cool");
-    }
-    else if (xhr.status == 403) {
-        alert("User already exist");
-    }
-    else {
-        console.log('fuck you!')
-    }
-
-}
+// }
   const navigate = useNavigate();
   const body: CSS.Properties = {
       /* Background */
@@ -158,7 +158,7 @@ const outer: CSS.Properties ={
 }
 
   return (
-   <body style={body}>
+   <main style={body}>
         <header style={nav}>
           <div style={logoBox}>
               <button onClick={() => navigate('/')} style={logoText}>Relaxacion</button>
@@ -172,7 +172,7 @@ const outer: CSS.Properties ={
             <Login/>
           </div>
         </div>
-   </body>
+   </main>
   )
  
 }

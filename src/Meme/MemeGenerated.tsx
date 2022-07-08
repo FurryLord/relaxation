@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useClipboard } from 'use-clipboard-copy'
 import React, { useState } from 'react'
-
+import { useSelector, useDispatch } from 'react-redux'
 import CSS from 'csstype'
 
 // @ts-ignore
@@ -39,7 +39,7 @@ export function MemeGenerated() {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    
+
     width: '100%',
     height: 'max-content',
   }
@@ -96,9 +96,8 @@ export function MemeGenerated() {
     marginBottom: '0px'
   }
 
-
-
-  const [copied, setCopied] = useState(false)
+  const counter = useSelector((state: any) => state.counter)
+  const dispatch = useDispatch()
 
   const clipboard = useClipboard()
   const navigate = useNavigate()
@@ -107,22 +106,28 @@ export function MemeGenerated() {
   const url = new URLSearchParams(location.search).get('url')
   // console.log(url)
 
+  const copy = () => {
+    return {
+      type: "COPY"
+    }
+  }
+
   const copyLink = () => {
     clipboard.copy(url)
-    setCopied(true)
+    dispatch(copy())
   }
 
   return (
     <body style={body}>
-      <NavibarBack/>
+      <NavibarBack />
       <div style={MemContainer}>
         <div style={MemContent}>
-          <button onClick={() => navigate('/meme_page')} style={MakeButton}>
+          <button onClick={() => navigate('/home/meme_page')} style={MakeButton}>
             Make more memes
           </button>
           {url && <img src={url} alt='meme' style={MemImage} />}
           <button onClick={copyLink} style={CopyButton}>
-            {copied ? 'Link copied!' : 'Copy link'}
+            {counter}
           </button>
         </div>
       </div>

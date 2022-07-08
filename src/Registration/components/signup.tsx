@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import CSS from "csstype";
-
+import SignUpCom from "./signup.component";
 import ReactDOM from 'react-dom';
 import { useNavigate } from "react-router-dom";
+
 export function SignUp() {
+ 
     const navigate = useNavigate();
     const body: CSS.Properties = {
       backgroundColor: '#FEE9C6',
@@ -110,7 +112,13 @@ export function SignUp() {
     display:'flex',
     marginTop:'10%',
     height:'50em',
+    padding:'0',
+    flex: 'none',
+order: '1',
+flexGrow: '0',
   }
+
+
   
         return (
     <body style={body}>
@@ -118,34 +126,23 @@ export function SignUp() {
           <div style={logoBox}>
               <button onClick={() => navigate('/')} style={logoText}>Relaxacion</button>
           </div>
-          <button style={login_button} onClick={()=>navigate('/reglog')}> Sign in</button>
-            <button style={reg_button} onClick={()=>navigate('/reglog/sign-up')}> Sign up</button>
+             <button style={login_button} onClick={()=>navigate('/reglog')}> Sign in</button>
+             <button style={reg_button} onClick={()=>navigate('/reglog/sign-up')}> Sign up</button>
          </header>
     
-       
-            <form>
-                <h3>Register</h3>
-
-                <div className="form-group">
-                    <input type="text"  placeholder="First name" />
-                </div>
-
-                <div className="form-group">
-                    <input type="text"  placeholder="Last name" />
-                </div>
-
-                <div className="form-group">
-                    <input type="email"  placeholder="Enter email" />
-                </div>
-
-                <div className="form-group">
-                    <input type="password" placeholder="Enter password" />
-                </div>
-
-                <button type="submit">Register</button>
-           
-            </form>
-        
+         <div style={outer} className="outer">
+          <div style={inner} className="inner">
+           <SignUpCom/>
+        </div>
+        </div>
       </body>
         );
     }
+function props(props: any, any: any) {
+  throw new Error("Function not implemented.");
+}
+
+function constructor(props: (props: any, any: any) => void, any: any) {
+  throw new Error("Function not implemented.");
+}
+

@@ -1,14 +1,86 @@
 import React, { Component } from "react";
 import CSS from 'csstype'
+import { isPropertySignature } from "typescript";
+import { useNavigate } from "react-router-dom";
+import path from "path";
 
-export default class Login extends Component {
+
+export default class Login extends Component<any, any> {
+    
+     
+
+    constructor(props: any){
+        // const navigate = useNavigate();
+        super(props)
+        this.state = { email:'', password:''}
+        this.handleInputChange = this.handleInputChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+      }
+    
+      handleInputChange(event: { target: any; }) {
+        this.setState({
+            [event.target.name] : event.target.value
+        })
+      }
+    
+       handleSubmit(event: { preventDefault: () => void; }){
+        let { email, password } = this.state
+    
+          var xhr = new XMLHttpRequest();
+
+        let user = {
+            "type": 'authorization',
+            "email": `${email}` ,
+            "password": `${password}`
+        }
+
+        xhr.open('POST', 'http://localhost:1337', true);
+        xhr.setRequestHeader("Content-type", "application/json")
+        xhr.send(JSON.stringify(user));
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 201)) {
+                // alert(xhr.responseText);
+                console.log(JSON.parse(xhr.responseText).name)
+                let name = JSON.parse(xhr.responseText).name
+                localStorage.setItem("name", name);
+                
+                window.location.href  = '/home';
+                
+                
+
+            }
+            else if (xhr.status == 400){
+                alert("There is no user with this email")
+            }
+            else if (xhr.status == 403) {
+                alert("User already exist");
+            }
+       
+
+        }
+    //       fetch("http://localhost:1337", {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //                  },
+    //             body: JSON.stringify(user)})
+    //            .then(response => response.json())
+    //             .then(function(result: any){
+    //                 let res_json = JSON.parse(result);
+    //                 alert(res_json)
+    //                 console.log(res_json)
+    //             })
+    //             console.log("eoini");
+        
+    //    } 
+       }
+  
+         
     render() {
         const form: CSS.Properties = {
-            border: '1px solid #000000',
+            border: '0.05em solid #000000',
             width:'100%',
-            /* Background */
-            backgroundColor: '#FEEAC5',
-           
+            backgroundColor: '#FEEAC5'
                         
             
         }
@@ -55,16 +127,16 @@ export default class Login extends Component {
                 <h3 style={Log_in}>Log in</h3>
 
                 <div >
-                    <input style={input} type="email" placeholder="Enter email" />
+                    <input  name = "email" value={this.state.email} onChange={this.handleInputChange} style={input} type="email" placeholder="Enter email" />
                 </div>
 
                 <div className="form-group">
                     
-                    <input style={input} type="password"  placeholder="Enter password" />
+                    <input name="password" value={this.state.password} onChange={this.handleInputChange} style={input} type="password"  placeholder="Enter password" />
                 </div>
 
                
-                <button style={enter} type="submit" >Enter</button>
+                <button style={enter} type='submit' onClick={this.handleSubmit} >Enter</button>
             
             </form>
             </div>

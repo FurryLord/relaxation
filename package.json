@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@reduxjs/toolkit": "^1.8.3",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
     "dts-css-modules-loader": "^2.0.0",
@@ -63,6 +64,8 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^2.7.1",
     "react-items-carousel": "^2.8.0",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0",
     "typescript-plugin-css-modules": "^3.4.0"
   }
 }

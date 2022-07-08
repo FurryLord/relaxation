@@ -42,6 +42,7 @@ export function App() {
         <Route path="/reglog/sign-in" element={<Login />} />
         <Route path="/reglog/sign-up" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
+<<<<<<< HEAD
         <Route path="/tests" element={<Catalog />} />
         <Route path='/tests/test1' element={<Test1 />} />
         <Route path="/home/Game1" element={<Game />} />
@@ -62,6 +63,11 @@ export function App() {
         <Route path="/home/Question15" element={<Question15 />} />
         <Route path="/home/Win" element={<Win />} />
         <Route path="/home/GameOver" element={<GameOver />} />
+=======
+        <Route path="home/tests" element={<Catalog />} />
+        <Route path='home/tests/test1' element={<Test1 />} />
+        <Route path="home/Game1" element={<Game />} />
+>>>>>>> 5725b0430186a26db647c32d469586e9f8a3a639
     </Routes>
   )
 }
