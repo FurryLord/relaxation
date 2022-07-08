@@ -87,8 +87,8 @@ export function Meme() {
   }
 
   const CreateButton: CSS.Properties = {
-    background: '#A34AA7',
-    border: '1px solid #000000',
+    background: '#D7A6D9',
+    border: '3px solid #000000',
     boxShadow: '-5px 5px 0px #000000',
     borderRadius: '60px',
 
@@ -96,7 +96,9 @@ export function Meme() {
     fontStyle: 'normal',
     fontWeight: '400',
     fontSize: '32px',
-    lineHeight: '38px'
+    lineHeight: '38px',
+
+    color: '#000000',
   }
 
 

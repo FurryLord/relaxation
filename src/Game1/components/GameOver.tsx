@@ -4,7 +4,6 @@ import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack';
 // @ts-ignore
 import styles from "./gameStyle.module.css";
 
-
 export function GameOver() {
 
     let qu = require('./question.json')
@@ -32,7 +31,7 @@ export function GameOver() {
             </div>
             <div className={styles.box}>
                 <div className={styles.question}>
-                    <h3 className={styles.h3}>You lose!</h3>
+                    <p className={styles.p}>You lose!</p>
                 </div>
 
                 <div className={styles.answer}>

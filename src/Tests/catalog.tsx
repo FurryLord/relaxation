@@ -1,6 +1,8 @@
 import CSS from "csstype";
 import { NavibarBack } from '../Index_page/Navbar/NaviBarBack';
 import { useNavigate } from 'react-router-dom';
+// @ts-ignore
+import backgroundRetro from "../img/background.png";
 
 export function Catalog() {
 
@@ -11,7 +13,17 @@ export function Catalog() {
     }
 
     const body: CSS.Properties = {
-        backgroundColor: '#FEE9C6',
+        /* Background */
+        backgroundImage: `url(${backgroundRetro})`,
+        backgroundBlendMode: "soft-light",
+        backgroundSize: 'cover',
+        backgroundPosition: '0 50vh',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        borderWidth: "none",
+        borderStyle: "none",
+        borderColor: "none",
+        backgroundColor: '#FEEAC5',
         /* Size */
         minHeight: '100vh',
         /* Display */
@@ -62,7 +74,7 @@ export function Catalog() {
     }
 
     const text: CSS.Properties = {
-        fontFamily: 'Inter',
+        fontFamily: 'Roboto Condensed',
         fontSize: '24px',
         marginLeft: '4%',
     }

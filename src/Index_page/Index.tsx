@@ -16,7 +16,6 @@ import React from "react";
 // eslint-disable-next-line import/prefer-default-export
 export function Index() {
     let [over, setOver]= React.useState(false);
-    let [click, setClicked]= React.useState(false);
     const navigate = useNavigate();
     const routeChange = () => {
         let path = '/reglog'
@@ -199,14 +198,7 @@ export function Index() {
         // @ts-ignore
         GreetingButton.backgroundColor="#F8A7A4";
     }
-    if(click) {
-        // @ts-ignore
-        GreetingButton.backgroundImage=``;
-        GreetingButton.backgroundColor="#F5807C";
-    } else {
-        // @ts-ignore
-        GreetingButton.backgroundColor="#F8A7A4";
-    }
+
     const GreetingWoman: CSS.Properties = {
         boxShadow: '0 0 0 0',
 
@@ -233,8 +225,8 @@ export function Index() {
                             </p>
                             <button style={GreetingButton}
                                     onClick={routeChange}
-                                    onMouseDown={()=>setClicked(true)}
-                                    onMouseUp={()=>setClicked(false)}
+                                    onMouseDown={()=>setOver(true)}
+                                    onMouseUp={()=>setOver(false)}
                                     onMouseOver={()=>setOver(true)}
                                     onMouseOut={()=>setOver(false)}> Play Now!</button>
                         </div>

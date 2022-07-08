@@ -31,7 +31,7 @@ export function Win() {
             </div>
             <div className={styles.box}>
                 <div className={styles.question}>
-                    <h3 className={styles.h3}>You win!</h3>
+                    <p className={styles.p}>You win!</p>
                 </div>
 
                 <div className={styles.answer}>

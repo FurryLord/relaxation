@@ -167,7 +167,6 @@ export class Test extends Component<MyProps, MyState> {
         border: '0.01em solid #000000',
         background: '#FEEAC5',
         // filter: 'drop-shadow(-10px 10px 0px #000000)'
-
     }
 
     render() {

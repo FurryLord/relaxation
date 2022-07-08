@@ -31,7 +31,6 @@ export function Question3() {
             </div>
             <div className={styles.box}>
                 <div className={styles.question}>
-                    <h3 className={styles.h3}>Question</h3>
                     <p className={styles.p}>{qu.q3.question}</p>
                 </div>
 

@@ -30,7 +30,7 @@ export function Game(){
             </div>
             <div className={styles.box}>
                 <div className={styles.question}>
-                    <h3 className={styles.h3}>Are you ready to start the game and test your knowledge?</h3>
+                    <p className={styles.p}>Are you ready to start the game and test your knowledge?</p>
                 </div>
 
                 <div className={styles.answer}>

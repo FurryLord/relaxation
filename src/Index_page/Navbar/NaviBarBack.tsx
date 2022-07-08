@@ -1,8 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 import CSS from 'csstype'
+import React from "react";
+// @ts-ignore
+import backgroundCircle from "../../img/dots.png";
 // eslint-disable-next-line import/prefer-default-export
 export function NavibarBack() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    let [over, setOver]= React.useState(false);
+
     const nav: CSS.Properties = {
         backgroundColor: '#FEE9C6',
         /* Size */
@@ -27,7 +32,7 @@ export function NavibarBack() {
         /* Display */
         display: 'flex',
         alignContent: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         placeContent: 'center',
         flexDirection: 'row',
@@ -40,8 +45,8 @@ export function NavibarBack() {
         fontSize: '48px',
 
         /* Size */
-        // height: 'fit-content',
-        // width: 'fit-content',
+        height: 'fit-content',
+        width: 'fit-content',
 
         /* Display */
         display: 'flex',
@@ -60,11 +65,10 @@ export function NavibarBack() {
 
     const HomeButton: CSS.Properties = {
         border: '1px solid #000000',
-        width: 'fit-content',
-        margin: '0% 0% 0% 5%',
-        padding: '0% 13% 0% 13%',
+        width: '128px',
+        margin: '0% 0% 0% 2%',
+        padding: '0',
         textAlign: 'center',
-
 
         fontFamily: 'Roboto',
         fontStyle: 'normal',
@@ -74,13 +78,27 @@ export function NavibarBack() {
         backgroundColor: '#FEE9C6',
         color: 'black'
     }
-
+    if(over){
+        // @ts-ignore
+        HomeButton.backgroundImage=`url(${backgroundCircle})`;
+        HomeButton.backgroundBlendMode="soft-light";
+        HomeButton.backgroundSize= 'contain';
+        HomeButton.backgroundAttachment= 'fixed';
+    }
+    else{
+        HomeButton.backgroundImage=`none`
+    }
     return (
         <header style={nav}>
             <div style={logoBox}>
                 <button onClick={() => navigate('/')} style={logoText}>Relaxacion</button>
-                <button onClick={() => navigate('/home')} style={HomeButton} >Home</button>
             </div>
+            <button
+                onMouseDown={()=>setOver(true)}
+                onMouseUp={()=>setOver(false)}
+                onMouseOver={()=>setOver(true)}
+                onMouseOut={()=>setOver(false)}
+                onClick={() => navigate('/home')} style={HomeButton} >Home</button>
         </header>
     )
 }

@@ -1,13 +1,26 @@
 import CSS from "csstype";
 import { NavibarBack } from '../Index_page/Navbar/NaviBarBack';
 import { Test } from "./components/Test";
+// @ts-ignore
 import questionContent1 from "./Contents/QuestionContent1";
 import resultContent1 from "./Contents/ResultContent1";
+// @ts-ignore
+import backgroundRetro from "../img/background.png"
 
 export function Test1() {
 
     const body: CSS.Properties = {
-        backgroundColor: '#FEE9C6',
+        /* Background */
+        backgroundImage: `url(${backgroundRetro})`,
+        backgroundBlendMode: "soft-light",
+        backgroundSize: 'cover',
+        backgroundPosition: '0 50vh',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        borderWidth: "none",
+        borderStyle: "none",
+        borderColor: "none",
+        backgroundColor: '#FEEAC5',
         /* Size */
         minHeight: '100vh',
         /* Display */
