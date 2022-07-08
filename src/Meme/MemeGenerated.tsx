@@ -1,25 +1,27 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useClipboard } from 'use-clipboard-copy'
 import React, { useState } from 'react'
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { useSelector, useDispatch } from 'react-redux'
 import CSS from 'csstype'
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import backgroundRetro from "../img/background.png";
-import { NavibarBack } from '../Index_page/Navbar/NaviBarBack';
+import backgroundRetro from '../img/background.png'
+import { NavibarBack } from '../Index_page/Navbar/NaviBarBack'
 
 export function MemeGenerated() {
   const body: CSS.Properties = {
     /* Background */
     backgroundImage: `url(${backgroundRetro})`,
-    backgroundBlendMode: "soft-light",
+    backgroundBlendMode: 'soft-light',
     backgroundSize: 'cover',
     backgroundPosition: '0 50vh',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
-    borderWidth: "none",
-    borderStyle: "none",
-    borderColor: "none",
+    borderWidth: 'none',
+    borderStyle: 'none',
+    borderColor: 'none',
     backgroundColor: '#FEEAC5',
     /* Size */
     minHeight: '100vh',
@@ -31,8 +33,8 @@ export function MemeGenerated() {
     alignItems: 'center',
 
     margin: '0',
-    padding: '0'
-  };
+    padding: '0',
+  }
   const MemContainer: CSS.Properties = {
     boxSizing: 'border-box',
     display: 'flex',
@@ -59,14 +61,13 @@ export function MemeGenerated() {
     border: '1px solid #000000',
     width: 'max-content',
     height: 'max-content',
-
   }
 
   const MemImage: CSS.Properties = {
     height: 'max-content',
     width: 'max-content',
     marginTop: '2%',
-    marginBottom: '2%'
+    marginBottom: '2%',
   }
 
   const MakeButton: CSS.Properties = {
@@ -84,7 +85,6 @@ export function MemeGenerated() {
     color: '#000000',
   }
 
-
   const CopyButton: CSS.Properties = {
     borderStyle: 'none',
     background: '#FEEAC5',
@@ -95,7 +95,7 @@ export function MemeGenerated() {
     fontWeight: '400',
     fontSize: '32px',
     lineHeight: '38px',
-    marginBottom: '0px'
+    marginBottom: '0px',
   }
 
   const counter = useSelector((state: any) => state.counter)
@@ -108,11 +108,9 @@ export function MemeGenerated() {
   const url = new URLSearchParams(location.search).get('url')
   // console.log(url)
 
-  const copy = () => {
-    return {
-      type: "COPY"
-    }
-  }
+  const copy = () => ({
+    type: 'COPY',
+  })
 
   const copyLink = () => {
     clipboard.copy(url)
@@ -124,10 +122,12 @@ export function MemeGenerated() {
       <NavibarBack />
       <div style={MemContainer}>
         <div style={MemContent}>
+          {/* eslint-disable-next-line react/button-has-type */}
           <button onClick={() => navigate('/home/meme_page')} style={MakeButton}>
             Make more memes
           </button>
           {url && <img src={url} alt='meme' style={MemImage} />}
+          {/* eslint-disable-next-line react/button-has-type */}
           <button onClick={copyLink} style={CopyButton}>
             {counter}
           </button>

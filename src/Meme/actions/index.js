@@ -1,5 +1,3 @@
-export const copy = () => {
-    return {
-        type: "COPY"
-    }
-}
+export const copy = () => ({
+  type: 'COPY',
+})

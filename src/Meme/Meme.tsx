@@ -2,23 +2,24 @@ import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import CSS from 'csstype'
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import backgroundRetro from "../img/background.png"
-import { NavibarBack } from '../Index_page/Navbar/NaviBarBack';
+import backgroundRetro from '../img/background.png'
+import { NavibarBack } from '../Index_page/Navbar/NaviBarBack'
 
+// eslint-disable-next-line import/prefer-default-export
 export function Meme() {
-
   const body: CSS.Properties = {
     /* Background */
     backgroundImage: `url(${backgroundRetro})`,
-    backgroundBlendMode: "soft-light",
+    backgroundBlendMode: 'soft-light',
     backgroundSize: 'cover',
     backgroundPosition: '0 50vh',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
-    borderWidth: "none",
-    borderStyle: "none",
-    borderColor: "none",
+    borderWidth: 'none',
+    borderStyle: 'none',
+    borderColor: 'none',
     backgroundColor: '#FEEAC5',
     /* Size */
     minHeight: '100vh',
@@ -30,8 +31,8 @@ export function Meme() {
     alignItems: 'center',
 
     margin: '0',
-    padding: '0'
-  };
+    padding: '0',
+  }
   const MemContainer: CSS.Properties = {
     boxSizing: 'border-box',
     display: 'flex',
@@ -63,14 +64,13 @@ export function Meme() {
     height: 'max-content',
     width: 'max-content',
     marginTop: '2%',
-    marginBottom: '2%'
+    marginBottom: '2%',
   }
 
   const EnterButton: CSS.Properties = {
     background: '#FFFFFF',
     border: '2px solid #000000',
     borderRadius: '60px',
-
   }
 
   const NextButton: CSS.Properties = {
@@ -83,7 +83,7 @@ export function Meme() {
     fontWeight: '400',
     fontSize: '32px',
     lineHeight: '38px',
-    marginBottom: '0px'
+    marginBottom: '0px',
   }
 
   const CreateButton: CSS.Properties = {
@@ -100,8 +100,6 @@ export function Meme() {
 
     color: '#000000',
   }
-
-
 
   const [memes, setMemes] = useState<any[]>([])
   const [memeIndex, setMemIndex] = useState<any[number]>(0)
@@ -122,10 +120,13 @@ export function Meme() {
   }
 
   const shuffleMemes = (array: string[]) => {
+    // eslint-disable-next-line no-plusplus
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * i)
       const temp = array[i]
+      // eslint-disable-next-line no-param-reassign
       array[i] = array[j]
+      // eslint-disable-next-line no-param-reassign
       array[j] = temp
     }
   }
@@ -146,6 +147,7 @@ export function Meme() {
       method: 'POST',
       body: formData,
     }).then((res) => {
+      // eslint-disable-next-line no-shadow
       res.json().then((res) => {
         const saveURL = window.location.pathname
         navigate(`${saveURL}/generated?url=${res.data.url}`)
@@ -155,7 +157,9 @@ export function Meme() {
 
   useEffect(() => {
     fetch('https://api.imgflip.com/get_memes').then((res) => {
+      // eslint-disable-next-line no-shadow
       res.json().then((res) => {
+        // eslint-disable-next-line no-underscore-dangle
         const _memes = res.data.memes
         shuffleMemes(_memes)
         setMemes(_memes)
@@ -169,28 +173,29 @@ export function Meme() {
     }
   }, [memeIndex, memes])
 
-
   return memes.length ? (
     <body style={body}>
       <NavibarBack />
       <div style={MemContainer}>
         <div style={MemContent}>
-
           {fields.map((element, index) => (
             <input onChange={(e) => updateField(e, index)} key={index} style={EnterButton} />
           ))}
+          {/* eslint-disable-next-line react/button-has-type */}
           <button onClick={() => fetchMeme()} style={CreateButton}>
             Create!
           </button>
           <img src={memes[memeIndex].url} alt='meme' style={MemImage} />
+          {/* eslint-disable-next-line react/button-has-type */}
           <button onClick={() => setMemIndex(memeIndex + 1)} style={NextButton}>
             Next
           </button>
         </div>
-        {/*<img style={mainBackground} src={background}/>*/}
+        {/* <img style={mainBackground} src={background}/> */}
       </div>
     </body>
   ) : (
+      // eslint-disable-next-line react/jsx-no-useless-fragment
     <></>
   )
 }

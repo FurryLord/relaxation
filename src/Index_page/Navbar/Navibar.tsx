@@ -60,9 +60,12 @@ export function Navibar() {
 
   return (
     <header style={nav}>
-        <div style={logoBox}>
-            <button onClick={() => navigate('/')} style={logoText}>Relaxacion</button>
-        </div>
+      <div style={logoBox}>
+        {/* eslint-disable-next-line react/button-has-type */}
+        <button onClick={() => navigate('/')} style={logoText}>
+          Relaxacion
+        </button>
+      </div>
     </header>
   )
 }
