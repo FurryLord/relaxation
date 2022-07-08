@@ -1,10 +1,19 @@
-import React from 'react';
+import CSS from "csstype";
 
-type Property = {
-    content: string;  
+type Question = {
+    content: string;
 }
-export function Question(props: Property) {
+
+export function Question(props: Question) {
+
+    const question: CSS.Properties = {
+        fontFamily: 'Roboto Condensed',
+        fontSize: '40px',
+        marginTop: '2vh',
+        marginLeft: '2vw'
+    }
+
     return (
-        <h2 className='question'>{props.content}</h2>
+        <h2 style={question}>{props.content}</h2>
     );
 }

@@ -1,7 +1,14 @@
 import CSS from "csstype";
 import { NavibarBack } from '../Index_page/Navbar/NaviBarBack';
+import { useNavigate } from 'react-router-dom';
 
 export function Catalog() {
+
+    const navigate = useNavigate();
+    const routeChangeTest1 = () =>{
+        let path = '/home/tests/1'
+        navigate(path)
+    }
 
     const body: CSS.Properties = {
         backgroundColor: '#FEE9C6',
@@ -40,7 +47,8 @@ export function Catalog() {
         width: '22vw',
         height: '23vh',
         background: '#6ACD94',
-        border: '1px solid #000000'
+        border: '1px solid #000000',
+        cursor: 'pointer'
     }
 
     const namebox: CSS.Properties = {
@@ -55,8 +63,8 @@ export function Catalog() {
 
     const text: CSS.Properties = {
         fontFamily: 'Inter',
-        fontSize: '32px',
-        marginLeft: '5%'
+        fontSize: '24px',
+        marginLeft: '4%',
     }
 
     return (
@@ -64,9 +72,9 @@ export function Catalog() {
             <NavibarBack />
             <h1 style={headline}>Tests</h1>
             <div style={container}>
-                <div style={test}>
+                <div style={test} onClick={routeChangeTest1}>
                     <div style={namebox}>
-                        <a style={text}>Test 1</a>
+                        <a style={text}>What element are you?</a>
                     </div>
                 </div>
                 <div style={test}>
