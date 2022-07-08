@@ -1,7 +1,9 @@
 import CSS from 'csstype'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack';
 
-export function Game(){
+
+export function Question1() {
 
     const body: CSS.Properties = {
         backgroundColor: '#FEE9C6',
@@ -13,34 +15,21 @@ export function Game(){
         alignContent: 'center',
         justifyContent: 'flex-start',
         alignItems: 'center',
-
         margin: '0',
         padding: '0'
     };
 
-
-    const box: CSS.Properties = {
-        position: 'absolute',
-        width: '72vw',
-        height:'57vh',
-        display: "flex",
-        flexWrap: "wrap",
-        margin:'31vh auto',
-        filter: "drop-shadow(-10px 10px 0px #000000)",
-        
-    }
-
     const question: CSS.Properties = {
-    
+
         width: '72vw',
-        height:'28vh',
+        height: '28vh',
         background: "#41A6E1",
         border: "1px solid #000000",
     }
 
     const answer: CSS.Properties = {
         width: '72vw',
-        height:'29vh',
+        height: '29vh',
         background: "#FEEAC5",
         border: "1px solid #000000",
         display: "flex",
@@ -54,7 +43,7 @@ export function Game(){
         position: 'absolute',
         top: "22vh",
         width: '72vw',
-        height:'4vh',
+        height: '4vh',
         display: "flex",
         justifyContent: "space-between",
 
@@ -62,24 +51,73 @@ export function Game(){
 
     const little_box: CSS.Properties = {
         width: '2vw',
+        height: '4vh',
+        background: "#41A6E1",
+        textAlign: "center",
+
+    }
+
+    const little_box_now: CSS.Properties = {
+        width: '2vw',
         height:'4vh',
         background: "#41A6E1",
+        textAlign: "center",
+        border: "1px solid #000000",
+        
+    }
+
+    const little__box_pass: CSS.Properties = {
+        width: '2vw',
+        height:'4vh',
+        background: "#005DA3",
         textAlign: "center",
         
     }
 
     const box_answer: CSS.Properties = {
-        border: "1px solid #000000",
+        // border: "1px solid #000000",
         width: '34vw',
-        height:'8vh',
+        height: '8vh',
     }
 
-    return ( 
+    const btn: CSS.Properties = {
+        color: "black",
+        width: '34vw',
+        height: '8vh',
+        background: "#FEE9C6",
+        border: "1px solid #000000"
 
+    }
+
+    const box: CSS.Properties = {
+        position: 'absolute',
+        width: '72vw',
+        height:'57vh',
+        display: "flex",
+        flexWrap: "wrap",
+        margin:'31vh auto',
+        filter: "drop-shadow(-10px 10px 0px #000000)",
+        
+    }
+
+    const h3: CSS.Properties = {
+        textAlign: "center",
+        marginTop: "8vh",
+    }
+
+    const p: CSS.Properties = {
+        textAlign: "center",
+    }
+
+    let qu = require('./question.json')
+    const navigate = useNavigate()
+
+
+    return (
         <body style={body}>
             <NavibarBack />
             <div style={block}>
-                <div style={little_box} id="b1">1</div>
+                <div style={little_box_now} id="b1">1</div>
                 <div style={little_box} id="b2">2</div>
                 <div style={little_box} id="b3">3</div>
                 <div style={little_box} id="b4">4</div>
@@ -96,18 +134,28 @@ export function Game(){
                 <div style={little_box} id="b15">15</div>
             </div>
             <div style={box}>
-                <div style={question}>Question</div>
+                <div style={question}>
+                    <h3 style={h3}>Question</h3>
+                    <p style={p}>{qu.q1.question}</p>
+                </div>
+
                 <div style={answer}>
-                    <div style={box_answer} id="a">a</div>
-                    <div style={box_answer} id="b">b</div>
-                    <div style={box_answer} id="c">c</div>
-                    <div style={box_answer} id="d">d</div>
-                    
+                    <div style={box_answer} onClick={() => navigate('/home/GameOver')}>
+                        <button style={btn}>{qu.q1.answers.a}</button>
+                    </div>
+                    <div style={box_answer} onClick={() => navigate('/home/GameOver')}>
+                        <button style={btn}>{qu.q1.answers.b}</button>
+                    </div>
+                    <div style={box_answer} onClick={() => navigate('/home/Question2')}>
+                        <button style={btn}>{qu.q1.answers.c}</button>
+                    </div>
+                    <div style={box_answer} onClick={() => navigate('/home/GameOver')}>
+                        <button style={btn}>{qu.q1.answers.d}</button>
+                    </div>
                 </div>
             </div>
-            
-
+     
         </body>
-
+        
     );
 }
