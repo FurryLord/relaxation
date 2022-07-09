@@ -8,11 +8,11 @@ import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 import { App } from './App/App'
 import reportWebVitals from './reportWebVitals'
-import linkReducer from './Meme/reducers/counter'
+import linkReducer from './Meme/reducer/counter'
 
 const clientStore = configureStore(
   { reducer: { counter: linkReducer } },
-    // eslint-disable-next-line no-underscore-dangle
+  // eslint-disable-next-line no-underscore-dangle
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 )
 

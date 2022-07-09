@@ -160,12 +160,12 @@ export function SignUp() {
     </body>
   )
 }
-// eslint-disable-next-line no-shadow
+// eslint-disable-next-line no-shadow, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
 function props(props: any, any: any) {
   throw new Error('Function not implemented.')
-} 
- 
-// eslint-disable-next-line no-shadow
+}
+
+// eslint-disable-next-line no-shadow, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
 function constructor(props: (props: any, any: any) => void, any: any) {
   throw new Error('Function not implemented.')
 }
