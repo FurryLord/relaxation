@@ -160,6 +160,7 @@ export function SignUp() {
     </body>
   )
 }
+// eslint-disable-next-line no-shadow
 function props(props: any, any: any) {
   throw new Error('Function not implemented.')
 } 
