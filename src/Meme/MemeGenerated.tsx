@@ -1,10 +1,9 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useClipboard } from 'use-clipboard-copy'
-import React, { useState } from 'react'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useSelector, useDispatch } from 'react-redux'
 import CSS from 'csstype'
-import { copy } from './actions'
+import { copy } from './actions/copy'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import backgroundRetro from '../img/background.png'
