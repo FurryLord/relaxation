@@ -2,6 +2,7 @@
 
 import { HashRouter as Router, Route, Routes } from "react-router-dom"
 import { Meme } from "../Meme/Meme"
+// @ts-ignore
 import { MemeGenerated } from "../Meme/MemeGenerated"
 // @ts-ignore
 import { Index } from "../Index_page/Index"
@@ -36,8 +37,8 @@ export function App() {
   return (
     <Routes>
       <Route path='/' element={<Index />} />
-      <Route path='home/meme_page/generated' element={<MemeGenerated />} />
-      <Route path='home/meme_page' element={<Meme />} />
+      <Route path='/home/meme_page/generated' element={<MemeGenerated />} />
+      <Route path='/home/meme_page' element={<Meme />} />
       <Route path='/reglog/*' element={<Registration />} />
       <Route path='/reglog/sign-in' element={<Login />} />
       <Route path='/reglog/sign-up' element={<SignUp />} />

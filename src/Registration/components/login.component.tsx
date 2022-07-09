@@ -52,7 +52,7 @@ export default class Login extends Component<any, any> {
         console.log(data.name)
         const { name } = data
         localStorage.setItem("name", name)
-        const saveURL = location.origin
+        const saveURL = `${window.location.protocol}//${window.location.host}`
         console.log(saveURL)
         window.location.href = `${saveURL}/#/home`
       })
