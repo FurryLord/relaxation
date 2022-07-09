@@ -8,7 +8,6 @@ type Test = {
   question: string
   questionId: number
   questionTotal: number
-  answer: string
   answerOptions: {
     type: string
     content: string

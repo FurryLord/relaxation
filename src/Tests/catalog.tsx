@@ -81,6 +81,7 @@ export function Catalog() {
   const text: CSS.Properties = {
     fontFamily: 'Roboto Condensed',
     fontSize: '24px',
+    marginTop: '0',
     marginLeft: '4%',
   }
 
@@ -89,14 +90,16 @@ export function Catalog() {
       <NavibarBack />
       <h1 style={headline}>Tests</h1>
       <div style={container}>
-        <div style={test} onClick={routeChangeTest1}>
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
+        <div role="button" style={test} onClick={routeChangeTest1} tabIndex={0}>
           <div style={namebox}>
-            <a style={text}>What element are you?</a>
+            <p style={text}>What element are you?</p>
           </div>
         </div>
-        <div style={test} onClick={routeChangeTest2}>
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
+        <div role="button" style={test} onClick={routeChangeTest2} tabIndex={0}>
           <div style={namebox}>
-            <a style={text}>Your Hogwarts House</a>
+            <p style={text}>Your Hogwarts House</p>
           </div>
         </div>
       </div>
