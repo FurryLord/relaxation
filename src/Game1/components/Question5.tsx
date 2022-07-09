@@ -66,16 +66,28 @@ export function Question5() {
 
         <div className={styles.answer}>
           <div className={styles.box_answer}>
-            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q5.answers.a}</button>
-          </div>
-          <div className={styles.box_answer} >
-            <button type="button" onClick={() => navigate('/home/Question6')} className={styles.btn}>{qu.q5.answers.b}</button>
+            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+              {qu.q5.answers.a}
+            </button>
           </div>
           <div className={styles.box_answer}>
-            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q5.answers.c}</button>
+            <button
+              type='button'
+              onClick={() => navigate('/home/Question6')}
+              className={styles.btn}
+            >
+              {qu.q5.answers.b}
+            </button>
           </div>
-          <div className={styles.box_answer} >
-            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q5.answers.d}</button>
+          <div className={styles.box_answer}>
+            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+              {qu.q5.answers.c}
+            </button>
+          </div>
+          <div className={styles.box_answer}>
+            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+              {qu.q5.answers.d}
+            </button>
           </div>
         </div>
       </div>

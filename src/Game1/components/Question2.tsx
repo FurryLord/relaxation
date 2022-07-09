@@ -4,7 +4,7 @@ import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
 import styles from './gameStyle.module.css'
 
 export function Question2() {
-// eslint-disable-next-line @typescript-eslint/no-var-requires,global-require
+  // eslint-disable-next-line @typescript-eslint/no-var-requires,global-require
   const qu = require('./question.json')
   const navigate = useNavigate()
 
@@ -34,17 +34,29 @@ export function Question2() {
         </div>
 
         <div className={styles.answer}>
-          <div className={styles.box_answer} >
-            <button type="button" onClick={() => navigate('/home/Question3')} className={styles.btn}>{qu.q2.answers.a}</button>
-          </div>
-          <div className={styles.box_answer} >
-            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q2.answers.b}</button>
+          <div className={styles.box_answer}>
+            <button
+              type='button'
+              onClick={() => navigate('/home/Question3')}
+              className={styles.btn}
+            >
+              {qu.q2.answers.a}
+            </button>
           </div>
           <div className={styles.box_answer}>
-            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q2.answers.c}</button>
+            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+              {qu.q2.answers.b}
+            </button>
           </div>
           <div className={styles.box_answer}>
-            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q2.answers.d}</button>
+            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+              {qu.q2.answers.c}
+            </button>
+          </div>
+          <div className={styles.box_answer}>
+            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+              {qu.q2.answers.d}
+            </button>
           </div>
         </div>
       </div>

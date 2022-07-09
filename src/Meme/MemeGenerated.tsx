@@ -107,7 +107,6 @@ export function MemeGenerated() {
   const url = new URLSearchParams(location.search).get('url')
   // console.log(url)
 
-
   const copyLink = () => {
     clipboard.copy(url)
     dispatch(copy())
@@ -118,11 +117,11 @@ export function MemeGenerated() {
       <NavibarBack />
       <div style={MemContainer}>
         <div style={MemContent}>
-          <button type="button" onClick={() => navigate('/home/meme_page')} style={MakeButton}>
+          <button type='button' onClick={() => navigate('/home/meme_page')} style={MakeButton}>
             Make more memes
           </button>
           {url && <img src={url} alt='meme' style={MemImage} />}
-          <button type="button" onClick={copyLink} style={CopyButton}>
+          <button type='button' onClick={copyLink} style={CopyButton}>
             {counter}
           </button>
         </div>

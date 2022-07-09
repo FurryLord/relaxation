@@ -38,7 +38,6 @@ type MyState = {
 }
 
 export class Test extends Component<MyProps, MyState> {
-
   testContainer: CSS.Properties = {
     position: 'absolute',
     top: '27vh',
@@ -121,9 +120,9 @@ export class Test extends Component<MyProps, MyState> {
   }
 
   setNextQuestion() {
-  // eslint-disable-next-line react/destructuring-assignment,react/no-access-state-in-setstate
+    // eslint-disable-next-line react/destructuring-assignment,react/no-access-state-in-setstate
     const counter = this.state.counter + 1
-  // eslint-disable-next-line react/destructuring-assignment,react/no-access-state-in-setstate
+    // eslint-disable-next-line react/destructuring-assignment,react/no-access-state-in-setstate
     const questionId = this.state.questionId + 1
 
     this.setState({

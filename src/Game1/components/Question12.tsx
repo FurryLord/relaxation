@@ -3,7 +3,6 @@ import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
 // @ts-ignore
 import styles from './gameStyle.module.css'
 
-
 export function Question12() {
   // eslint-disable-next-line @typescript-eslint/no-var-requires,global-require
   const qu = require('./question.json')
@@ -65,17 +64,29 @@ export function Question12() {
         </div>
 
         <div className={styles.answer}>
-          <div className={styles.box_answer} >
-            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q12.answers.a}</button>
-          </div>
-          <div className={styles.box_answer} >
-            <button type="button" onClick={() => navigate('/home/Question13')} className={styles.btn}>{qu.q12.answers.b}</button>
-          </div>
-          <div className={styles.box_answer} >
-            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q12.answers.c}</button>
+          <div className={styles.box_answer}>
+            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+              {qu.q12.answers.a}
+            </button>
           </div>
           <div className={styles.box_answer}>
-            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q12.answers.d}</button>
+            <button
+              type='button'
+              onClick={() => navigate('/home/Question13')}
+              className={styles.btn}
+            >
+              {qu.q12.answers.b}
+            </button>
+          </div>
+          <div className={styles.box_answer}>
+            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+              {qu.q12.answers.c}
+            </button>
+          </div>
+          <div className={styles.box_answer}>
+            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+              {qu.q12.answers.d}
+            </button>
           </div>
         </div>
       </div>

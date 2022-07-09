@@ -34,7 +34,7 @@ export function GameOver() {
 
         <div className={styles.answer}>
           <div className={styles.box_answer} id='a'>
-            <button type="button" className={styles.btn} onClick={() => navigate('/home/Game1')}>
+            <button type='button' className={styles.btn} onClick={() => navigate('/home/Game1')}>
               Start Over
             </button>
           </div>

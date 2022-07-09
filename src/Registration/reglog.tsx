@@ -13,32 +13,6 @@ import backgroundRetro from '../img/background.png'
 
 // eslint-disable-next-line import/prefer-default-export
 export function Registration() {
-  //  console.log(localStorage.getItem("name"))
-  //   var xhr = new XMLHttpRequest();
-
-  // let data = {
-  //     "type": 'registrtion',
-  //     "name": "egor",
-  //     "surname": "lebedev",
-  //     "email": "egor28476@gmail.com",
-  //     "password": "12343211",
-  // }
-
-  // xhr.open('POST', 'http://localhost:1337', true);
-  // xhr.setRequestHeader("Content-type", "application/json")
-  // xhr.send(JSON.stringify(data));
-  // xhr.onreadystatechange = () => {
-  //     if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 201)) {
-  //         alert("User is cool");
-  //     }
-  //     else if (xhr.status == 403) {
-  //         alert("User already exist");
-  //     }
-  //     else {
-  //         console.log('fuck you!')
-  //     }
-
-  // }
   const navigate = useNavigate()
   const body: CSS.Properties = {
     /* Background */

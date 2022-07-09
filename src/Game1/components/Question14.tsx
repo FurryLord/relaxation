@@ -64,17 +64,29 @@ export function Question14() {
         </div>
 
         <div className={styles.answer}>
-          <div className={styles.box_answer} >
-            <button type="button" onClick={() => navigate('/home/Question15')} className={styles.btn}>{qu.q14.answers.a}</button>
+          <div className={styles.box_answer}>
+            <button
+              type='button'
+              onClick={() => navigate('/home/Question15')}
+              className={styles.btn}
+            >
+              {qu.q14.answers.a}
+            </button>
           </div>
-          <div className={styles.box_answer} >
-            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q14.answers.b}</button>
+          <div className={styles.box_answer}>
+            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+              {qu.q14.answers.b}
+            </button>
           </div>
-          <div className={styles.box_answer} >
-            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q14.answers.c}</button>
+          <div className={styles.box_answer}>
+            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+              {qu.q14.answers.c}
+            </button>
           </div>
-          <div className={styles.box_answer} >
-            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q14.answers.d}</button>
+          <div className={styles.box_answer}>
+            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+              {qu.q14.answers.d}
+            </button>
           </div>
         </div>
       </div>

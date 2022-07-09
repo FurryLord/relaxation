@@ -4,10 +4,8 @@ import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
 // @ts-ignore
 import styles from './gameStyle.module.css'
 
-
 // eslint-disable-next-line import/prefer-default-export
 export function Game() {
-  
   const navigate = useNavigate()
 
   return (
@@ -37,7 +35,11 @@ export function Game() {
 
         <div className={styles.answer}>
           <div className={styles.box_answer} id='a'>
-            <button type="button" className={styles.btn} onClick={() => navigate('/home/Question1')}>
+            <button
+              type='button'
+              className={styles.btn}
+              onClick={() => navigate('/home/Question1')}
+            >
               Start!
             </button>
           </div>

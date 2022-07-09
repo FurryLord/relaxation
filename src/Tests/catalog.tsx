@@ -91,13 +91,13 @@ export function Catalog() {
       <h1 style={headline}>Tests</h1>
       <div style={container}>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
-        <div role="button" style={test} onClick={routeChangeTest1} tabIndex={0}>
+        <div role='button' style={test} onClick={routeChangeTest1} tabIndex={0}>
           <div style={namebox}>
             <p style={text}>What element are you?</p>
           </div>
         </div>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
-        <div role="button" style={test} onClick={routeChangeTest2} tabIndex={0}>
+        <div role='button' style={test} onClick={routeChangeTest2} tabIndex={0}>
           <div style={namebox}>
             <p style={text}>Your Hogwarts House</p>
           </div>

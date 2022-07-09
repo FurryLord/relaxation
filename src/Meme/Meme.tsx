@@ -1,4 +1,4 @@
-import  { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import CSS from 'csstype'
 
@@ -181,11 +181,11 @@ export function Meme() {
             // eslint-disable-next-line react/no-array-index-key
             <input onChange={(e) => updateField(e, index)} key={index} style={EnterButton} />
           ))}
-          <button type="button" onClick={() => fetchMeme()} style={CreateButton}>
+          <button type='button' onClick={() => fetchMeme()} style={CreateButton}>
             Create!
           </button>
           <img src={memes[memeIndex].url} alt='meme' style={MemImage} />
-          <button type="button" onClick={() => setMemIndex(memeIndex + 1)} style={NextButton}>
+          <button type='button' onClick={() => setMemIndex(memeIndex + 1)} style={NextButton}>
             Next
           </button>
         </div>
@@ -193,7 +193,7 @@ export function Meme() {
       </div>
     </body>
   ) : (
-      // eslint-disable-next-line react/jsx-no-useless-fragment
+    // eslint-disable-next-line react/jsx-no-useless-fragment
     <></>
   )
 }
