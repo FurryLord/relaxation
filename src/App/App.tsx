@@ -1,6 +1,6 @@
 // import styles from './styles.module.css'
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { HashRouter as Router, Route, Routes } from "react-router-dom"
 import { Meme } from "../Meme/Meme"
 import { MemeGenerated } from "../Meme/MemeGenerated"
 // @ts-ignore
