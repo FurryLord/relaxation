@@ -120,7 +120,6 @@ export function Meme() {
   }
 
   const shuffleMemes = (array: string[]) => {
-    // eslint-disable-next-line no-plusplus
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * i)
       const temp = array[i]
@@ -181,13 +180,11 @@ export function Meme() {
           {fields.map((element, index) => (
             <input onChange={(e) => updateField(e, index)} key={index} style={EnterButton} />
           ))}
-          {/* eslint-disable-next-line react/button-has-type */}
-          <button onClick={() => fetchMeme()} style={CreateButton}>
+          <button type="button" onClick={() => fetchMeme()} style={CreateButton}>
             Create!
           </button>
           <img src={memes[memeIndex].url} alt='meme' style={MemImage} />
-          {/* eslint-disable-next-line react/button-has-type */}
-          <button onClick={() => setMemIndex(memeIndex + 1)} style={NextButton}>
+          <button type="button" onClick={() => setMemIndex(memeIndex + 1)} style={NextButton}>
             Next
           </button>
         </div>

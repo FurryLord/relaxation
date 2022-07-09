@@ -59,7 +59,7 @@ export function Result(props: Result) {
       </div>
       <div style={resultDesription}>
         <div>
-          <img style={image} src={props.imageURL} />
+          <img style={image} src={props.imageURL} alt="result img" />
         </div>
         <div style={descriptionContent}>{props.description}</div>
       </div>

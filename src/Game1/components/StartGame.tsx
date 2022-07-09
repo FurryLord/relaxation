@@ -36,8 +36,7 @@ export function Game() {
 
         <div className={styles.answer}>
           <div className={styles.box_answer} id='a'>
-            {/* eslint-disable-next-line react/button-has-type */}
-            <button className={styles.btn} onClick={() => navigate('/home/Question1')}>
+            <button type="button" className={styles.btn} onClick={() => navigate('/home/Question1')}>
               Start!
             </button>
           </div>

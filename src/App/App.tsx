@@ -1,7 +1,6 @@
 // import styles from './styles.module.css'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import React from 'react'
 import { Meme } from '../Meme/Meme'
 import { MemeGenerated } from '../Meme/MemeGenerated'
 import { Index } from '../Index_page/Index'

@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useSelector, useDispatch } from 'react-redux'
 import CSS from 'csstype'
-
+import { copy } from './actions'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import backgroundRetro from '../img/background.png'
@@ -108,9 +108,6 @@ export function MemeGenerated() {
   const url = new URLSearchParams(location.search).get('url')
   // console.log(url)
 
-  const copy = () => ({
-    type: 'COPY',
-  })
 
   const copyLink = () => {
     clipboard.copy(url)
@@ -122,13 +119,11 @@ export function MemeGenerated() {
       <NavibarBack />
       <div style={MemContainer}>
         <div style={MemContent}>
-          {/* eslint-disable-next-line react/button-has-type */}
-          <button onClick={() => navigate('/home/meme_page')} style={MakeButton}>
+          <button type="button" onClick={() => navigate('/home/meme_page')} style={MakeButton}>
             Make more memes
           </button>
           {url && <img src={url} alt='meme' style={MemImage} />}
-          {/* eslint-disable-next-line react/button-has-type */}
-          <button onClick={copyLink} style={CopyButton}>
+          <button type="button" onClick={copyLink} style={CopyButton}>
             {counter}
           </button>
         </div>

@@ -1,5 +1,4 @@
-import CSS from 'csstype'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
 // @ts-ignore
 import styles from './gameStyle.module.css'
@@ -34,22 +33,22 @@ export function Question1() {
         </div>
 
         <div className={styles.answer}>
-          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
-          <div className={styles.box_answer} onClick={() => navigate('/home/GameOver')}>
-            <button className={styles.btn}>{qu.q1.answers.a}</button>
+
+          <div className={styles.box_answer} >
+            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q1.answers.a}</button>
           </div>
-          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
-          <div className={styles.box_answer} onClick={() => navigate('/home/GameOver')}>
-            {/* eslint-disable-next-line react/button-has-type */}
-            <button className={styles.btn}>{qu.q1.answers.b}</button>
+
+          <div className={styles.box_answer} >
+
+            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q1.answers.b}</button>
           </div>
-          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
-          <div className={styles.box_answer} onClick={() => navigate('/home/Question2')}>
-            <button className={styles.btn}>{qu.q1.answers.c}</button>
+
+          <div className={styles.box_answer} >
+            <button type="button" onClick={() => navigate('/home/Question2')} className={styles.btn}>{qu.q1.answers.c}</button>
           </div>
-          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
-          <div className={styles.box_answer} onClick={() => navigate('/home/GameOver')}>
-            <button className={styles.btn}>{qu.q1.answers.d}</button>
+
+          <div className={styles.box_answer} >
+            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q1.answers.d}</button>
           </div>
         </div>
       </div>

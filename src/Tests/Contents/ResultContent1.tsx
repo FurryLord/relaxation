@@ -20,7 +20,7 @@ const resultContent1 = [
   {
     result: 'Air',
     description:
-      "The easiest of all the elements. You're like a chameleon, adjusting to people and circumstances without detriment to yourself. And you look for the positives everywhere.",
+      'The easiest of all the elements. You\'re like a chameleon, adjusting to people and circumstances without detriment to yourself. And you look for the positives everywhere.',
     imageURL: 'https://s8.favim.com/orig/150411/aesthetics-air-art-beauty-Favim.com-2640135.jpg',
   },
   {

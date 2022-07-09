@@ -1,6 +1,6 @@
 {
     "q1" : {
-        "question" : "How many cubes are there in a Rubik's cube?",
+        "question" : "How many cubes are there in a Rubik\"s cube?",
         "answers" : {
             "a" : "22",
             "b" : "24",
@@ -30,7 +30,7 @@
         "correct" : "с"
     },
     "q4" : {
-        "question" : "What does the Hawaiian word 'wiki' mean, which gave the Internet encyclopedia Wikipedia its name?",
+        "question" : "What does the Hawaiian word \"wiki\" mean, which gave the Internet encyclopedia Wikipedia its name?",
         "answers" : {
             "a" : "Simple",
             "b" : "Quick",
@@ -110,7 +110,7 @@
         "correct" : "a"
     },
     "q12" : {
-        "question" : "How many percent of a sloth's life are spent sleeping?",
+        "question" : "How many percent of a sloth\"s life are spent sleeping?",
         "answers" : {
             "a" : "70%",
             "b" : "75%",

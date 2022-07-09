@@ -1,5 +1,4 @@
-import CSS from 'csstype'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
 // @ts-ignore
 import styles from './gameStyle.module.css'
@@ -64,17 +63,17 @@ export function Question14() {
         </div>
 
         <div className={styles.answer}>
-          <div className={styles.box_answer} onClick={() => navigate('/home/Question15')}>
-            <button className={styles.btn}>{qu.q14.answers.a}</button>
+          <div className={styles.box_answer} >
+            <button type="button" onClick={() => navigate('/home/Question15')} className={styles.btn}>{qu.q14.answers.a}</button>
           </div>
-          <div className={styles.box_answer} onClick={() => navigate('/home/GameOver')}>
-            <button className={styles.btn}>{qu.q14.answers.b}</button>
+          <div className={styles.box_answer} >
+            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q14.answers.b}</button>
           </div>
-          <div className={styles.box_answer} onClick={() => navigate('/home/GameOver')}>
-            <button className={styles.btn}>{qu.q14.answers.c}</button>
+          <div className={styles.box_answer} >
+            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q14.answers.c}</button>
           </div>
-          <div className={styles.box_answer} onClick={() => navigate('/home/GameOver')}>
-            <button className={styles.btn}>{qu.q14.answers.d}</button>
+          <div className={styles.box_answer} >
+            <button type="button" onClick={() => navigate('/home/GameOver')} className={styles.btn}>{qu.q14.answers.d}</button>
           </div>
         </div>
       </div>

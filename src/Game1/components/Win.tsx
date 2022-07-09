@@ -5,7 +5,6 @@ import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
 // @ts-ignore
 import styles from './gameStyle.module.css'
 
-// eslint-disable-next-line import/prefer-default-export
 export function Win() {
   // eslint-disable-next-line @typescript-eslint/no-var-requires,global-require
   const qu = require('./question.json')
@@ -68,8 +67,7 @@ export function Win() {
 
         <div className={styles.answer}>
           <div className={styles.box_answer} id='a'>
-            {/* eslint-disable-next-line react/button-has-type */}
-            <button className={styles.btn} onClick={() => navigate('/home/Game1')}>
+            <button type="button" className={styles.btn} onClick={() => navigate('/home/Game1')}>
               Start again!
             </button>
           </div>

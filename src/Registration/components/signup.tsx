@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import SignUpCom from './signup.component'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import backgroundRetro from "../../img/background.png";
+import backgroundRetro from '../../img/background.png';
 
 // eslint-disable-next-line import/prefer-default-export
 export function SignUp() {

@@ -78,7 +78,7 @@ export default class SignUpCom extends Component<any, any> {
       borderRadius: '60px',
     }
     const form: CSS.Properties = {
-      /*border: '0.005em solid #000000',*/
+      /* border: '0.005em solid #000000', */
       padding: '0',
       display: 'block',
       outline: '0',
