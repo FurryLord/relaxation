@@ -261,7 +261,7 @@ export function Home() {
               onClick={routeChangeLg}
             >
               <p style={HomeButtonText}>Logic</p>
-              <p style={HomeButtonText}>Games</p>
+              <p style={HomeButtonText}>Game</p>
             </button>
           </div>
         </div>
