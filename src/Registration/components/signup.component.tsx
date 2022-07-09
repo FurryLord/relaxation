@@ -49,7 +49,9 @@ export default class SignUpCom extends Component<any, any> {
       } else {
         const { name } = response.json
         localStorage.setItem("name", name)
-        window.location.href = "/#/reglog"
+        const saveURL = location.origin
+        console.log(saveURL)
+        window.location.href = `${saveURL}/#/reglog`
       }
     })
   }
