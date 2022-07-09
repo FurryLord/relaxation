@@ -3,12 +3,26 @@ import CSS from 'csstype'
 import ReactDOM from 'react-dom'
 import { useNavigate } from 'react-router-dom'
 import SignUpCom from './signup.component'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import backgroundRetro from "../../img/background.png";
 
 // eslint-disable-next-line import/prefer-default-export
 export function SignUp() {
   const navigate = useNavigate()
   const body: CSS.Properties = {
-    backgroundColor: '#FEE9C6',
+    /* Background */
+    backgroundImage: `url(${backgroundRetro})`,
+    backgroundBlendMode: 'soft-light',
+    backgroundSize: 'cover',
+    backgroundPosition: '0 50vh',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    borderWidth: 'none',
+    borderStyle: 'none',
+    borderColor: 'none',
+    backgroundColor: '#FEEAC5',
+
     /* Size */
     minHeight: '100vh',
     /* Display */

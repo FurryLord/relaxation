@@ -224,14 +224,19 @@ export function Index() {
               <p style={GreetingInnerTitle}>
                 Welcome to <span style={GreetingInnerLogo}>Relaxacion!</span>
               </p>
-              {' '}
+              <p style={GreetingInnerText}>
               Place where you can find yourself in{' '}
               <span style={GreetingInnerTextBold}>tests</span>, stuck in{' '}
               <span style={GreetingInnerTextBold}>memes</span>, and tense your{' '}
               <span style={GreetingInnerTextBold}>logic</span>.
+              </p>
               {/* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events,react/button-has-type */}
-              {' '}
-              Play Now!
+              <button style={GreetingButton}
+                      onClick={routeChange}
+                      onMouseDown={()=>setOver(true)}
+                      onMouseUp={()=>setOver(false)}
+                      onMouseOver={()=>setOver(true)}
+                      onMouseOut={()=>setOver(false)}> Play Now!</button>
             </div>
             {/* eslint-disable-next-line jsx-a11y/alt-text */}
             <img style={GreetingWoman} src={woman} />
