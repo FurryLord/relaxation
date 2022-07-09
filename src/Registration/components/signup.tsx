@@ -162,8 +162,8 @@ export function SignUp() {
 }
 function props(props: any, any: any) {
   throw new Error('Function not implemented.')
-}
-
+} 
+ 
 // eslint-disable-next-line no-shadow
 function constructor(props: (props: any, any: any) => void, any: any) {
   throw new Error('Function not implemented.')
