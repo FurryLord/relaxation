@@ -178,6 +178,7 @@ export function Meme() {
       <div style={MemContainer}>
         <div style={MemContent}>
           {fields.map((element, index) => (
+              // eslint-disable-next-line react/no-array-index-key
             <input onChange={(e) => updateField(e, index)} key={index} style={EnterButton} />
           ))}
           <button type="button" onClick={() => fetchMeme()} style={CreateButton}>
