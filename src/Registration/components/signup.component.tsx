@@ -1,6 +1,7 @@
 import React, { Component } from "react"
-import CSS from "csstype"
 import { isPropertySignature } from "typescript"
+// @ts-ignore
+import stylesReglog from "../Reglog.module.css"
 
 export default class SignUpCom extends Component<any, any> {
   constructor(props: any) {
@@ -48,79 +49,24 @@ export default class SignUpCom extends Component<any, any> {
       } else {
         const { name } = response.json
         localStorage.setItem("name", name)
-        window.location.href = "/reglog"
+        window.location.href = "/#/reglog"
       }
     })
   }
 
-  // xhr.open('POST', 'https://relaxacion.egorleb.repl.co', true);
-  // xhr.setRequestHeader("Content-type", "application/json")
-  //  xhr.send(JSON.stringify(user));
-  //  xhr.onreadystatechange = () => {
-  //     if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 201)) {
-  //         alert("User is cool");
-  //     }
-  //     else if (xhr.status == 403) {
-  //         alert("User already exist");
-  //     }
-
-  // }
-  // alert(xhr.readyState)
-
-  // }
-
   render() {
-    const input: CSS.Properties = {
-      width: "90%",
-      margin: "5%",
-      backgroundColor: "#FFFFFF",
-      border: "1px solid #000000",
-      borderRadius: "60px",
-    }
-    const form: CSS.Properties = {
-      /* border: '0.005em solid #000000', */
-      padding: "0",
-      display: "block",
-      outline: "0",
-      marginTop: "0",
-
-      border: "0.05em solid #000000",
-      width: "100%",
-      backgroundColor: "#FEEAC5",
-    }
-    const enter: CSS.Properties = {
-      width: "46%",
-      margin: "4%",
-      backgroundColor: "#000000",
-      textAlign: "center",
-      borderRadius: "60px",
-      marginLeft: "27%",
-      height: "3em",
-      fontSize: "large",
-      padding: "0",
-    }
-    // eslint-disable-next-line camelcase
-    const Log_in: CSS.Properties = {
-      backgroundColor: "#EF4E32",
-      textAlign: "center",
-      padding: "2%",
-      margin: "0",
-      fontFamily: "Roboto Condensed",
-      fontWeight: "1000",
-      fontSize: "x-large",
-    }
 
     return (
-      <form onSubmit={this.handleSubmit} style={form}>
+      <form onSubmit={this.handleSubmit} className={stylesReglog.form}>
         {/* eslint-disable-next-line camelcase */}
-        <p style={Log_in}>Register</p>
+        <p className={stylesReglog.Sign_up}>Register</p>
 
         <div>
           <input
             name='firstName'
             value={this.state.firstName}
             onChange={this.handleInputChange}
-            style={input}
+            className={stylesReglog.input}
             type='text'
             placeholder='First name'
           />
@@ -131,7 +77,7 @@ export default class SignUpCom extends Component<any, any> {
             name='lastName'
             value={this.state.lastName}
             onChange={this.handleInputChange}
-            style={input}
+            className={stylesReglog.input}
             type='text'
             placeholder='Last name'
           />
@@ -142,7 +88,7 @@ export default class SignUpCom extends Component<any, any> {
             name='email'
             value={this.state.email}
             onChange={this.handleInputChange}
-            style={input}
+            className={stylesReglog.input}
             type='email'
             placeholder='Enter email'
           />
@@ -153,13 +99,13 @@ export default class SignUpCom extends Component<any, any> {
             name='password'
             value={this.state.password}
             onChange={this.handleInputChange}
-            style={input}
+            className={stylesReglog.input}
             type='password'
             placeholder='Enter password'
           />
         </div>
 
-        <button style={enter} type='submit'>
+        <button className={stylesReglog.enter} type='submit'>
           Register
         </button>
       </form>

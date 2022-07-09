@@ -1,105 +1,17 @@
 import { ChangeEvent, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import CSS from "csstype"
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import backgroundRetro from "../img/background.png"
 import { NavibarBack } from "../Index_page/Navbar/NaviBarBack"
+// @ts-ignore
+import stylesMain from "../main.module.css"
+// @ts-ignore
+import stylesMem from "./Mem.module.css"
 
 // eslint-disable-next-line import/prefer-default-export
 export function Meme() {
-  const body: CSS.Properties = {
-    /* Background */
-    backgroundImage: `url(${backgroundRetro})`,
-    backgroundBlendMode: "soft-light",
-    backgroundSize: "cover",
-    backgroundPosition: "0 50vh",
-    backgroundRepeat: "no-repeat",
-    backgroundAttachment: "fixed",
-    borderWidth: "none",
-    borderStyle: "none",
-    borderColor: "none",
-    backgroundColor: "#FEEAC5",
-    /* Size */
-    minHeight: "100vh",
-    /* Display */
-    display: "flex",
-    flexDirection: "column",
-    alignContent: "center",
-    justifyContent: "flex-start",
-    alignItems: "center",
-
-    margin: "0",
-    padding: "0",
-  }
-  const MemContainer: CSS.Properties = {
-    boxSizing: "border-box",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-
-    width: "100%",
-    height: "max-content",
-  }
-
-  const MemContent: CSS.Properties = {
-    backgroundColor: "#FEEAC5",
-
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-
-    marginTop: "2%",
-    marginBottom: "2%",
-    padding: "2% 5% 2% 5%",
-    border: "1px solid #000000",
-    width: "max-content",
-    height: "max-content",
-  }
-
-  const MemImage: CSS.Properties = {
-    height: "max-content",
-    width: "max-content",
-    marginTop: "2%",
-    marginBottom: "2%",
-  }
-
-  const EnterButton: CSS.Properties = {
-    background: "#FFFFFF",
-    border: "2px solid #000000",
-    borderRadius: "60px",
-  }
-
-  const NextButton: CSS.Properties = {
-    borderStyle: "none",
-    background: "#FEEAC5",
-    color: "black",
-
-    fontFamily: "Roboto",
-    fontStyle: "normal",
-    fontWeight: "400",
-    fontSize: "32px",
-    lineHeight: "38px",
-    marginBottom: "0px",
-  }
-
-  const CreateButton: CSS.Properties = {
-    background: "#D7A6D9",
-    border: "3px solid #000000",
-    boxShadow: "-5px 5px 0px #000000",
-    borderRadius: "60px",
-
-    fontFamily: "Roboto",
-    fontStyle: "normal",
-    fontWeight: "400",
-    fontSize: "32px",
-    lineHeight: "38px",
-
-    color: "#000000",
-  }
 
   const [memes, setMemes] = useState<any[]>([])
   const [memeIndex, setMemIndex] = useState<any[number]>(0)
@@ -148,8 +60,9 @@ export function Meme() {
     }).then((res) => {
       // eslint-disable-next-line no-shadow
       res.json().then((res) => {
-        const saveURL = window.location.pathname
-        navigate(`${saveURL}/generated?url=${res.data.url}`)
+        const saveURL = location.href
+        console.log(saveURL)
+        window.location.href = `${saveURL}/generated?url=${res.data.url}`
       })
     })
   }
@@ -173,23 +86,22 @@ export function Meme() {
   }, [memeIndex, memes])
 
   return memes.length ? (
-    <body style={body}>
+    <body className={stylesMain.body}>
       <NavibarBack />
-      <div style={MemContainer}>
-        <div style={MemContent}>
+      <div className={stylesMem.MemContainer}>
+        <div className={stylesMem.MemContent}>
           {fields.map((element, index) => (
             // eslint-disable-next-line react/no-array-index-key
-            <input onChange={(e) => updateField(e, index)} key={index} style={EnterButton} />
+            <input onChange={(e) => updateField(e, index)} key={index} className={stylesMem.EnterButton} />
           ))}
-          <button type='button' onClick={() => fetchMeme()} style={CreateButton}>
+          <button type='button' onClick={() => fetchMeme()} className={stylesMem.CreateButton}>
             Create!
           </button>
-          <img src={memes[memeIndex].url} alt='meme' style={MemImage} />
-          <button type='button' onClick={() => setMemIndex(memeIndex + 1)} style={NextButton}>
+          <img src={memes[memeIndex].url} alt='meme' className={stylesMem.MemImage} />
+          <button type='button' onClick={() => setMemIndex(memeIndex + 1)} className={stylesMem.NextButton}>
             Next
           </button>
         </div>
-        {/* <img style={mainBackground} src={background}/> */}
       </div>
     </body>
   ) : (

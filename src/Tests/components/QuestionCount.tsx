@@ -1,4 +1,5 @@
-import CSS from "csstype"
+// @ts-ignore
+import stylesPsy from "../Psy.module.css"
 
 type QuestionCount = {
   counter: number
@@ -6,14 +7,8 @@ type QuestionCount = {
 }
 
 export function QuestionCount(count: QuestionCount) {
-  const questionCount: CSS.Properties = {
-    fontSize: "24px",
-    fontFamily: "Roboto Condensed",
-    paddingLeft: "2vw",
-    paddingTop: "1vw",
-  }
   return (
-    <div style={questionCount}>
+      <div className={stylesPsy.questionCount}>
       Question <span>{count.counter}</span> of <span>{count.total}</span>
     </div>
   )

@@ -1,51 +1,21 @@
-import CSS from "csstype"
 import { NavibarBack } from "../Index_page/Navbar/NaviBarBack"
 import { Test } from "./components/Test"
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import questionContent1 from "./Contents/QuestionContent1"
 import resultContent1 from "./Contents/ResultContent1"
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import backgroundRetro from "../img/background.png"
+import stylesMain from "../main.module.css"
+// @ts-ignore
+import stylesPsy from "./Psy.module.css"
 
 // eslint-disable-next-line import/prefer-default-export
 export function Test1() {
-  const body: CSS.Properties = {
-    /* Background */
-    backgroundImage: `url(${backgroundRetro})`,
-    backgroundBlendMode: "soft-light",
-    backgroundSize: "cover",
-    backgroundPosition: "0 50vh",
-    backgroundRepeat: "no-repeat",
-    backgroundAttachment: "fixed",
-    borderWidth: "none",
-    borderStyle: "none",
-    borderColor: "none",
-    backgroundColor: "#FEEAC5",
-    /* Size */
-    minHeight: "100vh",
-    /* Display */
-    display: "flex",
-    flexDirection: "column",
-    alignContent: "center",
-    justifyContent: "flex-start",
-    alignItems: "center",
-
-    margin: "0",
-    padding: "0",
-  }
-
-  const headline: CSS.Properties = {
-    color: "#000000",
-    fontFamily: "Roboto Condensed",
-    textShadow: "0px 0px 0px",
-  }
 
   return (
-    <body style={body}>
+    <body className={stylesMain.body}>
       <NavibarBack />
-      <h1 style={headline}>What element are you?</h1>
+      <h1 className={stylesPsy.headline}>What element are you?</h1>
       <Test questionContent={questionContent1} resultContent={resultContent1} />
     </body>
   )
