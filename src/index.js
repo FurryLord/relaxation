@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import "./index.css"
-import { BrowserRouter } from "react-router-dom"
+import { HashRouter } from "react-router-dom"
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { configureStore } from "@reduxjs/toolkit"
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -20,9 +20,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={clientStore}>
     <React.StrictMode>
-      <BrowserRouter basename="/">
+      <HashRouter basename={'/'}>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </React.StrictMode>
   </Provider>,
 )

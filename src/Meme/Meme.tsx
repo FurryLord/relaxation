@@ -60,8 +60,9 @@ export function Meme() {
     }).then((res) => {
       // eslint-disable-next-line no-shadow
       res.json().then((res) => {
-        const saveURL = window.location.pathname
-        navigate(`${saveURL}/generated?url=${res.data.url}`)
+        const saveURL = location.href
+        console.log(saveURL)
+        window.location.href = `${saveURL}/generated?url=${res.data.url}`
       })
     })
   }
