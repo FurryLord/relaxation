@@ -40,9 +40,12 @@ export function SignUp() {
       if (response.status !== 201) {
         alert("User with this email already exist")
       } else {
-        const saveURL = `${window.location.protocol}//${window.location.host}`
+        /*const { name } = response.json*/
+        let saveURL = window.location.href
         console.log(saveURL)
-        window.location.href = `${saveURL}/#/reglog`
+        saveURL = saveURL.replace('/reglog/sign-up', '/reglog')
+        console.log(saveURL)
+        window.location.href = `${saveURL}`;
       }
     })
   }

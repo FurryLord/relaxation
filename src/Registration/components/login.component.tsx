@@ -52,9 +52,11 @@ export default class Login extends Component<any, any> {
         console.log(data.name)
         const { name } = data
         localStorage.setItem("name", name)
-        const saveURL = `${window.location.protocol}//${window.location.host}`
+        let saveURL = window.location.href
         console.log(saveURL)
-        window.location.href = `${saveURL}/#/home`
+        saveURL = saveURL.replace('reglog', 'home')
+        console.log(saveURL)
+        window.location.href = `${saveURL}`;
       })
     })
   }
