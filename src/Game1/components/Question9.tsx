@@ -4,9 +4,10 @@ import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
 // @ts-ignore
 import styles from './gameStyle.module.css'
 
+
 // eslint-disable-next-line import/prefer-default-export
 export function Question9() {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  // eslint-disable-next-line @typescript-eslint/no-var-requires,global-require
   const qu = require('./question.json')
   const navigate = useNavigate()
 
