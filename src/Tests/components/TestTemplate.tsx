@@ -8,6 +8,8 @@ type Test = {
   question: string
   questionId: number
   questionTotal: number
+  // eslint-disable-next-line react/no-unused-prop-types
+  answer: string
   answerOptions: {
     type: string
     content: string

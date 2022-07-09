@@ -1,13 +1,12 @@
-import CSS from 'csstype'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import styles from './gameStyle.module.css'
 
+
 export function Win() {
   // eslint-disable-next-line @typescript-eslint/no-var-requires,global-require
-  const qu = require('./question.json')
   const navigate = useNavigate()
 
   return (
