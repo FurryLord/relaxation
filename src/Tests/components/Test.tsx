@@ -160,6 +160,7 @@ export class Test extends Component<MyProps, MyState> {
   renderQuiz() {
     return (
       <TestTemplate
+        answer={this.state.answer}
         answerOptions={this.state.answerOptions}
         questionId={this.state.questionId}
         question={this.state.question}
