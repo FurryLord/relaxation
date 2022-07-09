@@ -38,6 +38,17 @@ type MyState = {
 }
 
 export class Test extends Component<MyProps, MyState> {
+
+  testContainer: CSS.Properties = {
+    position: 'absolute',
+    top: '27vh',
+    width: '74vw',
+    height: '65vh',
+    border: '0.01em solid #000000',
+    background: '#FEEAC5',
+    // filter: 'drop-shadow(-10px 10px 0px #000000)'
+  }
+
   constructor(props: MyProps) {
     super(props)
 
@@ -63,6 +74,7 @@ export class Test extends Component<MyProps, MyState> {
           content: '',
         },
       ],
+      // eslint-disable-next-line react/no-unused-state
       answer: '',
       answersCount: {
         Microsoft: 0,
@@ -103,6 +115,7 @@ export class Test extends Component<MyProps, MyState> {
         ...state.answersCount,
         [answer]: (state.answersCount[answer] || 0) + 1,
       },
+      // eslint-disable-next-line react/no-unused-state
       answer,
     }))
   }
@@ -118,6 +131,7 @@ export class Test extends Component<MyProps, MyState> {
       questionId,
       question: this.props.questionContent[counter].question,
       answerOptions: this.props.questionContent[counter].answers,
+      // eslint-disable-next-line react/no-unused-state
       answer: '',
     })
   }
@@ -146,7 +160,6 @@ export class Test extends Component<MyProps, MyState> {
   renderQuiz() {
     return (
       <TestTemplate
-        answer={this.state.answer}
         answerOptions={this.state.answerOptions}
         questionId={this.state.questionId}
         question={this.state.question}
@@ -157,8 +170,7 @@ export class Test extends Component<MyProps, MyState> {
   }
 
   renderResult() {
-  // eslint-disable-next-line no-plusplus
-    for (let index = 0; index < this.props.resultContent.length; index++) {
+    for (let index = 0; index < this.props.resultContent.length; index += 1) {
       // eslint-disable-next-line react/destructuring-assignment
       if (this.state.result === this.props.resultContent[index].result) {
         this.setState({ description: this.props.resultContent[index].description })
@@ -172,16 +184,6 @@ export class Test extends Component<MyProps, MyState> {
         imageURL={this.state.imageURL}
       />
     )
-  }
-
-  testContainer: CSS.Properties = {
-    position: 'absolute',
-    top: '27vh',
-    width: '74vw',
-    height: '65vh',
-    border: '0.01em solid #000000',
-    background: '#FEEAC5',
-    // filter: 'drop-shadow(-10px 10px 0px #000000)'
   }
 
   render() {
