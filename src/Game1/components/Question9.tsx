@@ -1,13 +1,13 @@
-import { useNavigate } from 'react-router-dom'
-import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
+import { useNavigate } from "react-router-dom"
+import { NavibarBack } from "../../Index_page/Navbar/NaviBarBack"
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import styles from './gameStyle.module.css'
+import styles from "./gameStyle.module.css"
 
 // eslint-disable-next-line import/prefer-default-export
 export function Question9() {
   // eslint-disable-next-line @typescript-eslint/no-var-requires,global-require
-  const qu = require('./question.json')
+  const qu = require("./question.json")
   const navigate = useNavigate()
 
   return (
@@ -67,24 +67,24 @@ export function Question9() {
 
         <div className={styles.answer}>
           <div className={styles.box_answer}>
-            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+            <button type='button' onClick={() => navigate("/home/GameOver")} className={styles.btn}>
               {qu.q9.answers.a}
             </button>
           </div>
           <div className={styles.box_answer}>
-            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+            <button type='button' onClick={() => navigate("/home/GameOver")} className={styles.btn}>
               {qu.q9.answers.b}
             </button>
           </div>
           <div className={styles.box_answer}>
-            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+            <button type='button' onClick={() => navigate("/home/GameOver")} className={styles.btn}>
               {qu.q9.answers.c}
             </button>
           </div>
           <div className={styles.box_answer}>
             <button
               type='button'
-              onClick={() => navigate('/home/Question10')}
+              onClick={() => navigate("/home/Question10")}
               className={styles.btn}
             >
               {qu.q9.answers.d}

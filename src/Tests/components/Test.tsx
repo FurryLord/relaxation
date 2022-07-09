@@ -1,7 +1,7 @@
-import CSS from 'csstype'
-import React, { Component } from 'react'
-import { TestTemplate } from './TestTemplate'
-import { Result } from './Result'
+import CSS from "csstype"
+import React, { Component } from "react"
+import { TestTemplate } from "./TestTemplate"
+import { Result } from "./Result"
 
 type MyProps = {
   questionContent: {
@@ -39,12 +39,12 @@ type MyState = {
 
 export class Test extends Component<MyProps, MyState> {
   testContainer: CSS.Properties = {
-    position: 'absolute',
-    top: '27vh',
-    width: '74vw',
-    height: '65vh',
-    border: '0.01em solid #000000',
-    background: '#FEEAC5',
+    position: "absolute",
+    top: "27vh",
+    width: "74vw",
+    height: "65vh",
+    border: "0.01em solid #000000",
+    background: "#FEEAC5",
     // filter: 'drop-shadow(-10px 10px 0px #000000)'
   }
 
@@ -54,35 +54,35 @@ export class Test extends Component<MyProps, MyState> {
     this.state = {
       counter: 0,
       questionId: 1,
-      question: '',
+      question: "",
       answerOptions: [
         {
-          type: '',
-          content: '',
+          type: "",
+          content: "",
         },
         {
-          type: '',
-          content: '',
+          type: "",
+          content: "",
         },
         {
-          type: '',
-          content: '',
+          type: "",
+          content: "",
         },
         {
-          type: '',
-          content: '',
+          type: "",
+          content: "",
         },
       ],
       // eslint-disable-next-line react/no-unused-state
-      answer: '',
+      answer: "",
       answersCount: {
         Microsoft: 0,
         Nintendo: 0,
         Sony: 0,
       },
-      result: '',
-      description: '',
-      imageURL: '',
+      result: "",
+      description: "",
+      imageURL: "",
     }
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this)
@@ -131,7 +131,7 @@ export class Test extends Component<MyProps, MyState> {
       question: this.props.questionContent[counter].question,
       answerOptions: this.props.questionContent[counter].answers,
       // eslint-disable-next-line react/no-unused-state
-      answer: '',
+      answer: "",
     })
   }
 
@@ -152,7 +152,7 @@ export class Test extends Component<MyProps, MyState> {
     if (result.length === 1) {
       this.setState({ result: result[0] })
     } else {
-      this.setState({ result: 'Undetermined' })
+      this.setState({ result: "Undetermined" })
     }
   }
 

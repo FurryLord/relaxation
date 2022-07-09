@@ -1,4 +1,4 @@
-import CSS from 'csstype'
+import CSS from "csstype"
 
 type QuestionCount = {
   counter: number
@@ -7,10 +7,10 @@ type QuestionCount = {
 
 export function QuestionCount(count: QuestionCount) {
   const questionCount: CSS.Properties = {
-    fontSize: '24px',
-    fontFamily: 'Roboto Condensed',
-    paddingLeft: '2vw',
-    paddingTop: '1vw',
+    fontSize: "24px",
+    fontFamily: "Roboto Condensed",
+    paddingLeft: "2vw",
+    paddingTop: "1vw",
   }
   return (
     <div style={questionCount}>

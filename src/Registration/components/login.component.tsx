@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import CSS from 'csstype'
-import { isPropertySignature } from 'typescript'
-import { useNavigate } from 'react-router-dom'
-import path from 'path'
+import React, { Component } from "react"
+import CSS from "csstype"
+import { isPropertySignature } from "typescript"
+import { useNavigate } from "react-router-dom"
+import path from "path"
 
 export default class Login extends Component<any, any> {
   constructor(props: any) {
     // const navigate = useNavigate();
     super(props)
-    this.state = { email: '', password: '' }
+    this.state = { email: "", password: "" }
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -26,13 +26,13 @@ export default class Login extends Component<any, any> {
     const xhr = new XMLHttpRequest()
 
     const user = {
-      type: 'authorization',
+      type: "authorization",
       email: `${email}`,
       password: `${password}`,
     }
 
-    xhr.open('POST', 'https://relaxacion.egorleb.repl.co', true)
-    xhr.setRequestHeader('Content-type', 'application/json')
+    xhr.open("POST", "https://relaxacion.egorleb.repl.co", true)
+    xhr.setRequestHeader("Content-type", "application/json")
     xhr.send(JSON.stringify(user))
 
     // xhr.addEventListener("loadend", loadEnd , false);
@@ -54,22 +54,22 @@ export default class Login extends Component<any, any> {
     //     }
 
     // }
-    fetch('https://relaxacion.egorleb.repl.co', {
-      method: 'POST',
+    fetch("https://relaxacion.egorleb.repl.co", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(user),
     }).then((response) => {
       if (response.status !== 201) {
-        alert('There is no user with this email')
+        alert("There is no user with this email")
       }
 
       response.json().then((data) => {
         console.log(data.name)
         const { name } = data
-        localStorage.setItem('name', name)
-        window.location.href = '/home'
+        localStorage.setItem("name", name)
+        window.location.href = "/home"
       })
     })
     //       fetch("http://localhost:1337", {
@@ -91,38 +91,38 @@ export default class Login extends Component<any, any> {
 
   render() {
     const form: CSS.Properties = {
-      border: '0.05em solid #000000',
-      width: '100%',
-      backgroundColor: '#FEEAC5',
+      border: "0.05em solid #000000",
+      width: "100%",
+      backgroundColor: "#FEEAC5",
     }
 
     const Log_in: CSS.Properties = {
-      backgroundColor: '#FFD203',
-      textAlign: 'center',
-      padding: '2%',
-      margin: '0',
-      fontFamily: 'Roboto Condensed',
-      fontWeight: '1000',
+      backgroundColor: "#FFD203",
+      textAlign: "center",
+      padding: "2%",
+      margin: "0",
+      fontFamily: "Roboto Condensed",
+      fontWeight: "1000",
 
-      fontSize: 'x-large',
+      fontSize: "x-large",
     }
     const input: CSS.Properties = {
-      width: '90%',
-      margin: '5%',
-      backgroundColor: '#FFFFFF',
-      border: '1px solid #000000',
-      borderRadius: '60px',
+      width: "90%",
+      margin: "5%",
+      backgroundColor: "#FFFFFF",
+      border: "1px solid #000000",
+      borderRadius: "60px",
     }
     const enter: CSS.Properties = {
-      width: '46%',
-      margin: '4%',
-      backgroundColor: '#000000',
-      textAlign: 'center',
-      borderRadius: '60px',
-      marginLeft: '27%',
-      height: '3em',
-      fontSize: 'large',
-      padding: '0',
+      width: "46%",
+      margin: "4%",
+      backgroundColor: "#000000",
+      textAlign: "center",
+      borderRadius: "60px",
+      marginLeft: "27%",
+      height: "3em",
+      fontSize: "large",
+      padding: "0",
     }
 
     return (

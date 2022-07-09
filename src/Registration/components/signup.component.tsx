@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import CSS from 'csstype'
-import { isPropertySignature } from 'typescript'
+import React, { Component } from "react"
+import CSS from "csstype"
+import { isPropertySignature } from "typescript"
 
 export default class SignUpCom extends Component<any, any> {
   constructor(props: any) {
     super(props)
-    this.state = { firstName: '', lastName: '', email: '', password: '' }
+    this.state = { firstName: "", lastName: "", email: "", password: "" }
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -30,25 +30,25 @@ export default class SignUpCom extends Component<any, any> {
     const xhr = new XMLHttpRequest()
 
     const user = {
-      type: 'registratiom',
+      type: "registratiom",
       name: `${firstName}`,
       surname: `${lastName}`,
       email: `${email}`,
       password: `${password}`,
     }
-    fetch('https://relaxacion.egorleb.repl.co', {
-      method: 'POST',
+    fetch("https://relaxacion.egorleb.repl.co", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(user),
     }).then((response) => {
       if (response.status !== 201) {
-        alert('User with this email already exist')
+        alert("User with this email already exist")
       } else {
         const { name } = response.json
-        localStorage.setItem('name', name)
-        window.location.href = '/reglog'
+        localStorage.setItem("name", name)
+        window.location.href = "/reglog"
       }
     })
   }
@@ -71,43 +71,43 @@ export default class SignUpCom extends Component<any, any> {
 
   render() {
     const input: CSS.Properties = {
-      width: '90%',
-      margin: '5%',
-      backgroundColor: '#FFFFFF',
-      border: '1px solid #000000',
-      borderRadius: '60px',
+      width: "90%",
+      margin: "5%",
+      backgroundColor: "#FFFFFF",
+      border: "1px solid #000000",
+      borderRadius: "60px",
     }
     const form: CSS.Properties = {
       /* border: '0.005em solid #000000', */
-      padding: '0',
-      display: 'block',
-      outline: '0',
-      marginTop: '0',
+      padding: "0",
+      display: "block",
+      outline: "0",
+      marginTop: "0",
 
-      border: '0.05em solid #000000',
-      width: '100%',
-      backgroundColor: '#FEEAC5',
+      border: "0.05em solid #000000",
+      width: "100%",
+      backgroundColor: "#FEEAC5",
     }
     const enter: CSS.Properties = {
-      width: '46%',
-      margin: '4%',
-      backgroundColor: '#000000',
-      textAlign: 'center',
-      borderRadius: '60px',
-      marginLeft: '27%',
-      height: '3em',
-      fontSize: 'large',
-      padding: '0',
+      width: "46%",
+      margin: "4%",
+      backgroundColor: "#000000",
+      textAlign: "center",
+      borderRadius: "60px",
+      marginLeft: "27%",
+      height: "3em",
+      fontSize: "large",
+      padding: "0",
     }
     // eslint-disable-next-line camelcase
     const Log_in: CSS.Properties = {
-      backgroundColor: '#EF4E32',
-      textAlign: 'center',
-      padding: '2%',
-      margin: '0',
-      fontFamily: 'Roboto Condensed',
-      fontWeight: '1000',
-      fontSize: 'x-large',
+      backgroundColor: "#EF4E32",
+      textAlign: "center",
+      padding: "2%",
+      margin: "0",
+      fontFamily: "Roboto Condensed",
+      fontWeight: "1000",
+      fontSize: "x-large",
     }
 
     return (

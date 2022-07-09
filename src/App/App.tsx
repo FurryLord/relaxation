@@ -1,35 +1,35 @@
 // import styles from './styles.module.css'
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { Meme } from '../Meme/Meme'
-import { MemeGenerated } from '../Meme/MemeGenerated'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { Meme } from "../Meme/Meme"
+import { MemeGenerated } from "../Meme/MemeGenerated"
 // @ts-ignore
-import { Index } from '../Index_page/Index'
-import { Registration } from '../Registration/reglog'
-import Login from '../Registration/components/login.component'
-import { Catalog } from '../Tests/catalog'
-import { Test1 } from '../Tests/Test1'
-import { Test2 } from '../Tests/Test2'
-import { SignUp } from '../Registration/components/signup'
-import { Game } from '../Game1/components/StartGame'
-import { Question1 } from '../Game1/components/Question1'
-import { Question2 } from '../Game1/components/Question2'
-import { Question3 } from '../Game1/components/Question3'
-import { Question4 } from '../Game1/components/Question4'
-import { Question5 } from '../Game1/components/Question5'
-import { Question6 } from '../Game1/components/Question6'
-import { Question7 } from '../Game1/components/Question7'
-import { Question8 } from '../Game1/components/Question8'
-import { Question9 } from '../Game1/components/Question9'
-import { Question10 } from '../Game1/components/Question10'
-import { Question11 } from '../Game1/components/Question11'
-import { Question12 } from '../Game1/components/Question12'
-import { Question13 } from '../Game1/components/Question13'
-import { Question14 } from '../Game1/components/Question14'
-import { Question15 } from '../Game1/components/Question15'
-import { GameOver } from '../Game1/components/GameOver'
-import { Win } from '../Game1/components/Win'
-import { Home } from '../Home/Home'
+import { Index } from "../Index_page/Index"
+import { Registration } from "../Registration/reglog"
+import Login from "../Registration/components/login.component"
+import { Catalog } from "../Tests/catalog"
+import { Test1 } from "../Tests/Test1"
+import { Test2 } from "../Tests/Test2"
+import { SignUp } from "../Registration/components/signup"
+import { Game } from "../Game1/components/StartGame"
+import { Question1 } from "../Game1/components/Question1"
+import { Question2 } from "../Game1/components/Question2"
+import { Question3 } from "../Game1/components/Question3"
+import { Question4 } from "../Game1/components/Question4"
+import { Question5 } from "../Game1/components/Question5"
+import { Question6 } from "../Game1/components/Question6"
+import { Question7 } from "../Game1/components/Question7"
+import { Question8 } from "../Game1/components/Question8"
+import { Question9 } from "../Game1/components/Question9"
+import { Question10 } from "../Game1/components/Question10"
+import { Question11 } from "../Game1/components/Question11"
+import { Question12 } from "../Game1/components/Question12"
+import { Question13 } from "../Game1/components/Question13"
+import { Question14 } from "../Game1/components/Question14"
+import { Question15 } from "../Game1/components/Question15"
+import { GameOver } from "../Game1/components/GameOver"
+import { Win } from "../Game1/components/Win"
+import { Home } from "../Home/Home"
 
 // eslint-disable-next-line import/prefer-default-export
 export function App() {

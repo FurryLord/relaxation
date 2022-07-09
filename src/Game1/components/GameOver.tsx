@@ -1,8 +1,8 @@
-import { useNavigate } from 'react-router-dom'
-import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
+import { useNavigate } from "react-router-dom"
+import { NavibarBack } from "../../Index_page/Navbar/NaviBarBack"
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import styles from './gameStyle.module.css'
+import styles from "./gameStyle.module.css"
 
 export function GameOver() {
   const navigate = useNavigate()
@@ -34,7 +34,7 @@ export function GameOver() {
 
         <div className={styles.answer}>
           <div className={styles.box_answer} id='a'>
-            <button type='button' className={styles.btn} onClick={() => navigate('/home/Game1')}>
+            <button type='button' className={styles.btn} onClick={() => navigate("/home/Game1")}>
               Start Over
             </button>
           </div>

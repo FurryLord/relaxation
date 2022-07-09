@@ -1,13 +1,13 @@
-import { useNavigate } from 'react-router-dom'
-import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
+import { useNavigate } from "react-router-dom"
+import { NavibarBack } from "../../Index_page/Navbar/NaviBarBack"
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import styles from './gameStyle.module.css'
+import styles from "./gameStyle.module.css"
 
 // eslint-disable-next-line import/prefer-default-export
 export function Question11() {
   // eslint-disable-next-line @typescript-eslint/no-var-requires,global-require
-  const qu = require('./question.json')
+  const qu = require("./question.json")
 
   const navigate = useNavigate()
 
@@ -70,7 +70,7 @@ export function Question11() {
           <div className={styles.box_answer}>
             <button
               type='button'
-              onClick={() => navigate('/home/Question12')}
+              onClick={() => navigate("/home/Question12")}
               className={styles.btn}
             >
               {qu.q11.answers.a}
@@ -78,19 +78,19 @@ export function Question11() {
           </div>
 
           <div className={styles.box_answer}>
-            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+            <button type='button' onClick={() => navigate("/home/GameOver")} className={styles.btn}>
               {qu.q11.answers.b}
             </button>
           </div>
 
           <div className={styles.box_answer}>
-            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+            <button type='button' onClick={() => navigate("/home/GameOver")} className={styles.btn}>
               {qu.q11.answers.c}
             </button>
           </div>
 
           <div className={styles.box_answer}>
-            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+            <button type='button' onClick={() => navigate("/home/GameOver")} className={styles.btn}>
               {qu.q11.answers.d}
             </button>
           </div>

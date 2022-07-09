@@ -1,8 +1,8 @@
-import { useNavigate } from 'react-router-dom'
-import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
+import { useNavigate } from "react-router-dom"
+import { NavibarBack } from "../../Index_page/Navbar/NaviBarBack"
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import styles from './gameStyle.module.css'
+import styles from "./gameStyle.module.css"
 
 export function Win() {
   // eslint-disable-next-line @typescript-eslint/no-var-requires,global-require
@@ -65,7 +65,7 @@ export function Win() {
 
         <div className={styles.answer}>
           <div className={styles.box_answer} id='a'>
-            <button type='button' className={styles.btn} onClick={() => navigate('/home/Game1')}>
+            <button type='button' className={styles.btn} onClick={() => navigate("/home/Game1")}>
               Start again!
             </button>
           </div>

@@ -1,6 +1,6 @@
 .body {
   /* Background */
-  background-image: url('../../img/background.png');
+  background-image: url("../../img/background.png");
   background-blend-mode: soft-light;
   background-size: cover;
   background-position: 0 50vh;
@@ -47,7 +47,7 @@
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
-  font-family: 'Roboto Condensed', serif;
+  font-family: "Roboto Condensed", serif;
 }
 
 .little_box_now {
@@ -62,7 +62,7 @@
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
-  font-family: 'Roboto Condensed', serif;
+  font-family: "Roboto Condensed", serif;
 }
 
 .little_box_pass {
@@ -76,7 +76,7 @@
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
-  font-family: 'Roboto Condensed', serif;
+  font-family: "Roboto Condensed", serif;
 }
 
 .block {
@@ -125,7 +125,7 @@
   height: 8vh;
   background-color: #fee9c6;
   border: 1px solid #000000;
-  font-family: 'Roboto Condensed', serif;
+  font-family: "Roboto Condensed", serif;
   /*font-size: large;*/
   font-size: 26px;
 }
@@ -135,7 +135,7 @@
 }
 
 .h3 {
-  font-family: 'Roboto Condensed', serif;
+  font-family: "Roboto Condensed", serif;
   font-weight: normal;
   font-size: 24px;
   padding-left: 2vw;
@@ -145,7 +145,7 @@
 .p {
   text-align: center;
   /*font-size: 1.5em;*/
-  font-family: 'Roboto Condensed', serif;
+  font-family: "Roboto Condensed", serif;
   font-weight: bold;
   font-size: 40px;
 }

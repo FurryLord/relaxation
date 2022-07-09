@@ -1,11 +1,11 @@
-import { useNavigate } from 'react-router-dom'
-import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
+import { useNavigate } from "react-router-dom"
+import { NavibarBack } from "../../Index_page/Navbar/NaviBarBack"
 // @ts-ignore
-import styles from './gameStyle.module.css'
+import styles from "./gameStyle.module.css"
 
 export function Question7() {
   // eslint-disable-next-line @typescript-eslint/no-var-requires,global-require
-  const qu = require('./question.json')
+  const qu = require("./question.json")
   const navigate = useNavigate()
 
   return (
@@ -67,24 +67,24 @@ export function Question7() {
           <div className={styles.box_answer}>
             <button
               type='button'
-              onClick={() => navigate('/home/Question8')}
+              onClick={() => navigate("/home/Question8")}
               className={styles.btn}
             >
               {qu.q7.answers.a}
             </button>
           </div>
           <div className={styles.box_answer}>
-            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+            <button type='button' onClick={() => navigate("/home/GameOver")} className={styles.btn}>
               {qu.q7.answers.b}
             </button>
           </div>
           <div className={styles.box_answer}>
-            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+            <button type='button' onClick={() => navigate("/home/GameOver")} className={styles.btn}>
               {qu.q7.answers.c}
             </button>
           </div>
           <div className={styles.box_answer}>
-            <button type='button' onClick={() => navigate('/home/GameOver')} className={styles.btn}>
+            <button type='button' onClick={() => navigate("/home/GameOver")} className={styles.btn}>
               {qu.q7.answers.d}
             </button>
           </div>

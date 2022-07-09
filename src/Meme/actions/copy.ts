@@ -1,3 +1,3 @@
 export const copy = () => ({
-  type: 'COPY',
+  type: "COPY",
 })

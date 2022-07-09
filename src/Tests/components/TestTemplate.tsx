@@ -1,8 +1,8 @@
-import CSS from 'csstype'
-import { ChangeEventHandler } from 'react'
-import { Question } from './Question'
-import { QuestionCount } from './QuestionCount'
-import { AnswerOption } from './AnswerOption'
+import CSS from "csstype"
+import { ChangeEventHandler } from "react"
+import { Question } from "./Question"
+import { QuestionCount } from "./QuestionCount"
+import { AnswerOption } from "./AnswerOption"
 
 type Test = {
   question: string
@@ -24,18 +24,18 @@ type Key = {
 
 export function TestTemplate(props: Test) {
   const questionField: CSS.Properties = {
-    height: '17vh',
-    background: '#6ACD94',
-    margin: '0',
-    borderBottom: '0.01em solid #000000',
+    height: "17vh",
+    background: "#6ACD94",
+    margin: "0",
+    borderBottom: "0.01em solid #000000",
   }
 
   const answerOptions: CSS.Properties = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    height: '48vh',
-    paddingLeft: '3%',
-    alignContent: 'space-evenly',
+    display: "flex",
+    flexWrap: "wrap",
+    height: "48vh",
+    paddingLeft: "3%",
+    alignContent: "space-evenly",
   }
 
   return (

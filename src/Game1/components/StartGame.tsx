@@ -1,8 +1,8 @@
-import { useNavigate } from 'react-router-dom'
-import { NavibarBack } from '../../Index_page/Navbar/NaviBarBack'
+import { useNavigate } from "react-router-dom"
+import { NavibarBack } from "../../Index_page/Navbar/NaviBarBack"
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import styles from './gameStyle.module.css'
+import styles from "./gameStyle.module.css"
 
 // eslint-disable-next-line import/prefer-default-export
 export function Game() {
@@ -38,7 +38,7 @@ export function Game() {
             <button
               type='button'
               className={styles.btn}
-              onClick={() => navigate('/home/Question1')}
+              onClick={() => navigate("/home/Question1")}
             >
               Start!
             </button>
