@@ -19,7 +19,6 @@ type Test = {
 }
 
 export function TestTemplate(props: Test) {
-
   return (
     <div key={props.questionId}>
       <div className={stylesPsy.questionField}>

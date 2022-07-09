@@ -10,7 +10,6 @@ type AnswerOption = {
 }
 
 export function AnswerOption(option: AnswerOption) {
-
   return (
     <div className={stylesPsy.answerOption}>
       <input

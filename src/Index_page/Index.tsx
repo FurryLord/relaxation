@@ -16,7 +16,6 @@ import stylesGreeting from "./Greeting.module.css"
 
 // eslint-disable-next-line import/prefer-default-export
 export function Index() {
-
   const navigate = useNavigate()
   const routeChange = () => {
     const path = "/reglog"
@@ -35,10 +34,8 @@ export function Index() {
                 Welcome to <span className={stylesGreeting.GreetingInnerLogo}>Relaxacion!</span>
               </p>
               <p className={stylesGreeting.GreetingInnerText}>
-                Place where you can find yourself in{" "}
-                <strong>tests</strong>, stuck in{" "}
-                <strong>memes</strong>, and tense your{" "}
-                <strong>logic</strong>.
+                Place where you can find yourself in <strong>tests</strong>, stuck in{" "}
+                <strong>memes</strong>, and tense your <strong>logic</strong>.
               </p>
               {/* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events,react/button-has-type */}
               <button onClick={routeChange} className={stylesGreeting.GreetingButton}>
@@ -46,7 +43,7 @@ export function Index() {
               </button>
             </div>
             {/* eslint-disable-next-line jsx-a11y/alt-text */}
-            <img className={stylesGreeting.GreetingWoman} src={woman}/>
+            <img className={stylesGreeting.GreetingWoman} src={woman} />
           </div>
           <div className={stylesGreeting.GreetingInnerCard3} />
           <div className={stylesGreeting.GreetingInnerCard2} />

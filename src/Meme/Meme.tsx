@@ -12,7 +12,6 @@ import stylesMem from "./Mem.module.css"
 
 // eslint-disable-next-line import/prefer-default-export
 export function Meme() {
-
   const [memes, setMemes] = useState<any[]>([])
   const [memeIndex, setMemIndex] = useState<any[number]>(0)
   const [fields, setFields] = useState<any[]>([])
@@ -92,13 +91,21 @@ export function Meme() {
         <div className={stylesMem.MemContent}>
           {fields.map((element, index) => (
             // eslint-disable-next-line react/no-array-index-key
-            <input onChange={(e) => updateField(e, index)} key={index} className={stylesMem.EnterButton} />
+            <input
+              onChange={(e) => updateField(e, index)}
+              key={index}
+              className={stylesMem.EnterButton}
+            />
           ))}
           <button type='button' onClick={() => fetchMeme()} className={stylesMem.CreateButton}>
             Create!
           </button>
           <img src={memes[memeIndex].url} alt='meme' className={stylesMem.MemImage} />
-          <button type='button' onClick={() => setMemIndex(memeIndex + 1)} className={stylesMem.NextButton}>
+          <button
+            type='button'
+            onClick={() => setMemIndex(memeIndex + 1)}
+            className={stylesMem.NextButton}
+          >
             Next
           </button>
         </div>

@@ -4,7 +4,6 @@ import styles from "./Navbar.module.css"
 
 // eslint-disable-next-line import/prefer-default-export
 export function Navibar() {
-
   const navigate = useNavigate()
 
   return (

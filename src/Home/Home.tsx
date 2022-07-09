@@ -6,13 +6,12 @@ import { NavibarBack } from "../Index_page/Navbar/NaviBarBack"
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import stylesMain from '../main.module.css'
+import stylesMain from "../main.module.css"
 // @ts-ignore
-import stylesHome from './Home.module.css'
+import stylesHome from "./Home.module.css"
 
 // eslint-disable-next-line import/prefer-default-export
 export function Home() {
-
   const name = localStorage.getItem("name")
   console.log(name)
   const navigate = useNavigate()

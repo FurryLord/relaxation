@@ -1,81 +1,81 @@
 .nav {
-    background-color: #FEE9C6;
-/* Size */
-    width: 100%;
-    height: fit-content;
+  background-color: #fee9c6;
+  /* Size */
+  width: 100%;
+  height: fit-content;
 
-/* Display */
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
+  /* Display */
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
 
-/* Others */
-    border-bottom: 2px solid #000000;
+  /* Others */
+  border-bottom: 2px solid #000000;
 }
 
 .logoBox {
-    background-color: #FEE9C6;
+  background-color: #fee9c6;
 
-    height: fit-content;
-    width: fit-content;
-/* Display */
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    place-content: center;
-    flex-wrap: nowrap;
+  height: fit-content;
+  width: fit-content;
+  /* Display */
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+  flex-wrap: nowrap;
 }
 
 .logoText {
-    background-color: #FEE9C6;
-    color: #000000;
-    font-family: "Parisienne", serif;
-    font-size: 48px;
+  background-color: #fee9c6;
+  color: #000000;
+  font-family: "Parisienne", serif;
+  font-size: 48px;
 
-/* Size */
-    height: fit-content;
-    width: fit-content;
+  /* Size */
+  height: fit-content;
+  width: fit-content;
 
-/* Display */
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    place-content: center;
-    flex-wrap: nowrap;
+  /* Display */
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+  flex-wrap: nowrap;
 
-/* Others */
-    margin: 0 0 0 15px;
-    padding: 0;
+  /* Others */
+  margin: 0 0 0 15px;
+  padding: 0;
 }
 
 .HomeButton {
-    background-color: #FEE9C6;
+  background-color: #fee9c6;
 
-    border: 1px solid #000000;
-    width: 128px;
+  border: 1px solid #000000;
+  width: 128px;
 
-    font-family: "Roboto", serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.5em;
-    line-height: 2em;
-    text-align: center;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 2em;
+  text-align: center;
 
-    margin: 0 0 0 2%;
-    padding: 0;
+  margin: 0 0 0 2%;
+  padding: 0;
 
-    color: #000000;
+  color: #000000;
 }
 
 .HomeButton:hover {
-    background-image: url('../../img/dots.png');
-    background-blend-mode: soft-light;
-    background-size: contain;
-    background-attachment: fixed;
+  background-image: url("../../img/dots.png");
+  background-blend-mode: soft-light;
+  background-size: contain;
+  background-attachment: fixed;
 }

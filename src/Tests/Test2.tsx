@@ -11,7 +11,6 @@ import stylesPsy from "./Psy.module.css"
 
 // eslint-disable-next-line import/prefer-default-export
 export function Test2() {
-
   return (
     <body className={stylesMain.body}>
       <NavibarBack />

@@ -12,7 +12,6 @@ import stylesMain from "../main.module.css"
 import stylesMem from "./Mem.module.css"
 
 export function MemeGenerated() {
-
   const counter = useSelector((state: any) => state.counter)
   const dispatch = useDispatch()
 
@@ -33,7 +32,11 @@ export function MemeGenerated() {
       <NavibarBack />
       <div className={stylesMem.MemContainer}>
         <div className={stylesMem.MemContent}>
-          <button type='button' onClick={() => navigate("/home/meme_page")} className={stylesMem.MakeButton}>
+          <button
+            type='button'
+            onClick={() => navigate("/home/meme_page")}
+            className={stylesMem.MakeButton}
+          >
             Make more memes
           </button>
           {url && <img src={url} alt='meme' className={stylesMem.MemImage} />}

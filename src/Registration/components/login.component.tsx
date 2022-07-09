@@ -58,7 +58,6 @@ export default class Login extends Component<any, any> {
   }
 
   render() {
-
     return (
       <div className='col-6'>
         <form className={stylesReglog.form}>

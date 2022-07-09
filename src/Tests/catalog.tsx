@@ -6,7 +6,6 @@ import stylesMain from "../main.module.css"
 import stylesPsy from "./Psy.module.css"
 
 export function Catalog() {
-
   const navigate = useNavigate()
   const routeChangeTest1 = () => {
     const path = "/home/tests/1"
@@ -18,23 +17,23 @@ export function Catalog() {
   }
 
   return (
-      <body className={stylesMain.body}>
-        <NavibarBack />
-        <h1 className={stylesPsy.headline}>Tests</h1>
-        <div className={stylesPsy.container}>
-          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
-          <div role='button' className={stylesPsy.test} onClick={routeChangeTest1} tabIndex={0}>
-            <div className={stylesPsy.namebox}>
-              <p className={stylesPsy.text}>What element are you?</p>
-            </div>
-          </div>
-          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
-          <div role='button' className={stylesPsy.test} onClick={routeChangeTest2} tabIndex={0}>
-            <div className={stylesPsy.namebox}>
-              <p className={stylesPsy.text}>Your Hogwarts House</p>
-            </div>
+    <body className={stylesMain.body}>
+      <NavibarBack />
+      <h1 className={stylesPsy.headline}>Tests</h1>
+      <div className={stylesPsy.container}>
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
+        <div role='button' className={stylesPsy.test} onClick={routeChangeTest1} tabIndex={0}>
+          <div className={stylesPsy.namebox}>
+            <p className={stylesPsy.text}>What element are you?</p>
           </div>
         </div>
-      </body>
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
+        <div role='button' className={stylesPsy.test} onClick={routeChangeTest2} tabIndex={0}>
+          <div className={stylesPsy.namebox}>
+            <p className={stylesPsy.text}>Your Hogwarts House</p>
+          </div>
+        </div>
+      </div>
+    </body>
   )
 }

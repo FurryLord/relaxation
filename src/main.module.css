@@ -22,11 +22,11 @@
 }
 
 .main {
-/* Size */
+  /* Size */
   height: 90vh;
   width: 100vw;
 
-/* Display */
+  /* Display */
   display: flex;
   flex-direction: column;
   align-content: center;

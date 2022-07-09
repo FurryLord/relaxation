@@ -1,135 +1,135 @@
 .GreetingWrapper {
-    width: 85%;
-    height: 95%;
+  width: 85%;
+  height: 95%;
 
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 
-    margin: 0;
-    padding: 0;
-    position: relative;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 .GreetingInnerCard1 {
-    background-color: #F8A7A4;
-    border: 1px solid #000000;
+  background-color: #f8a7a4;
+  border: 1px solid #000000;
 
-    width: 95%;
-    height: 85%;
+  width: 95%;
+  height: 85%;
 
-    box-shadow: 0 0 0 0;
-    margin: 0;
-    padding: 0;
-    top: 75px;
-    right: 60px;
-    z-index: 1;
-    position: absolute;
+  box-shadow: 0 0 0 0;
+  margin: 0;
+  padding: 0;
+  top: 75px;
+  right: 60px;
+  z-index: 1;
+  position: absolute;
 }
 
 .GreetingInnerCard2 {
-    background-color: #EF4E32;
-    border: 1px solid #000000;
+  background-color: #ef4e32;
+  border: 1px solid #000000;
 
-    width: 95%;
-    height: 85%;
+  width: 95%;
+  height: 85%;
 
-    box-shadow: 0 0 0 0;
-    margin: 0;
-    padding: 0;
-    top: 50px;
-    right: 40px;
-    z-index: 2;
-    position: absolute;
+  box-shadow: 0 0 0 0;
+  margin: 0;
+  padding: 0;
+  top: 50px;
+  right: 40px;
+  z-index: 2;
+  position: absolute;
 }
 
 .GreetingInnerCard3 {
-    background-color: #FFD203;
-    border: 1px solid #000000;
-    width: 95%;
-    height: 85%;
-    box-shadow: 0 0 0 0;
-    margin: 0;
-    padding: 0;
-    top: 25px;
-    right: 20px;
-    z-index: 3;
-    position: absolute;
+  background-color: #ffd203;
+  border: 1px solid #000000;
+  width: 95%;
+  height: 85%;
+  box-shadow: 0 0 0 0;
+  margin: 0;
+  padding: 0;
+  top: 25px;
+  right: 20px;
+  z-index: 3;
+  position: absolute;
 }
 
 .GreetingInnerCard4 {
-    background-color: #FEEAC5;
-    border: 1px solid #000000;
-    width: 95%;
-    height: 85%;
-    box-shadow: 0 0 0 0;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    right: 0;
-    z-index: 4;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+  background-color: #feeac5;
+  border: 1px solid #000000;
+  width: 95%;
+  height: 85%;
+  box-shadow: 0 0 0 0;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .GreetingInner {
-    width: 90%;
-    height: 95%;
-    padding: 0;
-    margin: 0;
+  width: 90%;
+  height: 95%;
+  padding: 0;
+  margin: 0;
 }
 
 .GreetingInnerTitle {
-    color: #000000;
-    font-family: Roboto Condensed;
-    font-size: calc(36px + (48 - 36) * ((100vw - 280px) / (1920 - 280)));
-    margin-top: 0;
+  color: #000000;
+  font-family: Roboto Condensed;
+  font-size: calc(36px + (48 - 36) * ((100vw - 280px) / (1920 - 280)));
+  margin-top: 0;
 }
 
 .GreetingInnerText {
-    color: #000000;
-    font-family: Roboto Condensed;
-    font-size: calc(20px + (36 - 20) * ((100vw - 280px) / (1920 - 280)));
+  color: #000000;
+  font-family: Roboto Condensed;
+  font-size: calc(20px + (36 - 20) * ((100vw - 280px) / (1920 - 280)));
 }
 
 .GreetingInnerLogo {
-    color: #000000;
-    font-family: Parisienne;
-    font-size: calc(64px + (96 - 64) * ((100vw - 280px) / (1920 - 280)));
+  color: #000000;
+  font-family: Parisienne;
+  font-size: calc(64px + (96 - 64) * ((100vw - 280px) / (1920 - 280)));
 }
 
 .GreetingButton {
-    background-color: #F8A7A4;
-    border: 5px solid #000000;
-    box-shadow: -5px 5px 0px #000000;
-    border-radius: 80px;
-    height: calc(90px + (96 - 90) * ((100vw - 280px) / (1920 - 280)));
-    width: calc(256px + (356 - 256) * ((100vw - 280px) / (1920 - 280)));
-    font-family: Roboto;
-    font-size: calc(24px + (36 - 24) * ((100vw - 280px) / (1920 - 280)));
-    font-weight: bold;
-    color: #000000;
+  background-color: #f8a7a4;
+  border: 5px solid #000000;
+  box-shadow: -5px 5px 0px #000000;
+  border-radius: 80px;
+  height: calc(90px + (96 - 90) * ((100vw - 280px) / (1920 - 280)));
+  width: calc(256px + (356 - 256) * ((100vw - 280px) / (1920 - 280)));
+  font-family: Roboto;
+  font-size: calc(24px + (36 - 24) * ((100vw - 280px) / (1920 - 280)));
+  font-weight: bold;
+  color: #000000;
 }
 
 .GreetingButton:hover {
-    background-image: url("../img/dots.png");
-    background-blend-mode: soft-light;
-    background-size: contain;
-    background-attachment: fixed;
+  background-image: url("../img/dots.png");
+  background-blend-mode: soft-light;
+  background-size: contain;
+  background-attachment: fixed;
 }
 
 .GreetingWoman {
-    box-shadow: 0 0 0 0;
-    width: calc(200px + (350 - 200) * ((100vw - 280px) / (1920 - 280)));
-    height: auto;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 0 0 10px 10px;
+  box-shadow: 0 0 0 0;
+  width: calc(200px + (350 - 200) * ((100vw - 280px) / (1920 - 280)));
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 0 10px 10px;
 }

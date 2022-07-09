@@ -1,10 +1,10 @@
-import { Dispatch, SetStateAction, useMemo, useState } from "react";
+import { Dispatch, SetStateAction, useMemo, useState } from "react"
 
 export function usePrettyPrintedState<T extends object>(): [
   JSX.Element,
-  Dispatch<SetStateAction<T>>
+  Dispatch<SetStateAction<T>>,
 ] {
-  const [value, setValue] = useState<any>();
+  const [value, setValue] = useState<any>()
   const resultValue = useMemo(() => {
     return (
       <>
@@ -16,7 +16,7 @@ export function usePrettyPrintedState<T extends object>(): [
           </pre>
         )}
       </>
-    );
-  }, [value]);
-  return [resultValue, setValue];
+    )
+  }, [value])
+  return [resultValue, setValue]
 }
