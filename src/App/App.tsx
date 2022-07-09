@@ -34,7 +34,7 @@ import { Home } from "../Home/Home"
 // eslint-disable-next-line import/prefer-default-export
 export function App() {
   return (
-    <Routes>
+    <Router>
       <Route path='/' element={<Index />} />
       <Route path='home/meme_page/generated' element={<MemeGenerated />} />
       <Route path='home/meme_page' element={<Meme />} />
@@ -63,6 +63,6 @@ export function App() {
       <Route path='/home/Question15' element={<Question15 />} />
       <Route path='/home/Win' element={<Win />} />
       <Route path='/home/GameOver' element={<GameOver />} />
-    </Routes>
+    </Router>
   )
 }
