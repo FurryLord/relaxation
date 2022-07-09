@@ -81,6 +81,7 @@ export function Catalog() {
   const text: CSS.Properties = {
     fontFamily: 'Roboto Condensed',
     fontSize: '24px',
+    marginTop: '0',
     marginLeft: '4%',
   }
 
@@ -89,18 +90,16 @@ export function Catalog() {
       <NavibarBack />
       <h1 style={headline}>Tests</h1>
       <div style={container}>
-        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
-        <div style={test} onClick={routeChangeTest1}>
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
+        <div role="button" style={test} onClick={routeChangeTest1} tabIndex={0}>
           <div style={namebox}>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a style={text}>What element are you?</a>
+            <p style={text}>What element are you?</p>
           </div>
         </div>
-        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
-        <div style={test} onClick={routeChangeTest2}>
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
+        <div role="button" style={test} onClick={routeChangeTest2} tabIndex={0}>
           <div style={namebox}>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a style={text}>Your Hogwarts House</a>
+            <p style={text}>Your Hogwarts House</p>
           </div>
         </div>
       </div>
