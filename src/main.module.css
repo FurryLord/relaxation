@@ -1,0 +1,38 @@
+.body {
+  /* Background */
+  background-image: url("img/background.png");
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position: 0 50vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border: 0;
+  background-color: #feeac5;
+  /* Size */
+  min-height: 100vh;
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+/* Size */
+  height: 90vh;
+  width: 100vw;
+
+/* Display */
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}

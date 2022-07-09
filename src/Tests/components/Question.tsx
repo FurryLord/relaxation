@@ -1,16 +1,14 @@
-import CSS from "csstype"
+// @ts-ignore
+import stylesPsy from "../Psy.module.css"
 
 type Question = {
   content: string
 }
 
 export function Question(props: Question) {
-  const question: CSS.Properties = {
-    fontFamily: "Roboto Condensed",
-    fontSize: "40px",
-    marginTop: "2vh",
-    marginLeft: "2vw",
-  }
 
-  return <h2 style={question}>{props.content}</h2>
+  return (
+      <h2 className={stylesPsy.question}> {props.content} </h2>
+  )
+
 }

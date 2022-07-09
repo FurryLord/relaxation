@@ -1,0 +1,171 @@
+
+/* Catalogue */
+
+.headline {
+    color: #000000;
+    font-family: Roboto Condensed, serif;
+    text-shadow: 0 0 0;
+}
+
+.container {
+    display: flex;
+    width: 70%;
+    top: 30%;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    filter: drop-shadow(-5px 5px 0px #000000);
+}
+
+.test {
+    box-sizing: border-box;
+    position: relative;
+    width: 22vw;
+    height: 23vh;
+    background: #6ACD94;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+.namebox {
+    box-sizing: border-box;
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    bottom: 0;
+    background: #ffffff;
+    border-top: 1px solid #000000;
+}
+
+.text {
+    font-family: Roboto Condensed, serif;
+    font-size: 24px;
+    margin-top: 0;
+    margin-left: 4%;
+}
+
+/* Answer Options */
+
+.answerOption {
+    padding-bottom: 1%;
+    width: 74vw;
+    border-bottom: 1px solid #000000;
+    margin-right: 2.5rem;
+}
+
+.radioButton {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    content: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+    margin-top: 0.4%;
+    border-radius: 50%;
+    transition: all 0.2s;
+    filter: drop-shadow(-1px 2px 0px #6ACD94);
+}
+
+.radioCustomLabel {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0;
+    padding-left: 2.5rem;
+    font-size: 26px;
+}
+
+/* Question */
+
+.question {
+    font-family: Roboto Condensed, serif;
+    font-size: 40px;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+.questionCount {
+     font-family: Roboto Condensed, serif;
+     font-size: 24px;
+     padding-top: 1vw;
+     padding-left: 2vw;
+ }
+
+/* Result */
+
+.resultField {
+    height: 17vh;
+    background: #6ACD94;
+    margin: 0;
+    border-bottom: 0.01em solid #000000;
+}
+
+.resultText {
+    font-family: Roboto Condensed, serif;
+    font-size: 24px;
+    padding-top: 1vw;
+    padding-left: 2vw;
+}
+
+.resultContent {
+    font-family: Roboto Condensed, serif;
+    font-size: 40px;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+.resultDescription {
+    display: flex;
+    height: 48vh;
+    border-bottom: 0.01em solid #000000;
+}
+
+.resultImage {
+    height: 48vh;
+    margin: 0;
+    box-shadow: 0 0 0 black;
+}
+
+.resultDescriptionContent {
+    margin: 2%;
+    font-family: Roboto Condensed, serif;
+    font-size: 24px;
+}
+
+.resultCard {
+    background-color: #FEEAC5;
+    filter: drop-shadow(-10px 10px 0px #000000);
+}
+
+/* Test */
+
+.testContainer {
+    position: absolute;
+    top: 27vh;
+    width: 74vw;
+    height: 65vh;
+    border: 0.01em solid #000000;
+    background: #FEEAC5;
+}
+
+.questionField {
+    height: 17vh;
+    background: #6ACD94;
+    margin: 0;
+    border-bottom: 0.01em solid #000000;
+}
+
+.answerOptions {
+    display: flex;
+    flex-wrap: wrap;
+    height: 48vh;
+    padding-left: 3%;
+    align-content: space-evenly;
+}
+
+.headline {
+    color: #000000;
+    font-family: "Roboto Condensed", serif;
+    text-shadow: 0 0 0;
+}

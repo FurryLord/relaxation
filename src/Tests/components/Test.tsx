@@ -1,7 +1,8 @@
-import CSS from "csstype"
 import React, { Component } from "react"
 import { TestTemplate } from "./TestTemplate"
 import { Result } from "./Result"
+// @ts-ignore
+import stylesPsy from "../Psy.module.css"
 
 type MyProps = {
   questionContent: {
@@ -38,16 +39,6 @@ type MyState = {
 }
 
 export class Test extends Component<MyProps, MyState> {
-  testContainer: CSS.Properties = {
-    position: "absolute",
-    top: "27vh",
-    width: "74vw",
-    height: "65vh",
-    border: "0.01em solid #000000",
-    background: "#FEEAC5",
-    // filter: 'drop-shadow(-10px 10px 0px #000000)'
-  }
-
   constructor(props: MyProps) {
     super(props)
 
@@ -88,7 +79,7 @@ export class Test extends Component<MyProps, MyState> {
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this)
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.setState({
       // eslint-disable-next-line react/destructuring-assignment
       question: this.props.questionContent[0].question,
@@ -97,7 +88,7 @@ export class Test extends Component<MyProps, MyState> {
     })
   }
 
-  handleAnswerSelected(event: { currentTarget: { value: any } }) {
+  handleAnswerSelected = (event: { currentTarget: { value: any } }) => {
     this.setUserAnswer(event.currentTarget.value)
 
     // eslint-disable-next-line react/destructuring-assignment
@@ -108,7 +99,7 @@ export class Test extends Component<MyProps, MyState> {
     }
   }
 
-  setUserAnswer(answer: keyof typeof this.state.answersCount) {
+  setUserAnswer = (answer: keyof typeof this.state.answersCount) => {
     this.setState((state, props) => ({
       answersCount: {
         ...state.answersCount,
@@ -119,7 +110,7 @@ export class Test extends Component<MyProps, MyState> {
     }))
   }
 
-  setNextQuestion() {
+  setNextQuestion = () => {
     // eslint-disable-next-line react/destructuring-assignment,react/no-access-state-in-setstate
     const counter = this.state.counter + 1
     // eslint-disable-next-line react/destructuring-assignment,react/no-access-state-in-setstate
@@ -135,7 +126,7 @@ export class Test extends Component<MyProps, MyState> {
     })
   }
 
-  getResults() {
+  getResults = () => {
     const { answersCount } = this.state
     const answersCountKeys = Object.keys(answersCount)
     const answersCountValues = answersCountKeys.map(
@@ -148,7 +139,7 @@ export class Test extends Component<MyProps, MyState> {
     )
   }
 
-  setResults(result: string[]) {
+  setResults = (result: string[]) => {
     if (result.length === 1) {
       this.setState({ result: result[0] })
     } else {
@@ -156,7 +147,7 @@ export class Test extends Component<MyProps, MyState> {
     }
   }
 
-  renderQuiz() {
+  renderQuiz = () => {
     return (
       <TestTemplate
         answer={this.state.answer}
@@ -169,7 +160,7 @@ export class Test extends Component<MyProps, MyState> {
     )
   }
 
-  renderResult() {
+  renderResult = () => {
     for (let index = 0; index < this.props.resultContent.length; index += 1) {
       // eslint-disable-next-line react/destructuring-assignment
       if (this.state.result === this.props.resultContent[index].result) {
@@ -188,7 +179,7 @@ export class Test extends Component<MyProps, MyState> {
 
   render() {
     return (
-      <div style={this.testContainer}>
+      <div className={stylesPsy.testContainer}>
         {/* eslint-disable-next-line react/destructuring-assignment */}
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>

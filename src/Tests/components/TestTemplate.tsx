@@ -1,8 +1,9 @@
-import CSS from "csstype"
 import { ChangeEventHandler } from "react"
 import { Question } from "./Question"
 import { QuestionCount } from "./QuestionCount"
 import { AnswerOption } from "./AnswerOption"
+// @ts-ignore
+import stylesPsy from "../Psy.module.css"
 
 type Test = {
   question: string
@@ -17,34 +18,15 @@ type Test = {
   onAnswerSelected: ChangeEventHandler<HTMLInputElement>
 }
 
-type Key = {
-  content: string
-  type: string
-}
-
 export function TestTemplate(props: Test) {
-  const questionField: CSS.Properties = {
-    height: "17vh",
-    background: "#6ACD94",
-    margin: "0",
-    borderBottom: "0.01em solid #000000",
-  }
-
-  const answerOptions: CSS.Properties = {
-    display: "flex",
-    flexWrap: "wrap",
-    height: "48vh",
-    paddingLeft: "3%",
-    alignContent: "space-evenly",
-  }
 
   return (
     <div key={props.questionId}>
-      <div style={questionField}>
+      <div className={stylesPsy.questionField}>
         <QuestionCount counter={props.questionId} total={props.questionTotal} />
         <Question content={props.question} />
       </div>
-      <div style={answerOptions}>
+      <div className={stylesPsy.answerOptions}>
         <AnswerOption
           answerType={props.answerOptions[0].type}
           onAnswerSelected={props.onAnswerSelected}
