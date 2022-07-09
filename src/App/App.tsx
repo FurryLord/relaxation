@@ -3,6 +3,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Meme } from '../Meme/Meme'
 import { MemeGenerated } from '../Meme/MemeGenerated'
+// @ts-ignore
 import { Index } from '../Index_page/Index'
 import { Registration } from '../Registration/reglog'
 import Login from '../Registration/components/login.component'
