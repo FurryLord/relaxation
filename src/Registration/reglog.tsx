@@ -1,11 +1,8 @@
 import React from "react"
-import ReactDOM from "react-dom"
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
-import CSS from "csstype"
-import { resolve } from "node:path/win32"
 import Login from "./components/login.component"
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore

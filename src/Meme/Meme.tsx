@@ -1,5 +1,4 @@
 import { ChangeEvent, useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -15,8 +14,6 @@ export function Meme() {
   const [memes, setMemes] = useState<any[]>([])
   const [memeIndex, setMemIndex] = useState<any[number]>(0)
   const [fields, setFields] = useState<any[]>([])
-
-  const navigate = useNavigate()
 
   const updateField = (e: ChangeEvent<HTMLInputElement>, index: number) => {
     const textMeme = e.target.value

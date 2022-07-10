@@ -87,31 +87,31 @@
 
 .GreetingInnerTitle {
   color: #000000;
-  font-family: Roboto Condensed;
+  font-family: 'Roboto Condensed', serif;
   font-size: calc(36px + (48 - 36) * ((100vw - 280px) / (1920 - 280)));
   margin-top: 0;
 }
 
 .GreetingInnerText {
   color: #000000;
-  font-family: Roboto Condensed;
+  font-family: 'Roboto Condensed', serif;
   font-size: calc(20px + (36 - 20) * ((100vw - 280px) / (1920 - 280)));
 }
 
 .GreetingInnerLogo {
   color: #000000;
-  font-family: Parisienne;
+  font-family: 'Parisienne', serif;
   font-size: calc(64px + (96 - 64) * ((100vw - 280px) / (1920 - 280)));
 }
 
 .GreetingButton {
   background-color: #f8a7a4;
   border: 5px solid #000000;
-  box-shadow: -5px 5px 0px #000000;
+  box-shadow: -5px 5px 0 #000000;
   border-radius: 80px;
   height: calc(90px + (96 - 90) * ((100vw - 280px) / (1920 - 280)));
   width: calc(256px + (356 - 256) * ((100vw - 280px) / (1920 - 280)));
-  font-family: Roboto;
+  font-family: 'Roboto', serif;
   font-size: calc(24px + (36 - 24) * ((100vw - 280px) / (1920 - 280)));
   font-weight: bold;
   color: #000000;

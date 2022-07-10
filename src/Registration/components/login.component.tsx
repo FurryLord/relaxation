@@ -1,8 +1,5 @@
 import React, { Component } from "react"
-import CSS from "csstype"
-import { isPropertySignature } from "typescript"
-import { useNavigate } from "react-router-dom"
-import path from "path"
+
 // @ts-ignore
 import stylesReglog from "../Reglog.module.css"
 

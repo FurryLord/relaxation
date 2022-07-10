@@ -17,8 +17,7 @@ button {
   display: block;
   width: 350px;
   padding: 10px;
-  margin: auto;
-  margin-bottom: 15px;
+  margin: auto auto 15px;
   color: white;
   border: none;
   border-radius: 3px;
@@ -27,10 +26,9 @@ button {
 img {
   max-width: 500px;
   max-height: 500px;
-  margin: auto;
-  margin-top: 50px;
+  margin: 50px auto auto;
   display: block;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0 0 10px black;
 }
 
 input {
@@ -38,12 +36,11 @@ input {
   display: block;
   padding: 10px;
   width: 350px;
-  margin: auto;
-  margin-bottom: 15px;
+  margin: auto auto 15px;
 }
 
 h1 {
   text-align: center;
   font-size: 50px;
-  text-shadow: 0px 0px 5px black;
+  text-shadow: 0 0 5px black;
 }

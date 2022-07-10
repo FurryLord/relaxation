@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router-dom"
 
 // eslint-disable-next-line import/extensions
-import CSS from "csstype"
-import { Simulate } from "react-dom/test-utils"
 import React from "react"
 import { Navibar } from "./Navbar/Navibar"
 
