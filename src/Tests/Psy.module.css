@@ -1,29 +1,43 @@
 /* Catalogue */
 
+.catalogueWrapper {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .headline {
   color: #000000;
   font-family: Roboto Condensed, serif;
   text-shadow: 0 0 0;
+  font-size: calc(36px + (50 - 36) * ((100vw - 280px) / (1920 - 280)));
 }
 
 .container {
+  width: 100%;
   display: flex;
-  width: 70%;
-  top: 30%;
-  position: absolute;
   flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
   filter: drop-shadow(-5px 5px 0px #000000);
+
 }
 
 .test {
   box-sizing: border-box;
   position: relative;
-  width: 22vw;
+  width: calc(280px + (300 - 280) * ((100vw - 280px) / (1920 - 280)));
   height: 23vh;
   background: #6acd94;
   border: 1px solid #000000;
   cursor: pointer;
+  margin: 2%;
 }
 
 .namebox {
@@ -43,11 +57,22 @@
   margin-left: 4%;
 }
 
+@media (max-width: 575px) {
+  .container {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .test {
+    width: 90vw;
+    margin: 5px;
+  }
+}
 /* Answer Options */
 
 .answerOption {
   padding-bottom: 1%;
-  width: 74vw;
+  width: 100%;
   border-bottom: 1px solid #000000;
   margin-right: 2.5rem;
 }
@@ -72,14 +97,15 @@
   cursor: pointer;
   margin: 0;
   padding-left: 2.5rem;
-  font-size: 26px;
+  font-size: calc(19px + (26 - 19) * ((100vw - 280px) / (1920 - 280)));
 }
 
 /* Question */
 
+
 .question {
   font-family: Roboto Condensed, serif;
-  font-size: 40px;
+  font-size: calc(24px + (40 - 24) * ((100vw - 280px) / (1920 - 280)));
   margin-top: 2vh;
   margin-left: 2vw;
 }
@@ -108,8 +134,8 @@
 }
 
 .resultContent {
-  font-family: Roboto Condensed, serif;
-  font-size: 40px;
+  font-family: 'Roboto Condensed', serif;
+  font-size: calc(24px + (40 - 24) * ((100vw - 280px) / (1920 - 280)));
   margin-top: 2vh;
   margin-left: 2vw;
 }
@@ -124,12 +150,13 @@
   height: 48vh;
   margin: 0;
   box-shadow: 0 0 0 black;
+  
 }
 
 .resultDescriptionContent {
   margin: 2%;
   font-family: Roboto Condensed, serif;
-  font-size: 24px;
+  font-size: calc(14px + (24 - 14) * ((100vw - 280px) / (1920 - 280)));
 }
 
 .resultCard {
@@ -140,9 +167,7 @@
 /* Test */
 
 .testContainer {
-  position: absolute;
-  top: 27vh;
-  width: 74vw;
+  max-width: 100%;
   height: 65vh;
   border: 0.01em solid #000000;
   background: #feeac5;

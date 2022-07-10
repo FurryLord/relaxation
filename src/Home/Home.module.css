@@ -27,7 +27,7 @@
 }
 
 .HomeCatalogue {
-  width: 100%;
+  width: 98%;
   height: 100%;
 
   display: flex;
@@ -44,8 +44,8 @@
   box-shadow: -15px 15px 0 #000000;
   border-radius: 0;
 
-  height: calc(156px + (375 - 156) * ((100vw - 280px) / (1920 - 280)));
-  width: calc(156px + (480 - 156) * ((100vw - 280px) / (1920 - 280)));
+  height: calc(140px + (375 - 140) * ((100vw - 280px) / (1920 - 280)));
+  width: calc(200px + (480 - 200) * ((100vw - 280px) / (1920 - 280)));
 
   display: flex;
   flex-direction: column;
@@ -53,7 +53,7 @@
   justify-content: center;
   align-items: center;
 
-  margin: 1.25%;
+  margin: 0 0 0 25px;
   padding: 0;
 }
 .HomeButtonMeme:hover,
@@ -76,7 +76,7 @@
 
 .HomeButtonText {
   font-family: Roboto Condensed, serif;
-  font-size: calc(36px + (48 - 36) * ((100vw - 280px) / (1920 - 280)));
+  font-size: calc(24px + (48 - 24) * ((100vw - 280px) / (1920 - 280)));
   font-weight: bold;
   color: #000000;
   display: flex;
@@ -86,4 +86,15 @@
   align-items: center;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 992px) {
+  .HomeCatalogue {
+    flex-direction: column;
+  }
+  .HomeButtonPsy,
+  .HomeButtonLg,
+  .HomeButtonMeme {
+    margin: 20px 0 0;
+  }
 }

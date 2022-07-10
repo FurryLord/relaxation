@@ -23,8 +23,8 @@
 
 .main {
   /* Size */
-  height: 90vh;
-  width: 100vw;
+  height: 89vh;
+  width: 100%;
 
   /* Display */
   display: flex;

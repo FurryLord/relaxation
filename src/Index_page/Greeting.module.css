@@ -88,7 +88,7 @@
 .GreetingInnerTitle {
   color: #000000;
   font-family: 'Roboto Condensed', serif;
-  font-size: calc(36px + (48 - 36) * ((100vw - 280px) / (1920 - 280)));
+  font-size: calc(24px + (48 - 24) * ((100vw - 280px) / (1920 - 280)));
   margin-top: 0;
 }
 
@@ -101,7 +101,7 @@
 .GreetingInnerLogo {
   color: #000000;
   font-family: 'Parisienne', serif;
-  font-size: calc(64px + (96 - 64) * ((100vw - 280px) / (1920 - 280)));
+  font-size: calc(42px + (96 - 42) * ((100vw - 280px) / (1920 - 280)));
 }
 
 .GreetingButton {
@@ -126,10 +126,17 @@
 
 .GreetingWoman {
   box-shadow: 0 0 0 0;
-  width: calc(200px + (350 - 200) * ((100vw - 280px) / (1920 - 280)));
+  width: calc(140px + (350 - 140) * ((100vw - 280px) / (1920 - 280)));
   height: auto;
   position: absolute;
   left: 0;
   bottom: 0;
   padding: 0 0 10px 10px;
+  z-index: -1;
+}
+
+@media (max-width: 575px) {
+  .GreetingButton {
+    width: 100%;
+  }
 }

@@ -1,6 +1,6 @@
 .nav {
   background-color: #fee9c6;
-  width: 100%;
+  min-width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -29,7 +29,7 @@
   background-color: #fee9c6;
   color: #000000;
   font-family: "Parisienne", serif;
-  font-size: 48px;
+  font-size: calc(20px + (64 - 20) * ((100vw - 280px) / (1920 - 280)));
 
   /* Size */
   height: fit-content;
@@ -50,28 +50,30 @@
 }
 
 .login_button {
-  width: 10%;
+  width: calc(70px + (128 - 70) * ((100vw - 280px) / (1920 - 280)));
   color: black;
-  border: black solid 2px;
+  outline: black solid 1px;
   margin: 0 0 0 2%;
   font-family: Roboto, serif;
   font-weight: 400;
   text-align: center;
   padding: 0.3%;
-  font-size: larger;
+  font-size: calc(14px + (24 - 14) * ((100vw - 280px) / (1920 - 280)));
+  line-height: calc(1.5em + (2 - 1.5) * ((100vw - 280px) / (1920 - 280)));
   background-color: #fee9c6;
 }
 
 .reg_button {
-  width: 10%;
+  width: calc(70px + (128 - 70) * ((100vw - 280px) / (1920 - 280)));
   color: #ffffff;
-  border: black solid 2px;
-  margin: 0 0 0 2%;
+  outline: black solid 1px;
+  margin: 0 0 0 1%;
   font-family: Roboto, serif;
   font-weight: 400;
   text-align: center;
   padding: 0.3%;
-  font-size: larger;
+  font-size: calc(14px + (24 - 14) * ((100vw - 280px) / (1920 - 280)));
+  line-height: calc(1.5em + (2 - 1.5) * ((100vw - 280px) / (1920 - 280)));
   background-color: #000000;
 }
 
@@ -81,7 +83,7 @@
 }
 
 .outer {
-  width: 25%;
+  min-width: calc(224px + (317 - 224) * ((100vw - 280px) / (1920 - 280)));
   height: 50em;
   display: flex;
   margin-top: 10%;

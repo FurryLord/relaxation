@@ -15,7 +15,7 @@ export function Registration() {
   const navigate = useNavigate()
 
   return (
-    <main className={stylesMain.body}>
+    <body className={stylesMain.body}>
       <header className={stylesReglog.nav}>
         <div className={stylesReglog.logoBox}>
           {/* eslint-disable-next-line react/button-has-type */}
@@ -26,7 +26,7 @@ export function Registration() {
         {/* eslint-disable-next-line camelcase,react/button-has-type */}
         <button className={stylesReglog.login_button} onClick={() => navigate("/reglog")}>
           {" "}
-          Sign in
+          Log in
         </button>
         {/* eslint-disable-next-line camelcase,react/button-has-type */}
         <button className={stylesReglog.reg_button} onClick={() => navigate("/reglog/sign-up")}>
@@ -34,12 +34,13 @@ export function Registration() {
           Sign up
         </button>
       </header>
-
-      <div className={stylesReglog.outer}>
-        <div className={stylesReglog.inner}>
-          <Login />
+      <main className={stylesMain.main}>
+        <div className={stylesReglog.outer}>
+          <div className={stylesReglog.inner}>
+            <Login />
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </body>
   )
 }

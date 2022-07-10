@@ -59,7 +59,7 @@ export function SignUp() {
         {/* eslint-disable-next-line react/button-has-type,camelcase */}
         <button className={stylesReglog.login_button} onClick={() => navigate("/reglog")}>
           {" "}
-          Sign in
+          Log in
         </button>
         {/* eslint-disable-next-line camelcase,react/button-has-type */}
         <button className={stylesReglog.reg_button} onClick={() => navigate("/reglog/sign-up")}>
@@ -67,69 +67,70 @@ export function SignUp() {
           Sign up
         </button>
       </header>
+      <main className={stylesMain.main}>
+        <div className={stylesReglog.outer}>
+          <div className={stylesReglog.inner}>
+            <form className={stylesReglog.form} onSubmit={handleSubmit(onSubmit)}>
+            <p className={stylesReglog.Sign_up}>Register</p>
+              <input
+                className={stylesReglog.input}
+                placeholder='Bill'
+                type='text'
+                {...register("name", {
+                  required: "this is a required",
+                  maxLength: {
+                    value: 20,
+                    message: "Max length is 2",
+                  },
+                })}
+              />
+              {errors.name && <p className={stylesReglog.err}>{String(errors.name.message)}</p>}
 
-      <div className={stylesReglog.outer}>
-        <div className={stylesReglog.inner}>
-          <form className={stylesReglog.form} onSubmit={handleSubmit(onSubmit)}>
-          <p className={stylesReglog.Sign_up}>Register</p>
-            <input
-              className={stylesReglog.input}
-              placeholder='Bill'
-              type='text'
-              {...register("name", {
-                required: "this is a required",
-                maxLength: {
-                  value: 20,
-                  message: "Max length is 2",
-                },
-              })}
-            />
-            {errors.name && <p className={stylesReglog.err}>{String(errors.name.message)}</p>}
+              <input
+                className={stylesReglog.input}
+                placeholder='Luo'
+                type='text'
+                {...register("surname", {
+                  required: {
+                    value: true,
+                    message: "this is required"
+                  },
+                })}
+              />
+              {errors.surname && <p className={stylesReglog.err}>{String(errors.surname.message)}</p>}
 
-            <input 
-              className={stylesReglog.input}
-              placeholder='Luo'
-              type='text'
-              {...register("surname", {
-                required: {
-                  value: true,
-                  message: "this is required"
-                },
-              })}
-            />
-            {errors.surname && <p className={stylesReglog.err}>{String(errors.surname.message)}</p>}
+              <input
+                className={stylesReglog.input}
+                placeholder='bluebill1049@hotmail.com'
+                type='text'
+                {...register("email", {
+                  required: "this is required",
+                  pattern: {
+                    value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                    message: "Invalid email address",
+                  },
+                })}
+              />
+              {errors.email && <p className={stylesReglog.err}>{String(errors.email.message)}</p>}
+               <input
+                type="password"
+                 className={stylesReglog.input}
+                {...register("password", {
+                  required: "this is required",
+                  minLength: {
+                    value: 8,
+                    message: "Min length is 8",
+                  },
+                })}
+              />
+              {errors.password && <p className={stylesReglog.err}>{String(errors.password.message)}</p>}
 
-            <input
-              className={stylesReglog.input}
-              placeholder='bluebill1049@hotmail.com'
-              type='text'
-              {...register("email", {
-                required: "this is required",
-                pattern: {
-                  value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                  message: "Invalid email address",
-                },
-              })}
-            />
-            {errors.email && <p className={stylesReglog.err}>{String(errors.email.message)}</p>}
-             <input
-              type="password"
-               className={stylesReglog.input}
-              {...register("password", {
-                required: "this is required",
-                minLength: {
-                  value: 8,
-                  message: "Min length is 8",
-                },
-              })}
-            />
-            {errors.password && <p className={stylesReglog.err}>{String(errors.password.message)}</p>}
-
-            <button className={stylesReglog.enter} type='submit'>Register</button>
-            {submitValue}
-          </form>
+              <button className={stylesReglog.enter} type='submit'>Register</button>
+              {submitValue}
+            </form>
+          </div>
         </div>
-      </div>
+      </main>
     </body>
   )
 }
