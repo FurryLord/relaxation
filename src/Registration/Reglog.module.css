@@ -105,10 +105,33 @@
 
 .input {
   width: 90%;
-  margin: 5%;
+  margin: 5% 5% 0;
   background-color: #ffffff;
   border: 1px solid #000000;
   border-radius: 60px;
+}
+.input:focus {
+  background-color: #eeeeee;
+}
+
+.err {
+  color: red;
+
+  width: 90%;
+
+  font-family: "Roboto", serif;
+  font-size: small;
+  text-align: left;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin: 0 5% 0;
+  padding-left: 10px;
 }
 
 .enter {

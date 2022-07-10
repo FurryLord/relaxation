@@ -1,7 +1,6 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
-
 import { useForm } from "react-hook-form"
 import { usePrettyPrintedState } from "../usePrettyPrintedState"
 
@@ -76,6 +75,7 @@ export function SignUp() {
             <input
               className={stylesReglog.input}
               placeholder='Bill'
+              type='text'
               {...register("name", {
                 required: "this is a required",
                 maxLength: {
@@ -84,17 +84,20 @@ export function SignUp() {
                 },
               })}
             />
-            {errors.firstName && <p>{String(errors.firstName.message)}</p>}
+            {errors.name && <p className={stylesReglog.err}>{String(errors.name.message)}</p>}
 
             <input 
               className={stylesReglog.input}
               placeholder='Luo'
+              type='text'
               {...register("surname", {
-                required: "this is required",
-               
+                required: {
+                  value: true,
+                  message: "this is required"
+                },
               })}
             />
-            {errors.lastName && <p>{String(errors.lastName.message)}</p>}
+            {errors.surname && <p className={stylesReglog.err}>{String(errors.surname.message)}</p>}
 
             <input
               className={stylesReglog.input}
@@ -108,7 +111,7 @@ export function SignUp() {
                 },
               })}
             />
-            {errors.email && <p>{String(errors.email.message)}</p>}
+            {errors.email && <p className={stylesReglog.err}>{String(errors.email.message)}</p>}
              <input
               type="password"
                className={stylesReglog.input}
@@ -120,7 +123,7 @@ export function SignUp() {
                 },
               })}
             />
-            {errors.Password && <p>{String(errors.Password.message)}</p>}
+            {errors.password && <p className={stylesReglog.err}>{String(errors.password.message)}</p>}
 
             <button className={stylesReglog.enter} type='submit'>Register</button>
             {submitValue}
