@@ -51,6 +51,7 @@ export function Meme() {
     }).then((res) => {
       // eslint-disable-next-line no-shadow
       res.json().then((res) => {
+        // eslint-disable-next-line no-restricted-globals
         const saveURL = location.href
         console.log(saveURL)
         window.location.href = `${saveURL}/generated?url=${res.data.url}`
@@ -85,6 +86,7 @@ export function Meme() {
             // eslint-disable-next-line react/no-array-index-key
             <input
               onChange={(e) => updateField(e, index)}
+              // eslint-disable-next-line react/no-array-index-key
               key={index}
               className={stylesMem.EnterButton}
             />

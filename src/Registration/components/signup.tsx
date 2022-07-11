@@ -1,8 +1,11 @@
-import React from "react"
+/* eslint-disable react/jsx-indent */
+/* eslint-disable react/jsx-props-no-spreading */
+
 import { useNavigate } from "react-router-dom"
 
 import { useForm } from "react-hook-form"
 import { usePrettyPrintedState } from "../usePrettyPrintedState"
+
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -23,8 +26,9 @@ export function SignUp() {
     mode: "onChange",
   })
   const onSubmit = (data: any) => {
-    data.type = "registration"
-    console.log(data)
+    // eslint-disable-next-line no-param-reassign
+    data.type = "registration";
+    console.log((data))
     localStorage.setItem("name", data.name)
     fetch("https://relaxacion.egorleb.repl.co", {
       method: "POST",
@@ -36,12 +40,13 @@ export function SignUp() {
       if (response.status !== 201) {
         alert("User with this email already exist")
       } else {
-        /* const { name } = response.json */
+        // eslint-disable-next-line spaced-comment
+        /*const { name } = response.json */
         let saveURL = window.location.href
         console.log(saveURL)
-        saveURL = saveURL.replace("/reglog/sign-up", "/reglog")
+        saveURL = saveURL.replace('/reglog/sign-up', '/reglog')
         console.log(saveURL)
-        window.location.href = `${saveURL}`
+        window.location.href = `${saveURL}`;
       }
     })
   }
@@ -92,13 +97,11 @@ export function SignUp() {
                 {...register("surname", {
                   required: {
                     value: true,
-                    message: "this is required",
+                    message: "this is required"
                   },
                 })}
               />
-              {errors.surname && (
-                <p className={stylesReglog.err}>{String(errors.surname.message)}</p>
-              )}
+              {errors.surname && <p className={stylesReglog.err}>{String(errors.surname.message)}</p>}
 
               <input
                 className={stylesReglog.input}
@@ -113,24 +116,20 @@ export function SignUp() {
                 })}
               />
               {errors.email && <p className={stylesReglog.err}>{String(errors.email.message)}</p>}
-              <input
-                type='password'
-                className={stylesReglog.input}
-                {...register("password", {
+               <input
+                 type="password"
+                 className={stylesReglog.input}
+                 {...register("password", {
                   required: "this is required",
                   minLength: {
                     value: 8,
                     message: "Min length is 8",
                   },
                 })}
-              />
-              {errors.password && (
-                <p className={stylesReglog.err}>{String(errors.password.message)}</p>
-              )}
+               />
+              {errors.password && <p className={stylesReglog.err}>{String(errors.password.message)}</p>}
 
-              <button className={stylesReglog.enter} type='submit'>
-                Register
-              </button>
+              <button className={stylesReglog.enter} type='submit'>Register</button>
               {submitValue}
             </form>
           </div>
