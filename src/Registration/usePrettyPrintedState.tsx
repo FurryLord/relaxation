@@ -7,6 +7,7 @@ export function usePrettyPrintedState<T extends object>(): [
   const [value, setValue] = useState<any>()
   const resultValue = useMemo(() => {
     return (
+      // eslint-disable-next-line react/jsx-no-useless-fragment
       <>
         {value && (
           <pre>
