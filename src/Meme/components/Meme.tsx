@@ -1,15 +1,23 @@
 import { ChangeEvent, useEffect, useState } from "react"
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+import { NavibarBack } from "../../Index_page/Navbar/NaviBarBack"
 // @ts-ignore
-import backgroundRetro from "../img/background.png"
-import { NavibarBack } from "../Index_page/Navbar/NaviBarBack"
+import stylesMain from "../../main.module.css"
 // @ts-ignore
-import stylesMain from "../main.module.css"
-// @ts-ignore
-import stylesMem from "./Mem.module.css"
+import stylesMem from "../Mem.module.css"
 
-// eslint-disable-next-line import/prefer-default-export
+const shuffleMemes = (array: string[]) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * i)
+    const temp = array[i]
+    // eslint-disable-next-line no-param-reassign
+    array[i] = array[j]
+    // eslint-disable-next-line no-param-reassign
+    array[j] = temp
+  }
+}
+
 export function Meme() {
   const [memes, setMemes] = useState<any[]>([])
   const [memeIndex, setMemIndex] = useState<any[number]>(0)
@@ -27,17 +35,6 @@ export function Meme() {
     )
   }
 
-  const shuffleMemes = (array: string[]) => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * i)
-      const temp = array[i]
-      // eslint-disable-next-line no-param-reassign
-      array[i] = array[j]
-      // eslint-disable-next-line no-param-reassign
-      array[j] = temp
-    }
-  }
-
   const fetchMeme = () => {
     const currentMeme = memes[memeIndex]
     const formData = new FormData()
@@ -46,10 +43,8 @@ export function Meme() {
     formData.append("password", "1qaz1Qaz")
     formData.append("template_id", currentMeme.id)
     fields.forEach((element, index) =>
-      // console.log(`boxes[${index}][text]`, c)
       formData.append(`boxes[${index}][text]`, element),
     )
-    // formData.forEach((c) => console.log(c))
     fetch("https://api.imgflip.com/caption_image", {
       method: "POST",
       body: formData,

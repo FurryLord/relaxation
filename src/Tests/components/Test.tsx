@@ -79,7 +79,7 @@ export class Test extends Component<MyProps, MyState> {
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this)
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
     this.setState({
       // eslint-disable-next-line react/destructuring-assignment
       question: this.props.questionContent[0].question,

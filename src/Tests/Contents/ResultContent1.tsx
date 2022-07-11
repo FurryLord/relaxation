@@ -1,4 +1,4 @@
-const resultContent1 = [
+export const resultContent1 = [
   {
     result: "Water",
     description:
@@ -30,5 +30,3 @@ const resultContent1 = [
     imageURL: "https://i.pinimg.com/474x/ba/a7/72/baa772c9219145a7fa32ec87ba062bb7.jpg",
   },
 ]
-
-export default resultContent1

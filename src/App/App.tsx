@@ -1,9 +1,9 @@
 // import styles from './styles.module.css'
 
 import { Route, Routes } from "react-router-dom"
-import { Meme } from "../Meme/Meme"
+import { Meme } from "../Meme/components/Meme"
 // @ts-ignore
-import { MemeGenerated } from "../Meme/MemeGenerated"
+import { MemeGenerated } from "../Meme/components/MemeGenerated"
 // @ts-ignore
 import { Index } from "../Index_page/Index"
 import { Registration } from "../Registration/reglog"

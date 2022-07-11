@@ -9,7 +9,13 @@ type QuestionCount = {
 export function QuestionCount(count: QuestionCount) {
   return (
     <div className={stylesPsy.questionCount}>
-      Question <span>{count.counter}</span> of <span>{count.total}</span>
+      Question 
+      {' '}
+      <span>{count.counter}</span>
+      {' '}
+      of 
+      {' '}
+      <span>{count.total}</span>
     </div>
   )
 }

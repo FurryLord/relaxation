@@ -29,11 +29,20 @@ export function Index() {
           <div className={stylesGreeting.GreetingInnerCard4}>
             <div className={stylesGreeting.GreetingInner}>
               <p className={stylesGreeting.GreetingInnerTitle}>
-                Welcome to <span className={stylesGreeting.GreetingInnerLogo}>Relaxacion!</span>
+                Welcome to 
+                {' '}
+                <span className={stylesGreeting.GreetingInnerLogo}>Relaxacion!</span>
               </p>
               <p className={stylesGreeting.GreetingInnerText}>
-                Place where you can find yourself in <strong>tests</strong>, stuck in{" "}
-                <strong>memes</strong>, and tense your <strong>logic</strong>.
+                Place where you can find yourself in 
+                {' '}
+                <strong>tests</strong>
+                , stuck in
+                {" "}
+                <strong>memes</strong>
+                , and tense your
+                <strong>logic</strong>
+                .
               </p>
               {/* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events,react/button-has-type */}
               <button onClick={routeChange} className={stylesGreeting.GreetingButton}>

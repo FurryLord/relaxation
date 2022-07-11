@@ -1,4 +1,4 @@
-const questionContent1 = [
+export const questionContent1 = [
   {
     question: "What is your main positive quality?",
     answers: [
@@ -126,5 +126,3 @@ const questionContent1 = [
     ],
   },
 ]
-
-export default questionContent1

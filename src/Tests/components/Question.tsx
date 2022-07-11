@@ -6,5 +6,11 @@ type Question = {
 }
 
 export function Question(props: Question) {
-  return <h2 className={stylesPsy.question}> {props.content} </h2>
+  return (
+    <h2 className={stylesPsy.question}> 
+      {' '}
+      {props.content}
+      {' '}
+    </h2>
+)
 }

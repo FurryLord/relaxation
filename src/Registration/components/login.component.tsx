@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import { Component } from "react"
 
 // @ts-ignore
 import stylesReglog from "../Reglog.module.css"
@@ -51,9 +51,9 @@ export default class Login extends Component<any, any> {
         localStorage.setItem("name", name)
         let saveURL = window.location.href
         console.log(saveURL)
-        saveURL = saveURL.replace('reglog', 'home')
+        saveURL = saveURL.replace("reglog", "home")
         console.log(saveURL)
-        window.location.href = `${saveURL}`;
+        window.location.href = `${saveURL}`
       })
     })
   }

@@ -1,4 +1,4 @@
-const resultContent2 = [
+export const resultContent2 = [
   {
     result: "Gryffindor",
     description:
@@ -31,5 +31,3 @@ const resultContent2 = [
     imageURL: "https://i.pinimg.com/originals/c2/34/87/c23487e1d5a1bb12fa705f1d796e463a.jpg",
   },
 ]
-
-export default resultContent2

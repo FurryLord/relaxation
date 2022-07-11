@@ -1,9 +1,7 @@
 import { NavibarBack } from "../Index_page/Navbar/NaviBarBack"
 import { Test } from "./components/Test"
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import questionContent1 from "./Contents/QuestionContent1"
-import resultContent1 from "./Contents/ResultContent1"
+import { questionContent1 } from "./Contents/QuestionContent1"
+import { resultContent1 } from "./Contents/ResultContent1"
 // @ts-ignore
 import stylesMain from "../main.module.css"
 // @ts-ignore

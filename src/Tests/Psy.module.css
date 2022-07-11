@@ -26,7 +26,6 @@
   flex-direction: row;
   justify-content: center;
   filter: drop-shadow(-5px 5px 0px #000000);
-
 }
 
 .test {
@@ -102,7 +101,6 @@
 
 /* Question */
 
-
 .question {
   font-family: Roboto Condensed, serif;
   font-size: calc(24px + (40 - 24) * ((100vw - 280px) / (1920 - 280)));
@@ -134,7 +132,7 @@
 }
 
 .resultContent {
-  font-family: 'Roboto Condensed', serif;
+  font-family: "Roboto Condensed", serif;
   font-size: calc(24px + (40 - 24) * ((100vw - 280px) / (1920 - 280)));
   margin-top: 2vh;
   margin-left: 2vw;
@@ -150,7 +148,6 @@
   height: 48vh;
   margin: 0;
   box-shadow: 0 0 0 black;
-  
 }
 
 .resultDescriptionContent {

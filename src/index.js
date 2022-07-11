@@ -20,7 +20,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <Provider store={clientStore}>
     <React.StrictMode>
-      <HashRouter basename={"/"}>
+      <HashRouter basename='/'>
         <App />
       </HashRouter>
     </React.StrictMode>

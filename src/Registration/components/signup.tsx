@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import { usePrettyPrintedState } from "../usePrettyPrintedState"
 
-
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import stylesMain from "../../main.module.css"
@@ -24,8 +23,8 @@ export function SignUp() {
     mode: "onChange",
   })
   const onSubmit = (data: any) => {
-    data.type = "registration";
-    console.log((data))
+    data.type = "registration"
+    console.log(data)
     localStorage.setItem("name", data.name)
     fetch("https://relaxacion.egorleb.repl.co", {
       method: "POST",
@@ -37,12 +36,12 @@ export function SignUp() {
       if (response.status !== 201) {
         alert("User with this email already exist")
       } else {
-        /*const { name } = response.json*/
+        /* const { name } = response.json */
         let saveURL = window.location.href
         console.log(saveURL)
-        saveURL = saveURL.replace('/reglog/sign-up', '/reglog')
+        saveURL = saveURL.replace("/reglog/sign-up", "/reglog")
         console.log(saveURL)
-        window.location.href = `${saveURL}`;
+        window.location.href = `${saveURL}`
       }
     })
   }
@@ -71,7 +70,7 @@ export function SignUp() {
         <div className={stylesReglog.outer}>
           <div className={stylesReglog.inner}>
             <form className={stylesReglog.form} onSubmit={handleSubmit(onSubmit)}>
-            <p className={stylesReglog.Sign_up}>Register</p>
+              <p className={stylesReglog.Sign_up}>Register</p>
               <input
                 className={stylesReglog.input}
                 placeholder='Bill'
@@ -93,11 +92,13 @@ export function SignUp() {
                 {...register("surname", {
                   required: {
                     value: true,
-                    message: "this is required"
+                    message: "this is required",
                   },
                 })}
               />
-              {errors.surname && <p className={stylesReglog.err}>{String(errors.surname.message)}</p>}
+              {errors.surname && (
+                <p className={stylesReglog.err}>{String(errors.surname.message)}</p>
+              )}
 
               <input
                 className={stylesReglog.input}
@@ -112,9 +113,9 @@ export function SignUp() {
                 })}
               />
               {errors.email && <p className={stylesReglog.err}>{String(errors.email.message)}</p>}
-               <input
-                type="password"
-                 className={stylesReglog.input}
+              <input
+                type='password'
+                className={stylesReglog.input}
                 {...register("password", {
                   required: "this is required",
                   minLength: {
@@ -123,9 +124,13 @@ export function SignUp() {
                   },
                 })}
               />
-              {errors.password && <p className={stylesReglog.err}>{String(errors.password.message)}</p>}
+              {errors.password && (
+                <p className={stylesReglog.err}>{String(errors.password.message)}</p>
+              )}
 
-              <button className={stylesReglog.enter} type='submit'>Register</button>
+              <button className={stylesReglog.enter} type='submit'>
+                Register
+              </button>
               {submitValue}
             </form>
           </div>

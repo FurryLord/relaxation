@@ -2,14 +2,12 @@ import { useNavigate, useLocation } from "react-router-dom"
 import { useClipboard } from "use-clipboard-copy"
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useSelector, useDispatch } from "react-redux"
-import { copy } from "./actions/copy"
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+import { copy } from "../actions/copy"
+import { NavibarBack } from "../../Index_page/Navbar/NaviBarBack"
 // @ts-ignore
-import { NavibarBack } from "../Index_page/Navbar/NaviBarBack"
+import stylesMain from "../../main.module.css"
 // @ts-ignore
-import stylesMain from "../main.module.css"
-// @ts-ignore
-import stylesMem from "./Mem.module.css"
+import stylesMem from "../Mem.module.css"
 
 export function MemeGenerated() {
   const counter = useSelector((state: any) => state.counter)
@@ -18,9 +16,8 @@ export function MemeGenerated() {
   const clipboard = useClipboard()
   const navigate = useNavigate()
   const location = useLocation()
-  // console.log(location)
   const url = new URLSearchParams(location.search).get("url")
-  // console.log(url)
+
 
   const copyLink = () => {
     clipboard.copy(url)

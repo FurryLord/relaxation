@@ -1,12 +1,10 @@
 import { NavibarBack } from "../Index_page/Navbar/NaviBarBack"
 import { Test } from "./components/Test"
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import questionContent2 from "./Contents/QuestionContent2"
-import resultContent2 from "./Contents/ResultContent2"
+import { questionContent2 } from "./Contents/QuestionContent2"
+import { resultContent2 } from "./Contents/ResultContent2"
 // @ts-ignore
 import stylesMain from "../main.module.css"
-// @ts-ignore
+// @ts-ignoreFА
 import stylesPsy from "./Psy.module.css"
 
 // eslint-disable-next-line import/prefer-default-export

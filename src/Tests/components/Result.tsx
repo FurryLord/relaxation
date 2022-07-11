@@ -12,7 +12,10 @@ export function Result(props: Result) {
     <div className={stylesPsy.resultCard}>
       <div className={stylesPsy.resultField}>
         <div className={stylesPsy.resultText}>Result</div>
-        <h2 className={stylesPsy.resultContent}>You are - {props.result}</h2>
+        <h2 className={stylesPsy.resultContent}>
+          You are -
+          {props.result}
+        </h2>
       </div>
       <div className={stylesPsy.resultDescription}>
         <div>

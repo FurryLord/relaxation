@@ -36,7 +36,10 @@ export function Home() {
       <main className={stylesMain.main}>
         <div className={stylesHome.HomeWrapper}>
           <p className={stylesHome.HomeInnerTitle}>
-            Hello, <span className={stylesHome.HomeInnerTitleName}>{name}</span>{" "}
+            Hello, 
+            {' '}
+            <span className={stylesHome.HomeInnerTitleName}>{name}</span>
+            {" "}
           </p>
           <div className={stylesHome.HomeCatalogue}>
             {/* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events,react/button-has-type */}
