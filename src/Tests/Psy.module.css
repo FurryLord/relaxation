@@ -36,7 +36,8 @@
   background: #6acd94;
   border: 1px solid #000000;
   cursor: pointer;
-  margin: 2%;
+  margin: 5%;
+  margin-top: 2%;
 }
 
 .namebox {
@@ -164,7 +165,7 @@
 /* Test */
 
 .testContainer {
-  max-width: 100%;
+  width: 70vw;
   height: 65vh;
   border: 0.01em solid #000000;
   background: #feeac5;

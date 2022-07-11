@@ -13,7 +13,7 @@ export function Result(props: Result) {
       <div className={stylesPsy.resultField}>
         <div className={stylesPsy.resultText}>Result</div>
         <h2 className={stylesPsy.resultContent}>
-          You are -
+          You are -&nbsp;
           {props.result}
         </h2>
       </div>
