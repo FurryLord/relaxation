@@ -25,7 +25,7 @@ export function Home() {
     navigate(path)
   }
   const routeChangeLg = () => {
-    const path = "/home/Game1"
+    const path = "/home/startGame"
     navigate(path)
   }
 
